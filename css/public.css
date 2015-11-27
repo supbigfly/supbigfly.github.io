@@ -1,0 +1,4 @@
+.nav{width:250px;height:30px;}
+.nav li{float:left;width:70px;list-style-type: none;text-align: center;}
+a{text-decoration: none;font-weight:bold;}
+a:hover{color:#9fee22;font-weight:none;text-decoration:underline;}
