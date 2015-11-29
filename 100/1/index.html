@@ -4,15 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style type="text/css">
-		.zhengfangxing{width: 100px;height: 100px;box-shadow: 10px 10px 5px #888888;}
-		.index_a{background-color: #F0F8FF;}
+		.index_a{background-color: #F0F8FF;}/*首页标签样式*/
+		.zfx_one,.zfx_two,.zfx_three,.zfx_four{width: 100px;height: 100px;float: left;margin-right: 25px;margin-bottom:50px;font-size: 14px;}
+		.zfx_one{box-shadow: 10px 10px 5px #888888;color: red;text-align: center;line-height: 100px;}
+		.zfx_two{box-shadow: 0px 0px 20px black;color:black;text-align: center;}
+		.zfx_three{box-shadow: 0 0 10px 5px black,0 0 10px 20px red;}
+		.zfx_four{box-shadow: 0px -15px 4px green,15px 0px 4px yellow,0px 15px 4px red,-15px 0px 4px blue;}
+		pre{clear: both;}
 	</style>
 </head>
 <body>
 	<div class="index_a"><a href="http://supbigfly.github.io/100">首页</a></div>
 	<h1>这是一个正方形的层显示阴影的效果</h1>
-	<div class="zhengfangxing">
-	  第一天
+	<div class="zfx_one">
+	  <p>默认效果</p>
+	</div>
+	<div class="zfx_two">
+		<p>水平垂直移动值为0使得四周都有阴影效果为默认</p>
+	</div>
+	<div class="zfx_three">	
+	</div>
+	<div class="zfx_four">
+		<p>上下左右的阴影不一样</p>
 	</div>
 	<pre>
 	    box-shadow属性有六个值，详细如下：
@@ -24,6 +37,7 @@
 	    color阴影的颜色（可选）
 	    inset（可将默认的外部阴影值outset改成内部阴影值inset）
 	    用法说明详见链接博客：http://blog.csdn.net/freshlover/article/details/7610269
+	    如果前面的阴影模糊值小于后面的阴影模糊值，那么前面的显示在后面之上，如果前面阴影的模糊值大于后面的阴影模糊值，那么前面的阴影将遮住后面的阴影效果这句话好绕啊。
 	</pre>
 </body>
 </html>
