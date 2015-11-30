@@ -4,4 +4,3 @@ li{list-style-type: none;}
 .nav li{float:left;width:70px;text-align: center;}
 a{text-decoration: none;font-weight:bold;}
 a:hover{color:#9fee22;font-weight:none;text-decoration:underline;}
-a:visited{color:red;text-decoration: underline;}
