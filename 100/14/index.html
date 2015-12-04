@@ -5,12 +5,18 @@
 <meta charset="UTF-8">
 <style type="text/css">
 .father{border:1px solid red;}
-.son{width:30%;height:70%;background-color:green;float:left;}
-.daughter{width:70px;height:60px;background-color:blue;}
+.son{width:30%;height:60px;background-color:green;float: left;}
+.daughter{width:70%;height:60px;background-color:blue;float: left;}
+.clearfix:after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
 </style>
 </head>
 <body>
-<div class="father">
+<div class="father clearfix">
 <div class="son"></div>
 <div class="daughter"></div>
 </div>
