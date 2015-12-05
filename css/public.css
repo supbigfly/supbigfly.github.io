@@ -1,11 +1,70 @@
-*{margin:0;padding:0;}
-li{list-style-type: none;}
-a{text-decoration: none;font-weight:bold;}
-a:hover{color:#9fee22;font-weight:none;text-decoration:underline;}
-.top,.bottom{background-color: #FFF8DC;height: 10px;}
-.logo{float: left;}
-.logo img{width: 50px;height: 50px;}
-.nav li{float:left;border-bottom: 1px solid #87CEEB;}
-.nav li a{display: block;width:100px;height: 50px;text-align: center;line-height: 50px;border-right: 1px solid #87CEEB;}
-.main{clear: both;}/*当上面的层飘时就把清除浮动给下面的层*/
-.footer{text-align: center;}
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	font-weight:bold;
+}
+a:hover{
+	color:#9fee22;
+	font-weight:none;
+	text-decoration:underline;
+}
+.clear_header:after,
+.clear_header:before{
+	content: "";
+	display: table;
+}
+.clear_header:after{
+	clear: both;
+}
+.header{
+	background-color: gray;
+}
+.header_inner{
+	width: 1200px;height: 50px;margin:0 auto;
+}
+.top,.bottom{
+	background-color: #FFF8DC;
+	height: 10px;
+}
+.logo{
+	float: left;
+}
+.logo img{
+	width: 50px;
+	height: 50px;
+}
+.nav{
+	margin-left: 400px;
+}
+.nav li{
+	float:left;
+	border-bottom: 1px solid #87CEEB;
+}
+.nav .left_border
+{
+	border-left: 1px solid #87CEEB;
+}
+.nav li a{
+	display: block;
+	width:100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-right: 1px solid #87CEEB;
+}
+.main{
+	clear: both;
+	}/*当上面的层飘时就把清除浮动给下面的层*/
+.footer{
+	text-align: center;
+}
