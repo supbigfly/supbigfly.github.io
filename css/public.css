@@ -2,6 +2,7 @@
 *{
 	margin:0;
 	padding:0;
+	/*box-sizing:border-box;*/
 }
 body{
 	font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
@@ -18,24 +19,16 @@ a:hover{
 	font-weight:none;
 	text-decoration:underline;
 }
-.clear_header:after,
-.clear_header:before{
+.clearfix:after,
+.clearfix:before{
 	content: "";
 	display: table;
 }
-.clear_header:after{
-	clear: both;
-}
-.clear_main:after,
-.clear_main:before{
-	content: "";
-	display: block;
-}
-.clear_main:after{
+.clearfix:after{
 	clear: both;
 }
 .header,.footer{
-	background-color: #FFF8DC;
+	background-color: #1E90FF;
 }
 .header{
 	position:fixed;width:100%;
