@@ -26,15 +26,25 @@ a:hover{
 .clear_header:after{
 	clear: both;
 }
-.header{
-	background-color: gray;
+.clear_main:after,
+.clear_main:before{
+	content: "";
+	display: block;
 }
-.header_inner{
-	width: 1200px;height: 50px;margin:0 auto;
+.clear_main:after{
+	clear: both;
 }
 .top,.bottom{
-	background-color: #FFF8DC;
+	background-color: gray;
 	height: 10px;
+}
+.header,.footer{
+	background-color: #FFF8DC;
+}
+.header_inner{
+	width: 1200px;
+	height: 54px;
+	margin:0 auto;
 }
 .logo{
 	float: left;
@@ -44,7 +54,7 @@ a:hover{
 	height: 50px;
 }
 .nav{
-	margin-left: 400px;
+	margin-left: 100px;
 }
 .nav li{
 	float:left;
@@ -57,14 +67,10 @@ a:hover{
 .nav li a{
 	display: block;
 	width:100px;
-	height: 50px;
 	text-align: center;
-	line-height: 50px;
+	line-height: 53px;
 	border-right: 1px solid #87CEEB;
 }
-.main{
-	clear: both;
-	}/*当上面的层飘时就把清除浮动给下面的层*/
 .footer{
-	text-align: center;
+	text-align: center;height: 50px;line-height: 50px;
 }

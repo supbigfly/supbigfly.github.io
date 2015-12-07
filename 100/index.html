@@ -5,10 +5,31 @@
 	<title>百天百页面</title>
 	<link rel="stylesheet" type="text/css" href="../css/public.css">
 	<style type="text/css">
-	    h1{text-align:center;}
-	    .main{width: 270px;margin:auto;}
-	    a:visited{color:red;text-decoration: underline;}
-	    /*这里的右边框根据p多大就在哪里显示，p独立成行，所以看不到边框，所以得给p设定宽度，不让他那么潇洒*/
+	    .main_inner{width: 1200px;margin:auto;}
+	    .main_inner a{color:#363636;}
+	    .inner_top{border:4px dashed gray;}
+	    .inner_top h1{
+	    	text-align: center;
+	    }
+	    .inner_bottom .box{
+	    	width: 500px;height: 60px;margin:10px auto;box-shadow: 0px 0px 5px black;transition:all 1s;
+	    }
+	    .inner_bottom .box:hover{
+	    	box-shadow: 0px 0px 10px black;
+	    }
+	    .inner_bottom .doc{
+	    	background-color: #00FFFF;float: left;width: 50px;height: 60px;text-align: center;line-height: 60px;
+	    }
+		.inner_bottom .essay{
+			float: right;width: 450px;height: 60px;
+		}
+		.inner_bottom .title{
+			padding:10px;text-transform:uppercase;
+		}
+		.inner_bottom .date{
+			padding-left: 10px;letter-spacing: 0.07rem;
+		}
+		small{padding-left: 10px;color:red;}
 	</style>
 </head>
 <body>
@@ -21,32 +42,188 @@
         	</div>
 			<div class="nav">
 				<ul>
-					<li><a href="http://supbigfly.github.io">首页</a></li>
-					<li><a href="http://supbigfly.github.io/100">100页面</a></li>
-					<li><a href="http://supbigfly.github.io/FiltLine/home.html">FiltLine</a></li>
+					<li class="left_border"><a href="../index.html">首页</a></li>
+					<li><a href="index.html">100页面</a></li>
+					<li><a href="../FiltLine/home.html">FiltLine</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="main">
-		<h1>百日百页面</h1>
-		<ul>
-			<li><a href="1">day1 box:shadow</a></li>
-			<li><a href="2">day2 border:Radius</a></li>
-			<li><a href="3">day3 正确访问需输入完整路径</a></li>
-			<li><a href="4">day4 text:shadow</a></li>
-			<li><a href="5">day5 pre</a></li>
-			<li><a href="6">day6 transition</a></li>
-			<li><a href="7">day7 transition expand</a></li>
-			<li><a href="8">day8 yellow round</a></li>
-			<li><a href="9">day9 li-style-type</a></li>
-			<li><a href="10">day10 copyeaseinout</a></li>
-			<li><a href="11">day11 lianjieweilei</a></li>
-			<li><a href="12">day12 summary</a></li>
-			<li><a href="13">day13 small标签</a></li>
-			<li><a href="14">day14 clearfix</a></li>
-			<li><a href="15">day15 box-sizing</a></li>
-		</ul>
+		<div class="main_inner">
+			<div class="inner_top">
+				<h1>everyday one page</h1>
+			</div>
+			<div class="inner_bottom">
+				<ul>
+					<a href="1">
+						<li>
+							<div class="box">
+								<div class="doc">1</div>
+								<div class="essay">
+									<div class="title">box-shadow</div>
+									<div class="date">2015year11month21daily<small>Form Here Start</small></div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="2">
+						<li>
+							<div class="box">
+								<div class="doc">2</div>
+								<div class="essay">
+									<div class="title">border:radius</div>
+									<div class="date">2015year11month22daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="3">
+						<li>
+							<div class="box">
+								<div class="doc">3</div>
+								<div class="essay">
+									<div class="title">please input full path</div>
+									<div class="date">2015year11month23daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="4">
+						<li>
+							<div class="box">
+								<div class="doc">4</div>
+								<div class="essay">
+									<div class="title">text:shadow</div>
+									<div class="date">2015year11month24daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="5">
+						<li>
+							<div class="box">
+								<div class="doc">5</div>
+								<div class="essay">
+									<div class="title">pre</div>
+									<div class="date">2015year11month25daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="6">
+						<li>
+							<div class="box">
+								<div class="doc">6</div>
+								<div class="essay">
+									<div class="title">transition</div>
+									<div class="date">2015year11month26daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="7">
+						<li>
+							<div class="box">
+								<div class="doc">7</div>
+								<div class="essay">
+									<div class="title">transition expand</div>
+									<div class="date">2015year11month27daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="8">
+						<li>
+							<div class="box">
+								<div class="doc">8</div>
+								<div class="essay">
+									<div class="title">yellow round</div>
+									<div class="date">2015year11month28daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="9">
+						<li>
+							<div class="box">
+								<div class="doc">9</div>
+								<div class="essay">
+									<div class="title">li-style-type</div>
+									<div class="date">2015year11month29daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="10">
+						<li>
+							<div class="box">
+								<div class="doc">10</div>
+								<div class="essay">
+									<div class="title">ease-in-out</div>
+									<div class="date">2015year11month30daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="11">
+						<li>
+							<div class="box">
+								<div class="doc">11</div>
+								<div class="essay">
+									<div class="title">chaining fake</div>
+									<div class="date">2015year12month1daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="12">
+						<li>
+							<div class="box">
+								<div class="doc">12</div>
+								<div class="essay">
+									<div class="title">summary</div>
+									<div class="date">2015year12month2daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="13">
+						<li>
+							<div class="box">
+								<div class="doc">13</div>
+								<div class="essay">
+									<div class="title">small label</div>
+									<div class="date">2015year12month3daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="14">
+						<li>
+							<div class="box">
+								<div class="doc">14</div>
+								<div class="essay">
+									<div class="title">clearfix</div>
+									<div class="date">2015year12month4daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+					<a href="15">
+						<li>
+							<div class="box">
+								<div class="doc">15</div>
+								<div class="essay">
+									<div class="title">box-sizing</div>
+									<div class="date">2015year12month5daily</div>
+								</div>
+							</div>						
+						</li>
+					</a>
+				</ul>
+			</div>	
+		</div>
 	</div>
 	<div class="footer">
             <a href="http://supbigfly.github.io">supbigfly.github.io</a>
