@@ -34,17 +34,17 @@ a:hover{
 .clear_main:after{
 	clear: both;
 }
-.top,.bottom{
-	background-color: gray;
-	height: 10px;
-}
 .header,.footer{
 	background-color: #FFF8DC;
+}
+.header{
+	position:fixed;width:100%;
 }
 .header_inner{
 	width: 1200px;
 	height: 54px;
 	margin:0 auto;
+	/*margin-bottom: 100px;*/
 }
 .logo{
 	float: left;
