@@ -27,6 +27,11 @@ a:hover{
 .clearfix:after{
 	clear: both;
 }
+.clearfloat:after{
+	content: "";
+	display: block;
+	clear: both;
+}
 .header,.footer{
 	background-color: #1E90FF;
 }
@@ -63,6 +68,9 @@ a:hover{
 	text-align: center;
 	line-height: 53px;
 	border-right: 1px solid #87CEEB;
+}
+.main{
+	padding-top: 54px;
 }
 .footer{
 	text-align: center;height: 50px;line-height: 50px;
