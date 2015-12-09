@@ -3,6 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<title>总结</title>
+	<style type="text/css">
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.main{
+			background-color: #FFF5EE;
+		}
+		.main_inner{
+			width: 1200px;
+			margin:0 auto;
+		}
+		.numberone h3{
+			text-align: center;
+		}
+		.numberone .box1{
+			width: 400px;
+			height: 200px;
+			background-color: green;
+			float: left;
+			/*padding:20px;*/
+		}
+		.numberone .box1 p{
+			padding: 50px;
+		}
+		.numberone .box2{
+			width: 400px;
+			height: 200px;
+			background-color: green;
+			float: right;
+		}
+		.numberone .box2 .left{
+			width: 50px;
+			height: 50px;
+			margin-right: 50px;
+			background-color: yellow;
+			float: left;
+		}
+		.numberone .box2 .right{
+			width: 50px;
+			height: 50px;
+			background-color: yellow;
+			float: left;
+		}
+	</style>
 </head>
 <body>
 		<pre>
@@ -45,5 +91,21 @@
 			position:absolute绝对,fixed绝对,relative相对static,inherit
 			调试：当margin和float出现问题使用clearfix，当padding的使用出现问题使用box-sizing:border-box;
 		</pre>
+	<div class="main">
+		<div class="main_inner">
+			<div class="numberone clearfix">
+				<h3>文本与层用padding，div之间用margin</h3>
+				<div class="box1">
+					<p>用padding给我居中</p>
+				</div>
+				<div class="box2">
+					<div class="left"></div>
+					<div class="right"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
 </body>
 </html>
