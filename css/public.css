@@ -13,6 +13,7 @@ li{
 a{
 	text-decoration: none;
 	font-weight:bold;
+	color: #fff;
 }
 a:hover{
 	color:#9fee22;
@@ -33,7 +34,8 @@ a:hover{
 	clear: both;
 }
 .header,.footer{
-	background-color: #1E90FF;
+	background-color: black;
+	color: #fff;
 }
 .header{
 	position:fixed;width:100%;
