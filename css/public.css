@@ -54,8 +54,11 @@ a{
 	bottom: 0px;
 	left: 0px;
 }
-.clearfix:after{
+.clearfix:after,
+.clearfix:before{
 	content: "";
-	display: block;
+	display: table;
+}
+.clearfix:after{
 	clear: both;
 }
