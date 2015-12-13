@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile-min</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.one,
+		.two,
+		.three{
+			text-align: center;
+			line-height: 100px;
+			color:#fff;
+			font-weight: bold;
+			font-size: 30px;
+		}
+		.one{
+			height: 100px;
+			background-color: #03A9F4;
+		}
+		.two{
+			height: 100px;
+			background-color: #B3E5FC;
+		}
+		.three{
+			height: 100px;
+			background-color: #0288D1;
+		}
+		@media (min-width: 500px){
+			.one,
+			.two{
+				width: 50%;
+				float: left;
+			}
+			.three{
+				width: 50%;
+				clear: left;
+				margin:0 auto;
+			}
+		}
+		@media (min-width: 800px){
+			.one,
+			.two,
+			.three{
+				width: 33.333%;
+				clear:none;
+				float: left;
+			}
+		}
+		.footer{
+			width: 100%;
+			text-align: center;
+			background-color: #03A9F4;
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+		}
+		p:nth-of-type(2){
+			color: #727272;
+		}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">1</div>
+	<div class="two">2</div>
+	<div class="three clearfix">3</div>
+	<div class="four"><a href="../index.html">上一步</a></div>
+	<div class="footer">
+		<p>优先移动端设计，原设计两个层上下排列，当屏幕尺寸变大时使用@media就近原则，此时需要设置宽度了，但不要用绝对宽度用%这个单位不用px</p>
+	<p>注意事项:宽度不改变是100%会使层变成字体宽度大小</p>
+	</div>
+</body>
+</html>
