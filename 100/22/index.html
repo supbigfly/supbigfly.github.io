@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>@keyframes-animation</title>
+	<style type="text/css">
+		.main{
+			width: 800px;
+			margin:0 auto;
+		}
+		.hero{
+			width: 20px;
+			height: 267px;
+			overflow: hidden;
+			background-color: blue;
+		}
+		.hero img{
+			animation:bbb 14s infinite ;
+		}
+		@keyframes bbb{
+			0%{margin-left: 0px;}
+			12.5%{margin-left: -20px;}
+			25%{margin-left: -40px;}
+			37.5%{margin-left: -60px;}
+			50%{margin-left: -80px;}
+			62.5%{margin-left: -60px;}
+			75%{margin-left: -40px;}
+			87.5%{margin-left: -20px;}
+			100%{margin-left: 0px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="hero">
+			<img src="../../images/color.jpg">
+		</div>
+	</div>
+</body>
+</html>
