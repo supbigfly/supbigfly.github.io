@@ -1,0 +1,9 @@
+.box_left img{
+	width: 500px;
+	height: 300px;
+	opacity: 0.4;
+	transition:opacity 6s;
+}
+.box_left img:hover{
+	opacity: 1;
+}

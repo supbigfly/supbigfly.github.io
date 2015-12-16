@@ -1,0 +1,38 @@
+.box_left{
+	position: relative;
+	overflow: hidden;
+}
+.box_left p{
+	width: 500px;
+	background-color: green;
+	font-size: 40px;
+	position: absolute;
+	top:305px;
+	left: 0px;
+	transition:all 3s;
+}
+.box_left:hover p{
+	top:175px;
+	opacity: 0.5;
+}
+.box_right{
+	text-align: left;
+}
+.box_right h5{
+	text-align: center;
+}
+.box_right p{
+	padding-left: 30px;
+}
+.number_left{
+	float: left;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	border-radius: 50%;
+	margin: 20px 0px 0px 111px;
+	text-align: center;
+	line-height: 100px;
+	font-weight: bold;
+	font-size: 30px;
+}
