@@ -1,0 +1,18 @@
+.box_right p{
+	text-align: center;
+	color:#fff;
+}
+.box_right p:nth-of-type(1){
+	padding-top: 100px;
+}
+.boxs{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	transform:scale(1,1);
+	transition:all 3s;
+	margin:100px;
+}
+.boxs:hover{
+	transform:scale(2,2);
+}
