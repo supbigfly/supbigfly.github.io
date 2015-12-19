@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>trform and trtion</title>
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/four.css">
+</head>
+<body>
+	<audio controls="controls" autoplay="autoplay" hidden="hidden" loop="loop">您的浏览器不支持audio
+<!-- <source src="你要播放的音乐.ogg" type="audio/ogg" /> -->
+<source src="../music/Gala.mkv" type="audio/mpeg" /></audio>
+	<div class="box">
+		<p>jQuery之toggleClass()</p>
+		<div class="box_left">
+			<div class="boxs"></div>
+		</div>
+		<div class="box_right">
+			<p>主要代码如下：</p>
+			<p>.boxs.boxss{background-color: red;}</p>
+			<p>script type="text/javascript"</p>
+			<p>$('.boxs').click(function(){</p>
+			<p>$(this).toggleClass('boxss');</p>
+		</div>
+	</div>
+	<div class="number_right">
+		<a href="#">NEXT</a>
+	</div>
+	<div class="number_left">
+		<a href="three.html">UPDER</a>
+	</div>
+	<script type="text/javascript">
+		$('.boxs').click(function(){
+			alert("点击变色");
+			$(this).toggleClass('boxss');
+		});
+	</script>
+</body>
+</html>
