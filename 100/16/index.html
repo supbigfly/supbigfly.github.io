@@ -2,36 +2,45 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>opacity</title>
-	<link rel="stylesheet" href="../../css/public.css">
-	<style type="text/css">
-		h1{
-			background-color: blue;
-			opacity: 0.3;
-		}
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style>
+		.box_left img{
+	width: 500px;
+	height: 300px;
+	opacity: 0.4;
+	transition:opacity 6s;
+}
+.box_left img:hover{
+	opacity: 1;
+}
 	</style>
 </head>
 <body>
-	<div class="header">
-		<div class="header_inner">
-			<div class="logo">
-                <img src="../../images/logo.gif" alt="">
-        	</div>
-			<div class="nav">
-				<ul>
-					<li class="left_border"><a href="../index.html">首页</a></li>
-					<li><a href="../index.html">100页面</a></li>
-					<li><a href="../../FiltLine/home.html">FiltLine</a></li>
-				</ul>
-			</div>
+	<div class="box">
+		<div class="box_left">
+			<img src="../../images/288816.jpg" alt="">
+		</div>
+		<div class="box_right">
+			<pre>
+		主要代码如下：
+		.box_left img{
+			width: 500px;
+			height: 300px;
+			opacity: 0.2;
+			transition:opacity 1s;
+		}
+		.box_left img:hover{
+			opacity: 1;
+		}
+			</pre>
 		</div>
 	</div>
-	<div class="main" style="width: 500px;height: 540px;background-color: black; color:#fff; margin:0 auto;">
-		<h1>透明属性的使用</h1>
-		<p>颜色一般设置到零点几，值越小越透明，越大越不透明。</p>
+	<div class="number_right">
+		<a href="one.html">NEXT</a>
 	</div>
-	<div class="footer">
-    	<a href="http://supbigfly.github.io">supbigfly.github.io</a>
-    </div>
+	<div class="number_left">
+		<a href="../../100/index.html">INDEX</a>
+	</div>
 </body>
 </html>
