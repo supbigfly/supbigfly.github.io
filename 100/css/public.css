@@ -15,6 +15,9 @@ a{
 	margin:30px auto 0px auto;
 	font-size: 35px;
 }
+.box p{
+	text-align: center;
+}
 .box_left{
 	width: 500px;
 	height: 300px;
