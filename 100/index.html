@@ -3,11 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewprot" content="width=device-width" />
-	<title>每日每页面</title>
+	<title>百日每页面</title>
+	<script src="js/jQuery.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="../images/logo.gif">
 	<style type="text/css">
+		.nav{
+			width: 100px;
+			background-color: #fff;
+			position: absolute;
+			top:0px;
+			bottom:0px;
+			left: 0px;
+			/*display: none;*/
+			transform:translateX(-100px);
+		}
+		.nav.navs{
+			transform:translateX(0px);
+		}
+		.nav a{
+			color:black;
+			text-align: center;
+		}
 		.main{
 			background-color: #DCEDC8;
 			padding-top: 100px;
@@ -23,6 +41,19 @@
 	    .icon-reorder{
 	    	font-size: 32px;
 	    	margin: 30px 30px;
+	    }
+	    .max_btn{
+	    	width: 80%;
+	    	position: absolute;
+	    	top:0px;
+	    	bottom: 0px;
+	    	right: 0px;
+	    	background-color: #B0C4DE;
+	    	opacity: 0.2;
+	    	display: none;
+	    }
+	    .max_btn.max_btns{
+			display: block;
 	    }
 	    .box{
 	    	margin-top:10px;
@@ -93,6 +124,12 @@
         <h1>百日百页面</h1>
         <div class="icon-reorder"></div>
     </div>
+    <div class="nav">
+    	<p><a href="">首页</a></p>
+    	<p><a href="">登录</a></p>
+    	<p><a href="">注册</a></p>
+    </div>
+    <div class="max_btn"></div>
 	<div class="main clearfix">
 		<ul>
 			<a href="1/index.html">
@@ -419,5 +456,15 @@
 	<div class="footer">
         <a href="http://supbigfly.github.io">supbigfly.github.io</a>
     </div>
+    <script>
+    	$('.icon-reorder').click(function(){
+    		$('.nav').addClass('navs');
+    		$('.max_btn').addClass('max_btns');
+    	});
+    	$('.max_btn').click(function(){
+    		$('.nav').removeClass('navs');
+    		$(this).removeClass('max_btns');
+    	});
+    </script>
 </body>
 </html>
