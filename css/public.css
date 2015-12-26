@@ -9,9 +9,6 @@ li{
 a{
 	text-decoration: none;
 }
-.nav{
-	margin-left: 200px;
-}
 .nav a{
 	color: #FFFFFF;
 	display: block;
@@ -30,10 +27,6 @@ a{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-}
-.header_inner{
-	width: 1200px;
-	margin:0 auto;
 }
 .logo{
 	float: left;
