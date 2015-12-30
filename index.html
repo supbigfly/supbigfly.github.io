@@ -7,11 +7,28 @@
     <link rel="stylesheet" type="text/css" href="css/public.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
     <style type="text/css">
+        h1{
+            text-align: center;
+            letter-spacing: 100px;
+            font-size: 80px;
+        }
+        img{
+            width: 660px;
+            height: 200px;
+            margin:0px 55px;
+        }
+        .banner{
+            float: left;
+        }
         .main{
             background-color: #DCEDC8;
             width: 100%;
             padding-top: 100px;
             margin-bottom: 100px;
+        }
+        .ulone,.ultwo{
+            float: left;
+            border:1px solid red;
         }
     </style>
 </head>
@@ -30,41 +47,57 @@
             </div>
         </div>
     </div>
-    <div class="main">
-        <div class="main_inner">
+    <div class="main clearfix">
             <h1>参考资料</h1>
-            <ul>
-                <li><a href="http://dj.haoduoshipin.com/20151121.html">2015-11-21</a>Github 注册，网站托管，H5 标签入门</li>
-                <li><a href="http://dj.haoduoshipin.com/20151125.html">2015-11-25</a>百日百页面活动，CSS 新特性专题</li>
-                <li><a href="http://haoduoshipin.com/v/177">2015-11-27</a>CSS3 过渡效果</li>
-                <li><a href="http://www.imooc.com/learn/390">2015-11-28</a> github 客户端使用 绝对定位 更多过渡效果</li>
-                <li><a href="#">2015-12-02</a>综合练习</li>
-                <li><a href="http://dj.haoduoshipin.com/20151204.html">2015-12-04</a>clearfix</li>
-                <li><a href="http://happypeter.github.io/kiss/100/">2015-12-05</a>页面重置列表样式</li>
-                <li><a href="http://wiki.jikexueyuan.com/project/material-design/animation/meaningful-transitions.html">2015-12-09</a>有意义的转场动画</li>
-                <li><a href="https://dribbble.com/">2015-12-11</a>网站模型</li>
-                <li><a href="http://www.materialpalette.com/">2015-12-11</a>色盘</li>
-                <li><a href="http://happypeter.github.io/kiss/100/16/">2015-12-11</a>min-width实例</li>
-                <li><a href="http://book.haoduoshipin.com/">2015-12-11</a>好多书</li>
-                <li><a href="http://book.haoduoshipin.com/go-responsive/">2015-12-12</a>min-width实例二</li>
-                <li><a href="http://codepen.io/happypeter/pen/adbPoE">2015-11-12</a>黄色小狗</li>
-                <li><a href="http://alistapart.com/article/responsive-web-design">2015-12-12</a>响应式三要素：流体布局，弹性图片，media 查询 </li>
-                <li><a href="http://book.haoduoshipin.com/go-responsive/">2015-12-12</a>多屏时代-响应式设计</li>
-                <li><a href="http://www.html5rocks.com/en/">2015-12-14</a>HTML5rocks首页</li>
+            <ul class="ulone">
+                <li>
+                    <a href="http://dj.haoduoshipin.com/20151121.html">Github 注册网站托管H5标签入门</a>151121
+                </li>
+                <li>
+                    <a href="http://dj.haoduoshipin.com/20151125.html">百日百页面活动CSS新特性专题</a>151125
+                </li>
+                <li>
+                    <a href="http://haoduoshipin.com/v/177">CSS3过渡效果</a>151127
+                </li>
+                <li>
+                    <a href="http://www.imooc.com/learn/390">github客户端使用绝对定位 更多过渡效果</a>151128
+                </li>
+                <li><a href="http://dj.haoduoshipin.com/20151204.html">clearfix</a>151204</li>
+                                
+                <li><a href="http://happypeter.github.io/kiss/100/16/">2015-12-11</a>min-width实例</li> 
+                <li><a href="http://book.haoduoshipin.com/go-responsive/">151212</a>min-width实例二</li>
+                <li><a href="http://alistapart.com/article/responsive-web-design">2015-12-12</a>响应式三要素流体布局弹性图片media查询</li>
+                <li><a href="http://book.haoduoshipin.com/go-responsive/">多屏时代-响应式设计</a>151212</li>
                 <li><a href="http://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts">20151214</a>弹性媒介之iframe和video</li>
                 <li><a href="http://happypeter.github.io/kiss/100/19/">20151218jsHelloword</a></li>
-                <li><a href="http://jquery.cuishifeng.cn/">20151218jQuery帮助文档</a></li>
-                <li><a href="http://d2forum.alibaba-inc.com/">20151219D2</a></li>
-                <li><a href="http://meteor.haoduoshipin.com/">20151219作业标准</a></li>
-                <li><a href="http://qd.haoduoshipin.com/">151219摩登前端-网站</a></li>
-                <li><a href="http://www.bootcss.com/p/font-awesome/">151223字体图标</a></li>
-                <li><a href="http://happycasts.github.io/episode-90-demo/">151226仿宋</a></li>
-                <li><a href="http://autoprefixer.github.io/">151226厂商前缀</a></li>
-                <li><a href="http://www.smartisan.com/jianguo/#/overview">锤子响应式网站</a></li>
-                <li><a href="http://dj.haoduoshipin.com/list.html">共享作业</a></li>
-                <li></li>
+                <li><a href="http://happypeter.github.io/kiss/100/">页面重置列表样式</a>151226</li>   
             </ul>
-        </div>
+            <div class="banner">
+                <img src="images/banner.png" alt="">
+            </div>
+            <ul class="ultwo">
+                <li><a href="http://dj.haoduoshipin.com/list.html">共享作业</a></li>
+                <li><a href="http://book.haoduoshipin.com/">好多书</a>151211</li>
+                <li><a href="https://dribbble.com/">网站模型</a>151211</li>               
+                <li><a href="http://www.materialpalette.com/">色盘</a>151211</li>
+                <li><a href="http://wiki.jikexueyuan.com/project/material-design/animation/meaningful-transitions.html">有意义的转场动画</a>151209</li>
+                <li><a href="http://codepen.io/happypeter/pen/adbPoE">黄色小狗</a>151212</li>
+                <li><a href="http://www.html5rocks.com/en/">HTML5rocks首页</a>151214</li>
+                <li><a href="http://jquery.cuishifeng.cn/">jQuery帮助文档</a>151218</li>
+                <li><a href="http://d2forum.alibaba-inc.com/">D2</a>151219</li>
+                <li><a href="http://qd.haoduoshipin.com/">摩登前端网站</a>151219</li>
+                <li><a href="http://meteor.haoduoshipin.com/">作业标准</a>151219</li>
+                <li><a href="http://www.bootcss.com/p/font-awesome/">字体图标</a>151223</li>
+                <li><a href="http://happycasts.github.io/episode-90-demo/">仿宋</a>151226</li>
+                <li><a href="http://autoprefixer.github.io/">厂商前缀</a>151226</li>
+                <li><a href="http://www.smartisan.com/jianguo/#/overview">锤子响应式网站</a>151230</li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
     </div>
     <div class="footer">
         <a href="http://supbigfly.github.io">supbigfly.github.io</a>
