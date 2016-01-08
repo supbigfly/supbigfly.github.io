@@ -1,0 +1,41 @@
+.top{
+    background-color: #388E3C;
+    position: fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+}
+.top a{
+    color:#FFFFFF;
+    text-decoration: none;
+    float:right;
+    display: block;
+    width:8%;
+    text-align:center;
+}
+.header{
+    background-color: #4CAF50;
+    text-align: center;
+    color:#FFFFFF;
+    height:50px;
+    line-height: 300px;
+    position: fixed;
+    top:18px;
+    left:0px;
+    right: 0px;
+}
+.main{
+    width: 95%;
+    margin:70px auto 0px auto;
+}
+.main .box{
+    border:1px solid black;
+}
+.main .title{
+    float: left;
+    color:#727272;
+}
+.main a{
+    float: right;
+    margin-left: 15px;
+}
