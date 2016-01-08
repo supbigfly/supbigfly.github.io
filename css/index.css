@@ -53,25 +53,35 @@
     display: none;
 }
 .bbb{
-    background-color: yellow;
+    font-size: 48px;
+    font-weight: bold;
+    color: #eee;
+    text-align: right;
+    line-height: 85px;
+    background-color: #800000;
     position: fixed;
     top:0px;
     left: 0px;
     bottom: 0px;
     width: 50%;
-    transition:transform 3s;
+    transition:transform 10s;
 }
 .bbb.bbbs{
     transform:translateX(-100%);
 }
 .ccc{
-    background-color: red;
+    font-size: 48px;
+    font-weight: bold;
+    color: #eee;
+    text-align: left;
+    line-height: 85px;
+    background-color: #800000;
     position: fixed;
     top:0px;
     right: 0px;
     bottom:0px;
     width:50%;
-    transition:transform 3s;
+    transition:transform 10s;
 }
 .ccc.cccs{
     transform:translateX(100%);
