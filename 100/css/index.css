@@ -19,6 +19,7 @@ li{
 }
 .header{
 	background-image: url(../../images/29-bg.jpg);
+	width: 100%;
 	height: 250px;
 }
 .header a{

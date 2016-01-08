@@ -39,3 +39,40 @@
     float: right;
     margin-left: 15px;
 }
+.aaa{
+    background-color: blue;
+    position: fixed;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left: 0px;
+    opacity: 0.3;
+    transition:all 5s;
+}
+.aaa.aaas{
+    display: none;
+}
+.bbb{
+    background-color: yellow;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    bottom: 0px;
+    width: 50%;
+    transition:transform 3s;
+}
+.bbb.bbbs{
+    transform:translateX(-100%);
+}
+.ccc{
+    background-color: red;
+    position: fixed;
+    top:0px;
+    right: 0px;
+    bottom:0px;
+    width:50%;
+    transition:transform 3s;
+}
+.ccc.cccs{
+    transform:translateX(100%);
+}
