@@ -97,6 +97,18 @@ a i{
 	height: 80px;
 	background-color: #fff;
 }
+.title{
+	padding:10px 0px 10px 20px;
+	text-align: center;
+	text-transform:uppercase;
+	color:#212121;
+	font-size: 1.2rem;
+}
+.date{
+	text-align: center;
+	padding-left: 20px;
+	color: #727272;
+}
 @media (min-width:764px){
 	.doc{
 		width: 20%;
@@ -111,19 +123,13 @@ a i{
 	.header a{
 		display: inline;
 	}
+	.title,
+	.date{
+		text-align: left;
+	}
 	.icon-reorder{
 		display: none;
 	}
-}
-.title{
-	padding:10px 0px 10px 20px;
-	text-transform:uppercase;
-	color:#212121;
-	font-size: 1.2rem;
-}
-.date{
-	padding-left: 20px;
-	color: #727272;
 }
 .nav{
 	position: fixed;

@@ -8,21 +8,20 @@
 .top a{
     color:#FFFFFF;
     text-decoration: none;
-    float:right;
     display: block;
-    width:8%;
+    float:right;
     text-align:center;
+    width:7%;
 }
+.top a:hover{
+    border-bottom:2px solid chartreuse;
+}
+
 .header{
     background-color: #4CAF50;
     text-align: center;
     color:#FFFFFF;
-    height:50px;
-    line-height: 300px;
-    position: fixed;
-    top:18px;
-    left:0px;
-    right: 0px;
+    height:100px;
 }
 .main{
     width: 95%;
@@ -64,7 +63,7 @@
     left: 0px;
     bottom: 0px;
     width: 50%;
-    transition:transform 10s;
+    transition:transform 4s;
 }
 .bbb.bbbs{
     transform:translateX(-100%);
@@ -81,7 +80,7 @@
     right: 0px;
     bottom:0px;
     width:50%;
-    transition:transform 10s;
+    transition:transform 4s;
 }
 .ccc.cccs{
     transform:translateX(100%);
