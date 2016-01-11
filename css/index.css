@@ -11,7 +11,7 @@
     display: block;
     float:right;
     text-align:center;
-    width:12%;
+    width:17%;
     margin-right: 10px;
 }
 .top a:hover{
@@ -52,37 +52,45 @@
 .aaa.aaas{
     display: none;
 }
-.bbb{
+.doora{
+    color: #eee;
     font-size: 48px;
     font-weight: bold;
-    color: #eee;
-    text-align: right;
-    line-height: 80px;
+    line-height: 75px;
     background-color: #800000;
+    transition:transform 4s;
+    text-align: right;  
     position: fixed;
     top:0px;
     left: 0px;
     bottom: 0px;
     width: 50%;
-    transition:transform 4s;
 }
-.bbb.bbbs{
-    transform:translateX(-100%);
-}
-.ccc{
+.doorb{
+    color: #eee;
     font-size: 48px;
     font-weight: bold;
-    color: #eee;
-    text-align: left;
-    line-height: 80px;
+    line-height: 75px;
     background-color: #800000;
+    transition:transform 4s;
+    text-align: left;
     position: fixed;
     top:0px;
     right: 0px;
     bottom:0px;
     width:50%;
-    transition:transform 4s;
 }
-.ccc.cccs{
+.doora.dooras{
+    transform:translateX(-100%);
+}
+.doorb.doorbs{
     transform:translateX(100%);
+}
+@media (min-width: 786px){
+    .top a{
+        width: 9%;
+    }
+    .doora,.doorb{
+        line-height: 85px;
+    }
 }
