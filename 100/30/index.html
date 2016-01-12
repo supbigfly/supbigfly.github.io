@@ -2,187 +2,56 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>share</title>
-	<link rel="stylesheet" href="../../css/public.css">
+	<title>元素居中的学习</title>
 	<style>
-		.header{
-			height: 100px;
-			background-image: url(../../images/29-bg.JPG);
-		}
-		.header h1{
-			text-align: center;
-			line-height: 100px;
-		}
-		.header span{
-			text-transform:uppercase;
-		}
-		.box{
-			width: 200px;
-			border:2px double red;
-		}
-		.wrap{
-			width: 100px;
+		*{
 			margin: 0;
-			padding: 100px 100px 0px 100px;
-			background-color: blue;
+			padding: 0;
 		}
-		.dog-body{
-			width: 100px;
-			height: 95px;
-			background: #FFDE39;
-			border-radius: 50% 50% 0 0;
+		h1{
+			color:#eeeeee;
+			background-color: darkcyan;
 		}
-		.dog-ear{
-			width: 25px;
-			height: 25px;
-			background-color: #3A2011;
-			position: relative;
-			float: left;
+		h2{
+			color:#eeeeee;
+			background-color: darkcyan;
 		}
-		.dog-ear.left{
-			left: 2px;
-			top:0;
-			border-radius: 50% 0 50% 0;
-		}
-		.dog-ear.right{
-			left: 48px;
-			top:0;
-			border-radius: 0 50% 0 50%;
-		}
-		.dog-eye{
-			width: 20px;
-			height: 20px;
-			background-color: #fff;
-			position: relative;
-			border-radius: 50%;
-		}
-		.dog-eye.left{
-			left: 26px;
-			top:20px;
-		}
-		.dog-eye.right{
-			left: 57px;
-			top:0;
-			/*这里为什么写0px*/
-		}
-		.dog-eye.left:after,
-		.dog-eye.right:after{
-			content: "";
-			display: block;
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			background-color: #3A2011;
-			position: relative;
-			left: 5px;
-			top:5px;
-		}
-		.dog-nose{
+		.bigbox{
 			width: 50px;
 			height: 50px;
-			border-radius: 50% 50% 0 0;
-			background-color: #fff6ba;
-			position: absolute;
-			top:281px;
-			clip:rect(0,50px,25px,0px);
+			background-color: blue;
+			margin: 0 auto;
+			display:-webkit-box;
+			-webkit-box-orient:horizontal;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
 		}
-		.dog-nose.dog-nose1{
-			left: 930px;
-		}
-		.dog-nose.dog-nose2{
-			left:1131px;
-		}
-		.dog-nose.dog-nose2:after{
-			content:"";
-			display: block;
-			position: absolute;
-			border-radius: 0 0 50% 50%;
-			background-color: #3B1F11;
+		.smallbox{
 			width: 20px;
 			height: 20px;
-			left: 15px;
-			top:-10px;
-			/*clip:rect(10px,50px,30px,0px);*/
-		}
-		.dogbody{
-			width: 20px;
-			height: 40px;
 			background-color: yellow;
 		}
-		.wrap:hover .dogbody{
-			transform:rotate(45deg);
-		}
-		@media (min-width: 784px){
-			.box{
-				float: left;
-			}
+		.box{
+			width: 400px;
+			height: 400px;
+			background-color: blue;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin-top: -200px;
+			margin-left: -200px;
+			opacity: 0.2;
 		}
 	</style>
 </head>
 <body>
-	<div class="header">
-		<h1><span>html</span>形状大全</h1>
+	<h1>大盒子中的小盒子居中</h1>
+	<div class="bigbox">
+		<div class="smallbox"></div>
 	</div>
-	<div class="main">
-		<div class="box">
-			<p>形状一：使用padding在大盒子内固定小盒子</p>
-			<p>代码如示：w100,m0,p100</p>
-			<div class="wrap"></div>
-		</div>
-		<div class="box">
-			<p>形状二：上圆下方</p>
-			<p>代码如示：w100,h95,bgc,bdrd:50% 50% 0 0</p>
-			<div class="wrap">
-			<div class="dogbody"></div>
-			</div>
-		</div>
-		<div class="box">
-			<p>形状三：利用.class.class使公共样式得到整理</p>
-			<p>代码太多审查元素吧</p>
-			<div class="wrap">
-			<div class="dog-body">
-				<div class="dog-ear left"></div>
-				<div class="dog-ear right"></div>
-			</div>
-			</div>
-		</div>
-		<div class="box">
-			<p>after是选择器伪元素之一用于在指定元素如clearfix后面添加内容的</p>
-			<p>代码太多审查元素吧</p>
-			<div class="wrap">
-			<div class="dog-body">
-				<div class="dog-ear left"></div>
-				<div class="dog-ear right"></div>
-				<div class="dog-eye left"></div>
-				<div class="dog-eye right"></div>
-			</div>
-			</div>
-		</div>
-		<div class="box">
-			<span>使用clip:rect裁剪absolute</span>
-			<div class="wrap">
-			<div class="dog-body">
-				<div class="dog-ear left"></div>
-				<div class="dog-ear right"></div>
-				<div class="dog-eye left"></div>
-				<div class="dog-eye right"></div>
-				<div class="dog-nose dog-nose1"></div>
-			</div>
-			</div>
-		</div>
-		<div class="box">
-			<span>使用clip:rect裁剪absolute</span>
-			<div class="wrap">
-			<div class="dog-body">
-				<div class="dog-ear left"></div>
-				<div class="dog-ear right"></div>
-				<div class="dog-eye left"></div>
-				<div class="dog-eye right"></div>
-				<div class="dog-nose dog-nose2"></div>
-				<div class="yao"></div>
-			</div>
-			</div>
-		</div>
-	</div>
+	<p>大盒子属性：display:-webkit-box;    -webkit-box-orient:horizontal;    -webkit-box-pack:center;    -webkit-box-align:center;</p>
+	<h2>盒子在页面中居中如登录窗口</h2>
+	<div class="box"></div>
+	<p>要让DIV水平和垂直居中，必需知道该DIV得宽度和高度，然后设置位置为绝对位置，距离页面窗口左边框和上边框的距离设置为50%，这个50%就是指页面窗口的宽度和高度的50%，最后将该DIV分别左移和上移，左移和上移的大小就是该DIV宽度和高度的一半。</p>
 </body>
 </html>
