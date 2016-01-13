@@ -3,31 +3,54 @@
 <head>
 	<meta charset="UTF-8">
 	<title>This is spicegame</title>
+	<link rel="stylesheet" href="../css/public.css">
 	<style type="text/css">
-	.box{
-		width: 150px;
-		height: 500px;
-		background-color: #000000;
-		position:relative;
+	.max_boxone,
+	.max_boxtwo{
+		margin-left:50px;
+		float: left;
 	}
-	.ball{
+	.boxone,
+	.boxtwo{
 		width: 150px;
-		height: 1px;
-		position:absolute;
-		top:507px;
-		transition:all 10s;
+		height: 300px;
+		background-color: #000000;
+	}
+	.ballone,
+	.balltwo{
+		width: 150px;
+		height: 2px;
+		position:relative;
+		top:300px;
+		transition:all 8s;
 		background-color: yellow;
 	}
-	body:hover .ball{
-		width: 150px;
-		height: 480px;
+	body:hover .ballone{
+		height: 270px;
 		top:30px;
+	}
+	body:hover .balltwo{
+		height: 220px;
+		top:80px;
 	}
 	</style>
 </head>
 <body>
-	<div class="box">
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>a:hover transtion</h1>
+    </div>
+    <div class="max_boxone">
+		<div class="boxone">
+			<div class="ballone"></div>
+		</div>
 	</div>
-	<div class="ball"></div>
+	<div class="max_boxtwo">
+		<div class="boxtwo">
+			<div class="balltwo"></div>
+		</div>
+	</div>
+	<p>为什么鼠标放下面不动</p>
 </body>
 </html>

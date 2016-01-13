@@ -3,29 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>关于li序号的</title>
-	<link rel="stylesheet" type="text/css" href="../../css/public.css">
 	<style type="text/css">
-		.li_style{margin:auto auto;width: 100px;height: 800px;}
-		h2{text-align:center;text-shadow:1px 1px 0px #eee,2px 2px 0px lavender;color: palegreen;}
-		body:hover h2{color:chocolate;}
-		
+		li{
+			color:darkgray;
+		}
+		h1,h2,h3{
+			background-color: darkcyan;
+		}
+		.roman{
+			list-style-type: upper-roman;
+		}
+		.image{
+			list-style-image: url(../../images/li-style.gif);
+		}
+		.images{
+			list-style-image: url(../../images/li-style.gif);
+			list-style-position: inside;
+		}
 	</style>
 </head>
 <body>
-	<h2>CHINA 快递 INDEX</h2>
-	<div class="li_style">
-		<ul>
-			<li><a href="">*韵达*</a></li>
-			<li><a href="">*顺风*</a></li>
-			<li><a href="">*申通*</a></li>
-			<li><a href="">*中通*</a></li>
-			<li><a href="">*速通*</a></li>
-			<li><a href="">*圆通*</a></li>
-			<li><a href="">*邮政*</a></li>
-			<li><a href="">*汇通*</a></li>
-			<li><a href="">*全峰*</a></li>
-			<li><a href="">*天天*</a></li>
-		</ul>
-	</div>
+	<h1>list-style-type</h1>
+	<ul class="roman">
+		<li>建材学院</li>
+		<li>东北大学</li>
+		<li>科技师范学院</li>
+		<p>none无标记disc实心圆circle空心圆square实心方块......</p>
+	</ul>
+	<h2>list-style-image</h2>
+	<ul class="image">
+		<li>建材学院</li>
+		<li>东北大学</li>
+		<li>科技师范学院</li>
+		<p>格式示例list-style-image:url();</p>
+	</ul>
+	<h3>list-style-position</h3>
+	<ul class="images">
+		<li>建材学院</li>
+		<li>东北大学</li>
+		<li>东石油</li>
+		<li>科技师范学院</li>
+		主要的值：inside和outside
+	</ul>
 </body>
 </html>
