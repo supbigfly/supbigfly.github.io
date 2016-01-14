@@ -34,23 +34,9 @@ li{
 	top:10px;
 	left: 10px;
 	border-radius: 10px;
-	display: none;
 }
 .header h1{
 	color:#ffffff;
 	text-align: center;
 	line-height: 250px;
-}
-.icon-reorder{
-	color:#eee;
-	position: fixed;
-	top:15px;
-	left: 15px;
-	font-size: 32px;
-	cursor: pointer;
-}
-@media (min-width: 784px){
-	.header a{
-		display: inline;
-	}
 }
