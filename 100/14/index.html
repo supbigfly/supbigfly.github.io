@@ -3,59 +3,99 @@
 <head>
 <title>clearfix:after</title>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/public.css">
 <style type="text/css">
-*
-{
-	margin: 0;padding: 0;
-}
-.father{box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);width: 1000px;transition:all 1s;}
-.father:hover{box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(0, 0, 0, 0.12);}
-.son{width:100px;height:60px;background-color:#00bcd4;float: left;line-height: 60px;text-align: center;}
-.daughter{width:900px;height:60px;background-color:#eee;float: left;}
-.box1{width: 400px;height: 50px;background-color: green;float: left;}
-.box2{width: 400px;height: 60px;background-color: gray;clear: left;}
-.box3{width: 700px;background-color:gray;}
-.box4{width: 700px;height: 50px;background-color: blue;margin-top: 10px;}
-.clearfix:after,
-.clearfix:before
-{
-	content: "";
-	display: block;
-}
-.clearfix:after
-{
-	clear: both;
-}
-.clearfi:after,
-.clearfi:before
-{
-	content: "";
-	display: table;
-}
-.clearfi:after
-{
-	clear: both;
-}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.father{
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		width: 1000px;
+		transition:all 1s;
+	}
+	.father:hover{
+		box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(0, 0, 0, 0.12);
+	}
+	.son{
+		width:100px;
+		height:60px;
+		background-color:#00bcd4;
+		float: left;
+		line-height: 60px;
+		text-align: center;
+	}
+	.daughter{
+		width:900px;
+		height:60px;
+		background-color:#eee;
+		float: left;
+	}
+	.box1{
+		width: 400px;
+		height: 50px;
+		background-color: green;
+		float: left;
+	}
+	.box2{
+		width: 400px;
+		height: 60px;
+		background-color: gray;
+		clear: left;
+	}
+	.box3{
+		width: 700px;
+		background-color:gray;
+	}
+	.box4{
+		width: 700px;
+		height: 50px;
+		background-color: blue;
+		margin-top: 10px;
+	}
+	.clearfix:after,
+	.clearfix:before
+	{
+		content: "";
+		display: block;
+	}
+	.clearfix:after
+	{
+		clear: both;
+	}
+	.clearfi:after,
+	.clearfi:before
+	{
+		content: "";
+		display: table;
+	}
+	.clearfi:after
+	{
+		clear: both;
+	}
 </style>
 </head>
 <body>
-<h3>clearfix是应用技巧不是方法第一种：解决飘的问题一个大盒子套两个小盒子</h3>
-<div class="father clearfix">
-<div class="son">1</div>
-<div class="daughter"></div>
-</div>
-<pre>第二种：还是飘的问题，这次是两个盒子，不套盒子，第一个盒子飘第二个不飘
-	共两个解决方案：直接使用clear可以决绝，使用clearfix不能解决
-</pre>
-<div class="box1"></div>
-<div class="box2"></div>
-<pre>
-	第三种：大盒子里面有个盒子，两个盒子的margin-top重叠了，造成给小盒子margin-top产生大盒子给上面的距离，或者是margin-bottom，此时要搞清楚谁对谁造成了影响，clearfix这个词不要给错了位置
-</pre>
-<div class="box3 clearfi">
-	<div class="box4"></div>
-</div>
-<pre>
-</pre>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>clearfix:after</h1>
+    </div>
+	<h3>clearfix是应用技巧不是方法第一种：解决飘的问题一个大盒子套两个小盒子</h3>
+	<div class="father clearfix">
+		<div class="son">1</div>
+		<div class="daughter"></div>
+	</div>
+	<pre>第二种：还是飘的问题，这次是两个盒子，不套盒子，第一个盒子飘第二个不飘
+		共两个解决方案：直接使用clear可以决绝，使用clearfix不能解决
+	</pre>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<pre>
+		第三种：大盒子里面有个盒子，两个盒子的margin-top重叠了，造成给小盒子margin-top产生大盒子给上面的距离，或者是margin-bottom，此时要搞清楚谁对谁造成了影响，clearfix这个词不要给错了位置
+	</pre>
+	<div class="box3 clearfi">
+		<div class="box4"></div>
+	</div>
 </body>
 </html>

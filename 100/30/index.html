@@ -3,16 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>元素居中的学习</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
 	<style>
 		*{
 			margin: 0;
 			padding: 0;
 		}
-		h1{
+		h2{
 			color:#eeeeee;
 			background-color: darkcyan;
 		}
-		h2{
+		h3{
 			color:#eeeeee;
 			background-color: darkcyan;
 		}
@@ -32,25 +33,30 @@
 			background-color: yellow;
 		}
 		.box{
-			width: 400px;
-			height: 400px;
+			width: 200px;
+			height: 200px;
 			background-color: blue;
 			position: absolute;
 			top:50%;
 			left: 50%;
-			margin-top: -200px;
-			margin-left: -200px;
+			margin-top: -100px;
+			margin-left: -100px;
 			opacity: 0.2;
 		}
 	</style>
 </head>
 <body>
-	<h1>大盒子中的小盒子居中</h1>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>元素居中的学习</h1>
+    </div>
+	<h2>大盒子中的小盒子居中</h2>
 	<div class="bigbox">
 		<div class="smallbox"></div>
 	</div>
 	<p>大盒子属性：display:-webkit-box;    -webkit-box-orient:horizontal;    -webkit-box-pack:center;    -webkit-box-align:center;</p>
-	<h2>盒子在页面中居中如登录窗口</h2>
+	<h3>盒子在页面中居中如登录窗口</h3>
 	<div class="box"></div>
 	<p>要让DIV水平和垂直居中，必需知道该DIV得宽度和高度，然后设置位置为绝对位置，距离页面窗口左边框和上边框的距离设置为50%，这个50%就是指页面窗口的宽度和高度的50%，最后将该DIV分别左移和上移，左移和上移的大小就是该DIV宽度和高度的一半。</p>
 </body>

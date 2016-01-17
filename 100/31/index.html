@@ -2,98 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width" />
-	<title>Document</title>
-	<script src="../js/jQuery.js"></script>
-	<style>
-		.wrap{
-			background-color: #FAFAD2;
-			position: fixed;
-			top:0px;
-			bottom:0px;
-			left: 0px;
-			right: 0px;
-		}
-		.cake{
-			width: 400px;
-			height: 400px;
-			border-radius: 50%;
-			background-color: #fff;
-			margin:100px auto;
-			box-shadow: -7px 13px 5px #FF8C00;
-		}
-		.liang{
-			width: 400px;
-			height: 400px;
-			position: relative;
-			top:-230px;
-			left:0px;
-			border-radius: 50%;
-			display: none;
-		}
-		.liang.liangs{
-			display: block;
-		}
-		p{
-			position: relative;
-			top:135px;
-			left: 95px;
-			font-weight: bold;
-			font-size: 45px;
-			color:#FA8072;
-		}
-		.max_btn{
-			position: fixed;
-			top:0px;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-			z-index: 10;
-			background-color: black;
-			opacity: .5;
-		}
-		.max_btn.max_btns{
-			display: none;
-		}
-		@media (min-width: 768px){
-			.cake{
-				margin:150px auto;
-			}
-			.liang{
-				width: 400px;
-				height: 400px;
-				top:-190px;
-			}
-			p{
-			top:135px;
-			left: 95px;
-			font-size: 45px;
-			}
-			.cake{
-				width: 400px;
-				height: 400px;
-				margin:150px auto;
-			}
-		}
-	</style>
+	<title>html5 video</title>
 </head>
 <body>
-	<audio controls="controls" autoplay="autoplay"  loop="loop">
-		<source src="../../music/happy.mp3" type="audio/mpeg" />
-	</audio>
-	<div class="wrap">
-		<div class="cake">
-			<p>奶奶</p>
-			<p>生日快乐</p>
-			<img class="liang" src="cakes.jpg" alt="">
-		</div>
-	</div>
-	<div class="max_btn"></div>
-	<script>
-		$('.max_btn').click(function(){
-			$(this).addClass('max_btns');
-			$('.liang').addClass('liangs');
-		});
-	</script>
+	<video controls="controls">
+		<scource src="http://www.letv.com/ptv/vplay/2072980.html" type="video/html">
+	</video>
 </body>
 </html>

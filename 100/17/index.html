@@ -2,38 +2,61 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>outline</title>
+	<title>表单</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
 	<style type="text/css">
-		body{
-			background-color: tan;
-		}
-		.main{
-			width: 300px;
+		.box{
+			width: 400px;
 			height: 300px;
-			background-color: green;
-			margin:150px auto;
+			background-color: #DEB887;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin-top: -80px;
+			margin-left: -150px;
 		}
-		.main input{
-			outline: none;
-			display:block;
-			background-color: green;
+		h3{
+			text-align: center;
 		}
-		.aaa{
-			width: 500px;
-			height: 200px;
-			background-color: black;
-			color:#fff;
+		.name,
+		.pass,
+		.btn{
+			width: 300px;
+			height: 32px;
+			margin: 0 auto;
+		}
+		.label_class{
+			width: 60px;
+			margin-bottom: 5px;
+			float: left;
+		}
+		.input_class{
+			float: left;
 		}
 	</style>
 </head>
 <body>
-	<div class="main">
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>表单</h1>
+    </div>
+	<div class="box">
+		<h3>注册</h3>
 		<form action="">
-			<input type="text">
+			<div class="name">
+				<label class="label_class" for="na">用户名</label>
+				<input class="input_class" id="na" type="text" />
+			</div>
+			<div class="pass">
+				<label class="label_class" for="pa">密码</label>
+				<input class="input_class" id="pa" type="password" />
+			</div>
+			<div class="btn">
+				<input type="submit" value="提交" />
+				<input type="reset" value="重置" />
+			</div>
 		</form>
-		<div class="aaa">
-			
-		</div>
 	</div>
 </body>
 </html>
