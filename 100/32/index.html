@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ul>li*3>a与ul>li>a*3</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style>
+		.main{
+			width: 960px;
+			margin:20px auto;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+			background-color: #2F4F4F;
+		}
+		.main_top .container,
+		.main_bottom .container{
+			margin:20px 0px 2px 10px;
+			width: 960px;
+			height: 60px;
+			border-top:1px dashed yellow;
+			border-bottom: 1px dashed yellow;
+		}
+		.main_top li a,
+		.main_bottom li a{
+			float: left;
+			color:#fff;
+			margin-right: 5px;
+			padding:8px 5px;
+		}
+		.main_top .current,
+		.main_bottom .current{
+			border-radius: 7px;
+			background-color: rgba(255,255,255,.2);
+			
+		}
+		.main_top .container_left,
+		.main_bottom .container_left{
+			border-bottom: 1px dashed yellow;
+			float: left;
+		}
+		.main_top pre,
+		.main_bottom pre{
+			color: #fff;
+		}
+		.main_top .container_right,
+		.main_bottom .container_right{
+			border-left: 1px dashed yellow;
+			border-bottom: 1px dashed yellow;
+			border-right: 1px dashed yellow;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>ul>li*3>a与li>a*3</h1>
+    </div>
+    <div class="main">
+    	<div class="main_top clearfix">
+    		<div class="container">
+    			<ul>
+	    			<li><a class="current" href="#">Blog</a></li>
+	    			<li><a href="#">Work</a></li>
+	    			<li><a href="#">About</a></li>
+    			</ul>
+    		</div>
+    		<div class="container_left">
+    			<pre>html代码如下：
+    		ul
+		  li a href="#" class=current blog a li
+		  li a href="#" work a li
+		  li a href="#" About a li
+		ul
+    			</pre>
+    		</div>
+    		<div class="container_right">
+    			<pre>css代码如下：
+.container{
+           margin:20px 0px 2px 10px;
+		   width: 960px;
+		   height: 60px;}
+li a{
+     float: left;
+     color:#fff;
+     margin-right: 5px;
+     padding:8px 5px;}
+.current{
+         border-radius: 7px;
+         background-color: rgba(255,255,255,.2);}
+.container_left{
+                float: left;
+                margin-right: 150px;}
+pre{
+    color: #fff;}
+.container_right{
+                 float: left;}
+    		</div>
+    	</div>
+    	<div class="main_bottom clearfix">
+    		<div class="container">
+    			<li>
+    				<a class="current" href="#">Blog</a>
+    				<a href="#">Work</a>
+    				<a href="#">About</a>
+    			</li>
+    		</div>
+    		<div class="container_left">
+    			<pre>html代码如下：
+    		li
+    		a href="#" class="current" Blog a
+    		a href="#" Work a
+    		a href="#" About a
+    		li
+    			</pre>
+    		</div>
+    		<div class="container_right">
+    			<pre>css代码如下：
+.container{
+           margin:20px 0px 2px 10px;
+		   width: 960px;
+		   height: 60px;}
+li a{
+     float: left;
+     color:#fff;
+     margin-right: 5px;
+     padding:8px 5px;}
+.current{
+         border-radius: 7px;
+         background-color: rgba(255,255,255,.2);}
+.container_left{
+                float: left;
+                margin-right: 150px;}
+pre{
+    color: #fff;}
+.container_right{
+                 float: left;}
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>
