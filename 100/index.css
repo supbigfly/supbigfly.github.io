@@ -10,6 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing:border-box;
+	font-family: "Microsoft Yahei","Hiragino Sans GB",sans-serif;
 }
 a{
 	text-decoration: none;
@@ -75,7 +76,7 @@ a.hamburger:hover{
 }
 .box{
 	margin-top:10px;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
 	-webkit-transition: all 1s;
 	transition:all 1s;
 	margin:10px auto;
@@ -85,7 +86,7 @@ a.hamburger:hover{
 	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(0, 0, 0, 0.12);
 }
 .doc{
-	background-color: #C8E6C9;
+	background-color: #B03060;
 	height: 60px;
 	text-align: center;
 	line-height: 60px;
@@ -98,7 +99,7 @@ a.hamburger:hover{
 	background-color: #fff;
 }
 .title{
-	padding:10px 0px 10px 20px;
+	padding:15px 0px 10px 15px;
 	text-align: center;
 	text-transform:uppercase;
 	color:#212121;
@@ -147,13 +148,14 @@ a.hamburger:hover{
 @media (min-width:764px){
 	.doc{
 		width: 20%;
-		height: 80px;
+		height: 95px;
 		line-height: 80px;
 		float: left;
 	}
 	.essay{
 		width: 80%;
 		float: right;
+		height: 95px;
 	}
 	.title,
 	.date{

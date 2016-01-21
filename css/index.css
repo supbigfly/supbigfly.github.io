@@ -8,19 +8,23 @@
 .top a{
     color:#FFFFFF;
     text-decoration: none;
-    display: block;
-    float:right;
+    float: right;
     text-align:center;
-    width:17%;
-    margin-right: 10px;
+    border-bottom:2px solid transparent;
+    transition:all 0.2s;
 }
 .top a:hover{
-    border-bottom:2px solid chartreuse;
+    border-bottom:2px solid yellow;
 }
-
+.container{
+    width: 90%;
+    margin:0 auto;
+}
+.container .current{
+    margin-left: 40px;
+}
 .header{
     background-color: #4CAF50;
-    text-align: center;
     color:#FFFFFF;
     height:100px;
 }
@@ -87,9 +91,6 @@
     transform:translateX(100%);
 }
 @media (min-width: 786px){
-    .top a{
-        width: 9%;
-    }
     .doora,.doorb{
         line-height: 85px;
     }
