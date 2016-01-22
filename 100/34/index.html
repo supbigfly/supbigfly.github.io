@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>content:"";</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+		.main{
+			width: 960px;
+			margin:0 auto;
+			box-shadow: 1px 2px 5px rgba(0,0,0,0.4);
+		}
+		.one,
+		.two,
+		.three,
+		.four,
+		.five,
+		.six{
+			width: 220px;
+			height: 280px;
+			float: left;
+			border:4px solid #87CEEB;
+			margin-bottom: 10px;
+			text-align: center;
+			line-height: 22px;
+		}
+		.one,
+		.two,
+		.four,
+		.five{
+			margin-right: 150px;
+		}
+		.onehref,
+		.twohref,
+		.threehref,
+		.fourhref,
+		.fivehref,
+		.sixhref{
+			display: block;
+			position: relative;
+		}
+		.oneimg{
+			background-image: url(../../images/imgone.jpg);
+			background-size:cover;
+			background-position:50% 50%;
+			width: 100%;
+			height: 250px;
+		}
+		.onehref:before,
+		.twohref:before,
+		.threehref:before,
+		.fourhref:before,
+		.fivehref:before,
+		.sixhref:before{
+			display: block;
+			background-color: #111;
+			width: 100%;
+			height: 100%;
+			content: "";
+			position: absolute;
+			left: 0px;
+			top:0px;
+			opacity:.5;
+			transition:opacity 1s;
+		}
+		.onehref:hover:before,
+		.twohref:hover:before,
+		.threehref:hover:before,
+		.fourhref:hover:before,
+		.fivehref:hover:before,
+		.sixhref:hover:before{
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>content:""; hover:before</h1>
+    </div>
+    <div class="main">
+    	<div class="one">
+    		<a href="#" class="onehref">
+    			<div class="oneimg"></div>
+    			<p>喵</p>
+    		</a>
+    	</div>
+    	<div class="two">
+    		<a href="#" class="twohref">
+    			<div class="oneimg"></div>
+    			<p>喵</p>
+    		</a>
+    	</div>
+    	<div class="three">
+    		<a href="#" class="threehref">
+    			<div class="oneimg"></div>
+    			<p>喵</p>
+    		</a>
+    	</div>
+    	<div class="four">
+    		<a href="#" class="fourhref">
+    			<div class="oneimg"></div>
+    			<p>喵</p>
+    		</a>
+    	</div>
+    	<div class="five">
+    		<a href="#" class="fivehref">
+    			<div class="oneimg"></div>
+    			<p>喵</p>
+    		</a>
+    	</div>
+    	<div class="six">
+    		<a href="#" class="sixhref">
+    			<div class="oneimg"></div>
+    			<p>喵</p>
+    		</a>
+    	</div>
+    </div>
+</body>
+</html>
