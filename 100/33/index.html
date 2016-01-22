@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>z-index</title>
+	<style>
+		pre{
+			font-size: 20px;
+		}
+		*{
+			margin: 0;
+		}
+		.header{
+			color: #eee;
+			font-size: 33px;
+			text-align: center;
+			line-height: 70px;
+			width: 100%;
+			background-color: rgba(0,0,0,.3);
+			height: 70px;
+			position: fixed;
+			left: 0px;
+			top:0px;
+		}
+		.main{
+			color: #fff;
+			font-size: 32px;
+			line-height: 500px;
+			height: 300px;
+			text-align: center;
+			background-image: url(../../images/banner.png);
+			-webkit-background-size: cover;
+			background-size: cover;
+			/*z-index: 3;*/
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		我是header
+    </div>
+    <div class="main">
+    	我是main的背景图
+    </div>
+    <div class="footer">
+    	<pre>
+从上到下header main,
+    给header使用position:fixed后跳出一般流程，
+        main钻到了header下面，这时给main一个z-
+            index属性就会把header盖住。然后问题又出现了，
+                怎么不中呢，哦，没用position:relative;就是说z-
+                    index徒有虚名，没有position帮助他跳出一般流程，
+                        z-index不起作用。当我把z-index注销时，header并没有出现。
+    	</pre>
+    	
+    </div>
+    <a href="../index.html">返回</a>
+</body>
+</html>
