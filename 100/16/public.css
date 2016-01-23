@@ -13,10 +13,10 @@ a{
 	height: 500px;
 	background-color: #00CED1;
 	margin:30px auto 0px auto;
-	font-size: 35px;
 }
-.box p{
+.pcenter{
 	text-align: center;
+	font-size: 35px;
 }
 .box_left{
 	width: 500px;

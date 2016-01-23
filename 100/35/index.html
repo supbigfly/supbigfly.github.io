@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3文本换行</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style>
+		.main{
+			width: 960px;
+			margin:0 auto;
+		}
+		.main p:nth-of-type(3),
+		.main p:nth-of-type(5),
+		.main p:nth-of-type(9),
+		.main p:nth-of-type(14){
+			width: 200px;
+			border:1px solid red;
+			background-color: #000;
+			color:gold;
+		}
+		.main p:nth-of-type(5){
+			word-wrap:break-word;
+		}
+		.main p:nth-of-type(9){
+			word-break:break-all;
+		}
+		.main p:nth-of-type(14){
+			text-wrap:none;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>word-wrap word-brak text-wrap</h1>
+    </div>
+    <div class="main">
+    	<h2>word-wrap</h2>
+    	<p>允许对长的不可分割的单词进行分割并换行到下一行。(中英文处理效果一样)word-wrap有两个取值：</p>
+    	<p>1、word-wrap:normal：效果如下</p>
+    	<p>只在允许的断字点换行（浏览器保持默认处理）。</p>    	
+    	<p>2、word-wrap:break-word：在长单词或URL地址内部进行换行,在容器末端不会截断单词，而是作为整体自动换行效果如下</p>
+    	<p>Hello everyone, I was a big brother, I'm your boss.</p>
+    	<h2>word-break</h2>
+    	<p>规定非中日韩文本的换行规则。(对中文正常换行，对英文按照如下说明处理)有三个取值：</p>
+    	<p>1、word-break: normal;等价于word-wrap: normal</p>
+    	<p>2、word-break: break-all：允许在单词内换行。（ 即在容器末端有长单词不能完全显示，会截断单词 ）</p>
+    	<p>Hello everyone, I was a big brother, I'm your boss.</p>
+    	<p>3、word-break: keep-all：只能在半角空格或连字符处换行。</p>
+    	<h2>text-wrap</h2>
+    	<p>规定文本的换行规则,有4个取值：</p>
+    	<p>1、text-wrap:normal;只在允许的换行点进行换行。</p>
+    	<p>2、text-wrap:none;不换行。元素无法容纳的文本会溢出。</p>
+    	<p>Hello everyone, I was a big brother, I'm your boss.</p>
+    	<p>3、text-wrap：suppress：压缩元素中的换行。浏览器只在行中没有其他有效换行点时进行换行。</p>
+    	<p>4、text-wrap：unrestricted：在任意两个字符间换行。</p>
+    	<h3>目前主流浏览器都不支持 text-wrap 属性</h3>
+    </div>
+</body>
+</html>
