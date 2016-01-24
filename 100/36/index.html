@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3结构类选择器</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<style>
+		.box li{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			float: left;
+			text-align: center;
+			line-height: 40px;
+		}
+		.box li:first-child{
+			background-color: red;
+		}
+		.box li:last-child{
+			background-color: yellow;
+		}
+		.main li:nth-child(3n){
+			background-color: #2F4F4F;
+		}
+		span{
+			color:#FF4500;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>css3结构类选择器</h1>
+    </div>
+    <div class="main">
+    	<div class="box clearfix">
+    		<ul>
+    			<li><a href="#">1</a></li>
+    			<li><a href="#">2</a></li>
+    			<li><a href="#">3</a></li>
+    			<li><a href="#">4</a></li>
+    			<li><a href="#">5</a></li>
+    			<li><a href="#">6</a></li>
+    			<li><a href="#">7</a></li>
+    			<li><a href="#">8</a></li>
+    		</ul>
+    	</div>
+		<p>①红色球使用的是:first-child是用来选择某个元素的第一个子元素</p>
+		<p>②黄色球使用的是:last-child是用来选择某个元素的最后一个子元素</p>
+		<p>③:nth-child()可以选择某个的一个或多个特定的子元素,参数值如下:(length),(n),(n*length),(n+length),(-n+length),(n*length+1)只在单个文件中起作用或者只给li做描述的时候起作用这里的n不可代替,数字是从main这个层开始差数？</p>
+		<p>④:nth-last-child跟上一个是反的</p>
+		<p>⑤:nth-of-type类似于:nth-child，不同的是他只计算选择器中指定的那个元素,这个选择器主要对用来定位元素中包含了好多不同类型的元素是很有用处比如说main下面有li,p等元素的时候只需要选择p元素<span>隔一个一个样式的写法是这样的p:nth-of-type(even)</span></p>
+		<p>⑥:nth-last-of-type</p>
+		<p>⑦first-of-type</p>
+		<p>⑧last-of-type</p>
+		<p>⑨only-child表示的是一个元素是它的父元素的唯一一个子元素</p>
+		<p>⑩only-of-type表示一个元素有很多不同的子元素，而其中只有一个子元素是唯一的</p>
+		<p>11empty如p:empty{display:none;}</p>
+    </div>
+</body>
+</html>

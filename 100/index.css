@@ -59,7 +59,7 @@ background-color: #7FFFD4;
 text-align: center;
 position: fixed;
 right: 15px;
-bottom:15px;
+bottom:42px;
 z-index: 1;
 line-height: 50px;
 border-radius: 10%;
@@ -149,7 +149,7 @@ a.hamburger:hover{
 	.doc{
 		width: 20%;
 		height: 95px;
-		line-height: 80px;
+		line-height: 95px;
 		float: left;
 	}
 	.essay{

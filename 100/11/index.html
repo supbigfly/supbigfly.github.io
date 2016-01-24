@@ -2,25 +2,66 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>background</title>
 	<link rel="stylesheet" type="text/css" href="../css/public.css">
 	<style type="text/css">
-		p:nth-of-type(1){
-			color:#eee;
-			background-color: blue;
+		.main{
+			width: 960px;
+			margin:0 auto;
 		}
-		p:nth-of-type(2){
-			background-image: url(../../images/banner.png);
-			margin-top: 20px;
+		.main_left,
+		.main_right{
+			float: left;
 		}
-		p:nth-of-type(3){
-			background-image: url(../../images/li-style.gif);
-			background-repeat: repeat-x;
-			background-position: center middle;
-			margin-top: 20px;
+		.main_right{
+			margin-left: 125px;
 		}
-		pre{
-
+		.main_right p{
+			text-align: center;
+		}
+		.ulleft,
+		.ulright{
+			float: left;
+		}
+		.ulleft li,
+		.ulright li{
+			border: 1px dashed #FF9800;
+		}
+		.main_bottom{
+			clear:left;
+			margin-top:20px;
+			color:#FF9800;
+		}
+		.main_bottom .one,
+		.main_bottom .two,
+		.main_bottom .three,
+		.main_bottom .four{
+			background-image: url(../../images/29-bg.JPG);
+			background-position: center;
+			background-repeat: no-repeat;
+			height:100px;
+			margin-bottom: 10px;
+		}
+		.main_bottom .five{
+			background-image: url(../../images/29-bg.JPG);
+			height:100px;
+			margin-bottom: 10px;
+			border:4px dashed red;
+			/*background-clip: content-box;*/
+			background-origin: content-box;
+		}
+		.main_bottom .one{
+			background-size:cover;
+		}
+		.main_bottom .two{
+			background-size: 960px 100px;
+		}
+		.main_bottom .three{
+			background-size:96% 10%;
+		}
+		.main_bottom .four{
+			background-size:contain;
 		}
 	</style>
 </head>
@@ -30,12 +71,64 @@
         <a href="../index.html">返回</a>
         <h1>background</h1>
     </div>
-    <p>bgc:#0000FF;blue;</p>
-    <p>bgi:url();</p>
-    <p>bgr and bgp</p>
-    <p>bga:scroll;fixed</p>
-    <p>bgs:length;percentage;cover;contain;</p>
-    <p>background:origin</p>
-    <p>background:clip</p>
+    <div class="main">
+    	<p>background分为css和css3详情请参阅<a href="http://www.w3school.com.cn/cssref/pr_background.asp">w3school</a></p>
+    	<div class="main_top clearfix">
+	    	<div class="main_left">
+	    		<table border=1 bgcolor=#727272>
+	    			<caption align=center>css</caption>
+	    			<tr>
+	    				<th>属性</th>
+	    				<th>描述</th>
+	    			</tr>
+			    	<tr>
+			    		<td>background</td>
+			    		<td>简写属性可将八个属性在一个设置中声明</td>
+			    	</tr>
+			    	<tr>
+			    		<td>background-attachment</td>
+			    		<td>背景图像是否固定或者随着页面的其余部分滚动</td>
+			    	</tr>
+			    	<tr>
+			    		<td>background-color</td>
+			    		<td>设置元素的背景颜色</td>
+			    	</tr>
+			    	<tr>
+			    		<td>background-image</td>
+			    		<td>把图像设置为背景</td>
+			    	</tr>
+			    	<tr>
+			    		<td>background-position</td>
+			    		<td>设置背景图像的起始位置</td>
+			    	</tr>
+			    	<tr>
+			    		<td>background-repeat</td>
+			    		<td>设置背景图像是否及如何重复</td>
+			    	</tr>
+		    	</table>
+	    	</div>
+	    	<div class="main_right">
+	    		<p>css3</p>
+	    		<ul class="ulleft">
+	    			<li>background-size</li>
+	    			<li>background-clip</li>
+	    			<li>background-origin</li>
+	    		</ul>
+	    		<ul class="ulright">
+	    			<li>规定背景图片的尺寸</li>
+	    			<li>规定背景的绘制区域</li>
+	    			<li>规定背景图片的定位区域</li>
+	    		</ul>
+	    	</div>
+	    </div>
+	    <div class="main_bottom">
+	    	<div class="one">background-size:cover;</div>
+	    	<div class="two">background-size:length;</div>
+	    	<div class="three">background-size:percentage;</div>
+	    	<div class="four">background-size:contain;</div>
+	    	<div class="five">background-clip与background-origin,clip没有origin可以origin没有clip细微可以粗略不可以</div>
+	    </div>
+    </div>
+	
 </body>
 </html>
