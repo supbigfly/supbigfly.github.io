@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义字体</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		@font-face{
+			font-family: supbigfly;
+			src:url(../font/FontAwesome.otf),
+				url(../font/fontawesome-webfont.eot),
+				url(../font/fontawesome-webfont.svg),
+				url(../font/fontawesome-webfont.ttf),
+				url(../font/fontawesome-webfont.woff);
+		}
+		p{font-family: supbigfly;}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>自定义字体的方法</h1>
+    </div>
+    <div class="main">
+    	<p>把喜欢的字体截图-<a href="http://www.qiuziti.com">求字体</a></p>
+    	<p>浏览-打开-搜索-得到.ttf文件</p>
+    	<p>登录<a href="http://www.fontsquirrel.com/tools/webfont-generator">最新字体转换网站</a>-选中YES选项</p>
+    	<p>upload-download-fouts-解压</p>
+    	<p>在style下面写@font-face{font-famile:supbigfly;src:url(fonts/.ttf),src:url(fonts/.eot);有几种格式写几种a{font-famile:supbigfly;}在括号内加引号避免出现问题</p>
+    	<p>link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"</p>
+    	<p>在上面这句话的font文件夹中就有各种字体</p>
+    </div>
+</body>
+</html>
