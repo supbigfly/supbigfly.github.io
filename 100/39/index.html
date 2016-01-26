@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动导航</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		@font-face{
+			font-family: supbigfly;
+			src:url(../font/FontAwesome.otf),
+				url(../font/fontawesome-webfont.eot),
+				url(../font/fontawesome-webfont.svg),
+				url(../font/fontawesome-webfont.ttf),
+				url(../font/fontawesome-webfont.woff);
+		}
+		.main p{
+			font-family: supbigfly;
+			color:#fff;
+		}
+		.main{
+			padding:20px 250px;
+			background-color: #000;
+		}
+		/*nav{
+			background-color: #696969;
+		}*/
+		ul{
+			height: 40px;
+			overflow: hidden;
+		}
+		li{
+			list-style-type:none;
+			float: left;
+		}
+		li:hover span{
+			margin-top: -40px;
+		}
+		.main span,
+		.main a{
+			display: block;
+			padding:0 20px;
+			height: 40px;
+			line-height: 40px;
+		}
+		.main span{
+			background-color: #eee;
+			transition:margin-top 0.6s ease-in-out;
+		}
+		.main a{
+			background-color: #8B4513;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>滚动导航</h1>
+    </div>
+    <div class="main">
+    	<nav>
+    		<ul>
+    			<li><span>index</span><a href="#">index</a></li>
+    			<li><span>content</span><a href="#">content</a></li>
+    			<li><span>about</span><a href="#">about</a></li>
+    			<li><span>some</span><a href="#">some</a></li>
+    			<li><span>thing</span><a href="#">thing</a></li>
+    		</ul>
+    	</nav>
+    	<p>动画并不难，重要的是把基础知识夯实，然后夯成墙。</p>
+    	<p>使用的标签有：nav ul li span a</p>
+    	<p>使用的属性有：background-color height float:left margin-top padding hover transition ease-in-out display:block overflow:hidden line-height</p>
+    	<p>利用块元素独立成行的特点把a和span升级，在li中就会一个个的竖着排列，加上float就会达到一个妙用a飘在一起span飘在一起，因为li要飘所以，设定ul的高度，为了使用overflow达到效果将a和span都设定成固定宽度，让一类元素把另一类挤出去。还有一妙用就是margin使用负值而不是display:none这样写简化了这个过程。</p>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+</html>
