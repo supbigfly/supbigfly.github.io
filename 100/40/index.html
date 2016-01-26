@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		@font-face{
+			font-family: supbigfly;
+			src:url(../font/FontAwesome.otf),
+				url(../font/fontawesome-webfont.eot),
+				url(../font/fontawesome-webfont.svg),
+				url(../font/fontawesome-webfont.ttf),
+				url(../font/fontawesome-webfont.woff);
+		}
+		.main p{
+			font-family: supbigfly;
+			color:#fff;
+			clear:left;
+		}
+		.main{
+			margin:10px auto;
+			background-color: #000;
+		}
+		.mainnav>li{
+			float: left;
+			padding:0 20px;
+			background-color: #008B45;
+			line-height: 40px;
+			position: relative;
+		}
+		.mainnav li:first-child{
+			border-radius: 8px 0px 0px 8px;
+		}
+		.mainnav li:last-child{
+			border-radius: 0px 8px 8px 0px;
+		}
+		.main a{
+			color: #fff;
+		}
+		.subnav{
+			position: absolute;
+			left: 10px;
+			top:40px;
+			overflow: hidden;
+		}
+		.subnav a{
+			display: block;
+			background-color: #000;
+			padding:0 15px;
+			height: 0;
+			transition:height 0.6s ease-in-out;
+		}
+		.mainnav>li:hover .subnav li a{
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>下拉菜单</h1>
+    </div>
+    <div class="main">
+    	<nav>
+    		<ul class="mainnav">
+    			<li>
+    				<a href="#">home</a>
+    				<ul class="subnav">
+    					<li><a href="#">home</a></li>
+    					<li><a href="#">home</a></li>
+    					<li><a href="#">home</a></li>
+    					<li><a href="#">home</a></li>
+    				</ul>
+    			</li>
+    			<li>
+    				<a href="#">about</a>
+    				<ul class="subnav">
+    					<li><a href="#">about</a></li>
+    					<li><a href="#">about</a></li>
+    					<li><a href="#">about</a></li>
+    					<li><a href="#">about</a></li>
+    				</ul>
+    			</li>
+    			<li>
+    				<a href="#">program</a>
+    				<ul class="subnav">
+    					<li><a href="#">program</a></li>
+    					<li><a href="#">program</a></li>
+    					<li><a href="#">program</a></li>
+    					<li><a href="#">program</a></li>
+    				</ul>
+    			</li>
+    			<li>
+    				<a href="#">content</a>
+    				<ul class="subnav">
+    					<li><a href="#">content</a></li>
+    					<li><a href="#">content</a></li>
+    					<li><a href="#">content</a></li>
+    					<li><a href="#">content</a></li>
+    				</ul>
+    			</li>
+    			<li>
+    				<a href="#">book</a>
+    				<ul class="subnav">
+    					<li><a href="#">5555555555555555555555555555</a></li>
+    					<li><a href="#">555</a></li>
+    					<li><a href="#">555</a></li>
+    					<li><a href="#">55</a></li>
+    				</ul>
+    			</li>
+    		</ul>
+    	</nav>
+    	<p>说是overflow跟height配合使用</p>
+    	<p>使用的标签有：nav ul li a</p>
+    	<p>使用的属性有：overflow height:0px position:relative position:absolute top left float:left </p>
+    </div>
+</body>
+</html>
