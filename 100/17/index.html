@@ -13,14 +13,14 @@
 			top:50%;
 			left: 50%;
 			margin-top: -80px;
-			margin-left: -150px;
+			margin-left: -200px;
 		}
 		h3{
 			text-align: center;
 		}
-		.name,
-		.pass,
-		.btn{
+		.divname,
+		.divname,
+		.divname{
 			width: 300px;
 			height: 32px;
 			margin: 0 auto;
@@ -44,18 +44,35 @@
 	<div class="box">
 		<h3>注册</h3>
 		<form action="">
-			<div class="name">
+			<div class="divname">
 				<label class="label_class" for="na">用户名</label>
 				<input class="input_class" id="na" type="text" />
 			</div>
-			<div class="pass">
+			<div class="divname">
 				<label class="label_class" for="pa">密码</label>
 				<input class="input_class" id="pa" type="password" />
 			</div>
-			<div class="btn">
-				<input type="submit" value="提交" />
-				<input type="reset" value="重置" />
+			<div class="divname">
+				性别
+				<label for="nan">男</label>
+				<input id="nan" type="radio" name="sex" />
+				<label for="nv">女</lable>
+				<input id="nv" type="radio" name="sex">
 			</div>
+			<div class="divname">
+				职业
+				<label for="student">学生</label>
+				<input id="student" type="checkbox">
+				<label for="gongren">工人</label>
+				<input id="gongren" type="checkbox">
+				<label for="gcs">工程师</label>
+				<input id="gcs" type="checkbox">
+			</div>
+			<div class="divname">
+				<label class="label_class">兴趣爱好</label>
+				<textarea cols="15" rows="5"></textarea>
+			</div>
+			<div class="divname">kkkkk</div>
 		</form>
 	</div>
 </body>
