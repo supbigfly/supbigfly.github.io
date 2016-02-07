@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3基础</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		[sb]{
+			color:red;
+		}
+		[sb=ab]{
+			color:green;
+		}
+		[pa=color]{
+			color:red;
+		}
+		[pb=direction]{
+			direction: rtl;
+		}
+		[pc=decoration]{
+			text-decoration:blink;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>css3基础</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<h4 sb="abcd">属性选择器：在p标签中随意定义选择器名称如sb=&quot;a&quot;，在样式中将名称用[]括起来在加入{}后把属性写在里面。</h4>
+		<h4 sb="ab">如果是两个p则可以第一个在样式中不指定名字第二个指定，效果如下。</h4>
+		<h4>background详见11</h4>
+		<h4>css文本:color、direction、line-height、letter-spacing、text-align、text-decoration、text-indent、text-transform、unicode-bidi、white-space、word-spacing</h4>
+		<p pa="color"><a href="http://www.w3school.com.cn/cssref/pr_text_color.asp">color</a>共三种值color:red;color:#00ff00;color:rgb(0,0,255);</p>
+		<p pb="direction"><a href="http://www.w3school.com.cn/cssref/pr_text_direction.asp">direction该属性有两个值ltr文本方向从左到右</a>rtl文本方向从右到左</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_text_text-align.asp">text-align</a>对齐元素中的文本四个值left right center justify</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_unicode-bidi.asp">unicode-bidi</a>设置文本方向</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_text_text-indent.asp">text-indent</a>通过使用负值和padding可以替代pre标签</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_text_text-transform.asp">text-transform</a>uppercase全部大写capitalize首字母大写lowercase全部小写</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_text_white-space.asp">white-space</a>元素中空白的处理方式详细请参考链接</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_text_letter-spacing.asp">letter-spacing</a>字母和汉字的间距</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_text_word-spacing.asp">word-spacing</a>单词的间距</p>
+		<p pc="decoration"><a href="http://www.w3school.com.cn/cssref/pr_text_text-decoration.asp">text-decoration</a>blink闪烁的文本(只有火狐支持)overline文本上边有一条线line-through删除线</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_dim_line-height.asp">line-height</a>属性设置行间的距离</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_font_font-family.asp">font-family</a>规定元素的字体系列</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_font_font-style.asp">font-style</a>italic和oblique</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_font_font-size.asp">font-size</a>属性可设置字体的尺寸</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_font_font-variant.asp">font-variant</a>属性设置小型大写字母的字体显示文本</p>
+		<p><a href="http://www.w3school.com.cn/cssref/pr_font_weight.asp">font-weight</a>属性设置文本的粗细</p>
+		<p><a href="http://www.w3cplus.com/content/css3-font-face">@font-face</a>自定义字体</p>
+		<p><a href="http://www.cnblogs.com/yangfeng/archive/2009/07/25/1530962.html">a:link</a>默认链接样式a:visited访问后a:hover鼠标经过a:active按住不放，当四个属性一起使用时需按顺序</p>
+		<p>list-style详见09</p>
+	</div>
+</body>
+</html>
