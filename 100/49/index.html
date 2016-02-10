@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>js变量</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>js变量</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<p>变量分为全局变量和局部变量，都在script标签内，在函数内的是局部变量外的是全局变量，局部变量只能在函数内起作用，而全局变量在哪里都起作用。想要得到局部变量的数值得定义全局变量通过调用函数将局部变量数值赋值给全局变量然后通过alert等显示。代码如下：<br>function demo(){<br>var num1 = 10;//此时的num1是局部变量<br>num3 = 4;无关键字var的变量是全局变量如需要num3的值即使将return注释掉也能拿到<br>return num1;<br>}<br>var num2 = demo();//此时的num2是全局变量<br>alert(num2);//不想使用return须将alert写到函数里面</p>
+		</div>
+	</div>
+</body>
+</html>

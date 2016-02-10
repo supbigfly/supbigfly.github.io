@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>js函数</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>js函数</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<p>function demo(a,b){//定义函数,a,b是参数，参数任意多使用逗号隔开<br>
+			var i = a+b;<br>
+			return i;<br>//将函数的值返回给调用它的地方，通过return语句执行，使用时，函数会停止执行，同时返回值
+		}<br>
+		var sum = demo(1,2);//调用函数，将值传递给方法中的参数<br>
+		var sum1 = demo(2,2);//按顺序执行，此时用sum1去接住i的值，用全局变量将局部变量接出来<br>
+		alert("第一组数1+2="+sum);<br>
+		alert("第二组数2+2="+sum);</p>
+		</div>
+	</div>
+	<script>
+		function demo(a,b){//定义函数,a,b是参数，参数任意多使用逗号隔开
+			var i = a+b;
+			return i;
+		}
+		var sum = demo(1,2);//调用函数，将值传递给方法中的参数
+		var sum1 = demo(2,2);
+		alert("第一组数1+2="+sum);
+		alert("第二组数2+2="+sum);
+	</script>
+</body>
+</html>

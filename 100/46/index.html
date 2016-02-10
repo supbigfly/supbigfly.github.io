@@ -2,30 +2,35 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>js基础-介绍</title>
+	<meta name="viewport" content="width=device-width">
+	<title>js基础</title>
 	<link rel="stylesheet" type="text/css" href="../36/index.css">
 	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
-	<script>
-		alert("hello bigfly");
-		document.getElementById("aaa").innerHTML="aaa";
-	</script>
-	<style>
-
-	</style>
 </head>
 <body>
 	<header>
 		<div class="header clearfix">
 	        <i class="icon-reorder"></i>
 	        <a href="../index.html">返回</a>
-	        <h1>js基础-介绍</h1>
+	        <h1>js基础</h1>
 	    </div>
 	</header>
 	<div class="main">
 		<div class="main_inner">
-			<p id="aaa">javascript是互联网最流行的脚本语言，与java没什么关系，这门语言可用于web和HTML，更可广泛用于服务器、pc端、移动端。是一种轻量级的编程语言，可插入HTML页面并且所以浏览器都支持</p>
-			<p>html中的脚本必须位于&lt;script&lt;&lt;/script&lt;标签之间脚本可被放置在html页面的&lt;body&lt;和&lt;head&lt;部分中，一般放置在&lt;head&lt;中不限制脚本数量。</p>
+			<p id="aaa">001-介绍实现输出javascript是互联网最流行的脚本语言，与java没什么关系，这门语言可用于web和HTML，更可广泛用于服务器、pc端、移动端。是一种轻量级的编程语言，可插入HTML页面并且所以浏览器都支持</p>
+			<p>html中的脚本必须位于&lt;script&gt;&lt;/script&gt;标签之间脚本可被放置在html页面的&lt;body&gt;和&lt;head&gt;部分中，一般放置在&lt;head&gt;中不限制脚本数量。语法如下：document.getElementById.innerHTML</p>
+			<p>002-语法注释</p>
+			<p>javascript语句向浏览器发出命令，告诉浏览器做什么，执行顺序按编写顺序，标识符以字母下划线开始对大小写敏感单号注释//多行注释/**/语法如下document.write(1)document.write(2)先写1再写2</p>
+			<p>003-变量和数据类型</p>
+			<p>变量是来储存信息的容器，声明变量通过关键字var变量名称值的顺序来进行。数据类型：①字符串String②数字Number③布尔Boolean④数组array⑤对象object⑥空null⑦未定义⑧通过赋值null清除变量。数组定义：①var arr = [1,2,3];document.write("arr[0],arr[1],arr[2]");②var arr = new array["我是狗","我是猪","我是驴"];document.write(同上)③var arr = new array();arr[0] = 10;arr[1] = "我";</p>
 		</div>
 	</div>
+	<footer>
+		不知道为什么先读head里面的内容，可人家都把script放head里面就可以啊？难道这就是src与不src的区别吗？
+	</footer>
+	<script>
+		document.getElementById("aaa").innerHTML="替换了，嘿嘿嘿。";
+		document.getElementById("aaa").innerHTML;//不是按先后顺序执行吗？唉！
+	</script>
 </body>
 </html>
