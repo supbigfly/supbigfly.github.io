@@ -2,39 +2,166 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>@media-display</title>
-	<link rel="stylesheet" type="text/css" href="../css/public.css">
-	<style type="text/css">
-	.fangkuai{
-		width:100px;
-		height:50px;
-		background-color:green;
-		display:none;
-	}
-	.yuan{
-		width:100px;
-		height:100px;
-		border-radius:50%;
-		background-color:red;
-	}
-	@media (min-width: 500px){
-		.yuan{
-			display:none;
+	<title>js-open()</title>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		function renwu(){
+			window.open("../58/index.html","aaa","width=500,height=300,scrollbars=yes,menubar=yes,screenX=500,screenY=200");}
+	</script>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		.footer{
+			position: fixed;
+			bottom:50px;
+			left:20%;
 		}
-		.fangkuai{
-			display:block;
+		ul{
+			padding-left: 0;
 		}
-	}
+		ul>li{float: left;width: 100px;height: 50px;text-align: center;background-color: blue;line-height: 50px;color:white;cursor:pointer;border:1px solid #F4A460;box-sizing:border-box;}
+		ul>li:first-child{
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+		ul>li:last-child{
+			border-radius: 0px 5px 5px 0px;
+		}
+		.btn{
+			width: 20px;
+			height: 20px;
+			color:white;
+			background-color: black;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 20px;
+			position: absolute;
+			right: 0px;
+			top:-5px;
+		}
+		.btnshow{
+			width: 50px;
+			height: 50px;
+			border-radius: 40%;
+			background-color: #00FFFF;
+			position: fixed;
+			bottom:100px;
+			right:50px;
+			z-index: 8;
+		}
+		.doora{
+		    color: #eee;
+		    font-size: 48px;
+		    font-weight: bold;
+		    line-height: 68px;
+		    background-color: #800000;
+		    transition:transform 4s;
+		    text-align: right;  
+		    position: fixed;
+		    top:0px;
+		    left: 0px;
+		    bottom: 0px;
+		    width: 50%;
+		    z-index: 9;
+		}
+		.doorb{
+		    color: #eee;
+		    font-size: 48px;
+		    font-weight: bold;
+		    line-height: 68px;
+		    background-color: #800000;
+		    transition:transform 4s;
+		    text-align: left;
+		    position: fixed;
+		    top:0px;
+		    right: 0px;
+		    bottom:0px;
+		    width:50%;
+		    z-index: 9;
+		}
+		.doora.dooras{
+		    transform:translateX(-100%);
+		}
+		.doorb.doorbs{
+		    transform:translateX(100%);
+		}
+		@media (min-width: 786px){
+		    .doora,.doorb{
+		        line-height: 85px;
+		    }
+		}
+		.aaa{
+		    background-color: blue;
+		    position: fixed;
+		    top:0px;
+		    right:0px;
+		    bottom:0px;
+		    left: 0px;
+		    opacity: 0.3;
+		    transition:all 5s;
+		    z-index: 10;
+		}
+		.aaa.aaas{
+		    display: none;
+		}
 	</style>
 </head>
 <body>
 	<div class="header clearfix">
         <i class="icon-reorder"></i>
         <a href="../index.html">返回</a>
-        <h1>@media-display</h1>
+        <h1>js-open()</h1>
     </div>
-	<div class="fangkuai"></div>
-	<div class="yuan"></div>
-	<p>宽度小于500变色</p>
+	<div class="main">
+		<div class="main_inner">
+		</div>
+	</div>
+	<div class="footer">
+		<div class="btn">×</div>
+		<ul>
+			<li onclick="renwu()">任务</li>
+			<li>首页</li>
+			<li>上一页</li>
+			<li>下一页</li>
+			<li>啊啊啊</li>
+			<li>不不不</li>
+			<li>擦擦擦</li>
+			<li>对对对</li>
+		</ul>
+	</div>
+	<div class="doorb">
+        <p>大吉</p>
+        <p>连连</p>
+        <p>常在</p>
+        <p>开心</p>
+        <p>美满</p>
+        <p>大利</p>
+        <p>风顺</p>
+        <p>事成</p>
+    </div>
+    <div class="doora">
+        <p>开门</p>
+        <p>喜事</p>
+        <p>好运</p>
+        <p>天天</p>
+        <p>幸福</p>
+        <p>大吉</p>
+        <p>一帆</p>
+        <p>心想</p>
+    </div>
+	<div class="aaa"></div>
+	<div class="btnshow"></div>
+	<script>
+		$('.aaa').click(function(){
+            $(this).addClass('aaas');
+            $('.doora').addClass('dooras');
+            $('.doorb').addClass('doorbs');
+        });
+		$(".btn").click(function(){
+			$(".footer").hide();
+		});
+		$(".btnshow").click(function(){
+			$(".footer").show();
+		});
+	</script>
 </body>
 </html>

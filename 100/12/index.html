@@ -2,146 +2,48 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>总结</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>弹性布局弹性媒介</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		.fontyound{
+			font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+		}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.main h2{
+			color:#ffffff;
+			background-color: #00FA9A;
+			text-align: center;
+		}
+		.main .box{
+			width: 70%;
+			margin:0 auto;
+		}
+		.main img{
+			display: block;
+			width: 75%;
+			margin:0 auto;
+		}
+		.main .numbertwo p:nth-of-type(6){
+			color: #FFFFFF;
+			background-color: #FF4081;
+		}
+	</style>
 </head>
 <body class="fontyound">
-	<table>
-		<tr>
-			<td>jQuery</td>
-			<td>js查询</td>
-			<td>font-family</td>
-			<td>字体类型</td>
-		</tr>
-		<tr>
-			<td>addClass</td>
-			<td>添加类名</td>
-			<td>font-size</td>
-			<td>默认16px,最小12px</td>
-		</tr>
-		<tr>
-			<td>alert</td>
-			<td>警告</td>
-			<td>color</td>
-			<td>字体颜色</td>
-		</tr>
-		<tr>
-			<td>lib</td>
-			<td>类库</td>
-			<td>font-weight</td>
-			<td>字体宽度none正常bold加粗bolder lighter 100~700</td>
-		</tr>
-		<tr>
-			<td>GitHub</td>
-			<td>傻×汇集地</td>
-			<td>font-style</td>
-			<td>字体样式italic斜体normal正常</td>
-		</tr>
-		<tr>
-			<td>HTML</td>
-			<td>超文本标记语言</td>
-		</tr>
-		<tr>
-			<td>CSS</td>
-			<td>层叠样式表</td>
-		</tr>
-		<tr>
-			<td>JS</td>
-			<td>java脚步，与java无关</td>
-		</tr>
-		<tr>
-			<td>Tutorial</td>
-			<td>教程</td>
-		</tr>
-		<tr>
-			<td>compare</td>
-			<td>对比</td>
-		</tr>
-		<tr>
-			<td>changes</td>
-			<td>改变的内容</td>
-		</tr>
-		<tr>
-			<td>hisstory</td>
-			<td>历史</td>
-		</tr>
-		<tr>
-			<td>sync</td>
-			<td>同步</td>
-		</tr>
-		<tr>
-			<td>Collapse all</td>
-			<td>折叠</td>
-		</tr>
-		<tr>
-			<td>Repositories</td>
-			<td>仓库</td>
-		</tr>
-		<tr>
-			<td>you contribute</td>
-			<td>提交过代码的仓库</td>
-		</tr>
-		<tr>
-			<td>profile</td>
-			<td>个人主页</td>
-		</tr>
-		<tr>
-			<td>edit</td>
-			<td>编辑</td>
-		</tr>
-		<tr>
-			<td>commit</td>
-			<td>版本</td>
-		</tr>
-		<tr>
-			<td>settings</td>
-			<td>设置</td>
-		</tr>
-		<tr>
-			<td>taggleClass</td>
-			<td>开关</td>
-		</tr>
-		<tr>
-			<td>ctrl+r</td>
-			<td>刷新</td>
-		</tr>
-		<tr>
-			<td>.class=this</td>
-			<td>类名等于类名</td>
-		</tr>
-	</table>
-		<pre>
-			padding,margin,inset,outset,fixed,scroll,
-			调试：当margin和float出现问题使用clearfix，当padding的使用出现问题使用box-sizing:border-box;status-bar message-box menu icon caption word-wrap:break-word;强制换行
-		</pre>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>响应式设计之弹性布局弹性媒介</h1>
+    </div>
 	<div class="main">
-		<div class="numberone clearfix">
-			<h2>文本与层用padding，div之间用margin</h2>
-			<div class="box">
-				<div class="box1">
-					<p>用padding给我居中</p>
-				</div>
-				<div class="box2">
-					<div class="left"></div>
-					<div class="right"></div>
-				</div>
-			</div>
-		</div>
 		<div class="numbertwo">
-			<h2>响应式设计之弹性布局弹性媒介</h2>
 			<div class="box">
 			<h3>弹性布局</h3><p>所谓的弹性布局，说的是在创建网站的时候，采用流体网格布局方式，动态地调整网站布局宽度以此来适应各种设备屏幕大小。弹性布局不使用固定的测量单位，比如像素或者英寸。原因显而易见，视窗（ viewport ）的高度和宽度在不同设备之间是不断变化的，那么弹性网站布局为了适应这种变化，所以就不可能明确的指定网站内容的宽度和高度，只能使用相对长度单位。那么怎么得到相对长度呢？ 一个可靠的计算公式，可以用来确定弹性布局的比例值。用一个元素的宽度target 除以它的父元素的宽度parent，那得到的计算结果result就是这个元素的相对宽度,也就是我们常用的百分数。</p><h3>弹性媒介</h3><p>网站中的图片、视频、Flash 动画等等，在变为响应式的时候不能简单的按照流体网格计算公式来变化。</p><p>网站上的图片、视频、Flash 等就是所谓的媒介。随着浏览器窗口大小的改变，网站上媒介的布局不一定变得很合适，有时候它们会超出其容器的界限，因此图片、视频和其它媒介类型应该具备可伸缩性，能根据浏览器窗口的大小，自动调整自身尺寸，保证页面布局整齐一致。一个简单的方法，是把它的 max-width 属性值设置为 100%，意思是说它的最大宽度就是其容器的宽度。这样就能确保当浏览器窗口变小的时候，则网站上的媒介会依据其容器的大小而缩小尺寸，始终包裹在容器内。</p><p><img src="../../images/imgone.jpg" alt=""></p><p>若使用 em 单位的元素定义了 font-size为12px，则此时1em==12px，那2em==24px若没有，则找其父元素的字体大小，依次类推直到html元素；若整个页面没有定义字体大小，而是使用浏览器默认字体大小 16px，则1em==16px。这样若某些CSS属性使用了em单位，只要改变与其相关联的字体大小，就能改变这些属性值。再稍微说一下 rem（ root em 的简写 ），它与 em 相似，但 rem 仅仅是相对于 html 根元素的 font-size 而言的。这样一旦设置了一个基本字体大小，定义其它长度就容易了，比em使用起来简单。不足之处就是，牵一发而动全身。对于百分比，就是根据 Ethan 的公式，得到的结果乘以 100%。既然对这三个相对长度单位有了一定了解，那在响应式网站中如何使用它们呢？一般而言，对于响应式网站，水平方向为流体网格布局，那宽度、左右间距和左右内边距的长度自然采用百分比。像高度、上下间距，还有字体大小等与垂直方向相关的属性则应该使用 em 或者 rem 单位。</p><p>①文本布局将包裹的层设定宽度并居中②字体样式使用小米官网字体③对于图片设定百分比宽度，重点是转块后margin0auto才发挥作用。</p>
 			</div>
-		</div>
-		<div class="numberthree">
-			<h2>响应式设计之媒介查询</h2>
-			<div class="box">
-				<p>媒体查询是可应用于 CSS 样式的简单过滤器。有了这些过滤器，我们可以根据设备呈现内容的特点轻松更改样式，包括显示屏类型、宽度、高度、方向甚至是分辨率。</p><p><img src="../../images/css-media-queries.jpg" alt=""></p><p>在 CSS2.1 中定义了媒体类型，通过给 <link> 元素添加 media 属性，可以为不同的媒体类型加载不同的样式表。link rel=stylesheet media=screen href="";</p><h3>初始化媒体查询</h3><p>媒体查询有两种不同的使用方法，一种是在已有的样式表文件中使用@media规则，另一种是使用 @import 规则导入一张新的样式表，或在HTML文档中链接到一个单独的样式表文件。通常来说，推荐使用的方法是在已有的样式表文件中使用 @media 规则，避免增加额外的 HTTP 请求。</p><p>每一个媒体查询可能会包含一个媒体类型，紧接着是一个或多个表达式。常见的媒体类型包括 all、screen、print、tv 和 braille。HTML5 规范包含了新的媒体类型，甚至包括三维眼镜。若媒体查询中没有指定媒体类型，则默认为 screen。</p>
-			</div>
-		</div>
-		<div class="numberfive">
-			<h2>Font-Awesome</h2>
-			<p>字体图标的来历：因为图片在调整方面的局限性，比如颜色、清晰度等等，没有字体的可调节性强。同时在网站中常用的图片格式大多数是jpg、png格式，这些格式的图片都是位图素材，应用于一些按钮图标之类图片时总会出现毛边，所以字体图标应运而生。制作流程：字体图标首先是由字体制作来的，大概的流程是这样。先通过矢量制图工具（AI等）将图标制作出来，然后在将其做成一种字体（此处注意，为满足网页需要，需做多种格式字体，包括ttf、svg、eot、otf、woff），这个过程很麻烦。下面是将字体包以及css做好。接下来就是应用了，此处所说的应用是最简单的应用。那就是直接连接css样式，在网页浏览的过程中下载对应的字体包，会影响加载速度。老师说他不用这个，替代方式svg，canvas等。应用时只需要连接对应的css样式地址，需要哪个图标就起名对应的class名。一些特殊的用法如下：class="icon-camera-retro icon-large"class="icon-camera-retro icon-2x"class="icon-camera-retro icon-3xclass="icon-camera-retro icon-4x</p>
 		</div>
 	</div>
 </body>

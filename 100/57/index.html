@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>animation360deg</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			border:4px solid red;
+			border-radius: 50%;
+			position: relative;
+			top:50%;
+			left: 50%;
+		}
+		.bbb{
+			width: 191px;
+			height: 191px;
+			position: absolute;
+			top:0.5px;
+			left:.5px;
+			border-radius: 50%;
+			animation:hh 3s linear infinite;
+		}
+		@keyframes hh{
+			100%{
+				transform:rotate(360deg);
+			}
+		}
+		.aaa{
+			width: 130px;
+			height: 130px;
+			position: absolute;
+			top:35px;
+			left: 35px;
+			animation:ww 3s linear infinite;
+		}
+		@keyframes ww{
+			100%{
+				transform:rotate(-360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>animation360deg</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<p>在@keyframes中阶段放到100%就会一直沿一个方向旋转<br>而度数也用360一圈来表示不会出现卡顿的现象用animation<br>就会一个方向如果用alternate就会先顺时针转一圈在逆时针转一圈的。</p>
+			<div class="box">
+				<img src="../../images/color.jpg" alt="" class="bbb">
+				<img src="../../images/logo.gif" alt="" class="aaa">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

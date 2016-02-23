@@ -46,11 +46,12 @@
 		<form action="">
 			<div class="divname">
 				<label class="label_class" for="na">用户名</label>
-				<input class="input_class" id="na" type="text" placeholder="请输入用户名"/>
+				<input class="input_class" id="na" type="text" placeholder="请输入用户名" onfocus="changeDemo(this)" />
 			</div>
+			
 			<div class="divname">
 				<label class="label_class" for="pa">密码</label>
-				<input class="input_class" id="pa" type="password" />
+				<input class="input_class" id="pa" type="password" placeholder="请输入密码" />
 			</div>
 			<div class="divname">
 				性别
@@ -75,5 +76,10 @@
 			<div class="divname">kkkkk</div>
 		</form>
 	</div>
+	<script>
+		function changeDemo(oob){
+			oob.style.background="blue";
+		}
+	</script>
 </body>
 </html>

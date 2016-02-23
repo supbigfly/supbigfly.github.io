@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>js浏览器对象location</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>浏览器对象location</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<h4>window.location用于获得当前页面的地址(URL)，并把浏览器重定向到新的页面</h4>
+			<p>hostname返回web主机域名，效果请点击按钮</p>
+			<a id="hostid"></a>
+			<button onclick="hostnames()">hostname</button>
+			<script>
+				function hostnames(){
+					document.getElementById("hostid").innerHTML = window.location.hostname;
+				}
+			</script>
+			<p>pathname返回当前页面的路径和文件名</p>
+			<a id="pathid"></a>
+			<button onclick="pathnames()">pathname</button>
+			<script>
+				function pathnames(){
+					document.getElementById("pathid").innerHTML = window.location.pathname;
+				}
+			</script>
+			<p>port返回web主机的端口</p>
+			<a id="portid"></a>
+			<button onclick="ports()">port</button>
+			<script>
+				function ports(){
+					document.getElementById("portid").innerHTML = window.location.port;
+				}
+			</script>
+			<p>protocol返回所使用的web协议http://或https://</p>
+			<a id="protocolid"></a>
+			<button onclick="protocols()">protocol</button>
+			<script>
+				function protocols(){
+					document.getElementById("protocolid").innerHTML = window.location.protocol;
+				}
+			</script>
+			<p>href返回当前页面的url</p>
+			<a id="hrefid"></a>
+			<button onclick="hrefs()">href</button>
+			<script>
+				function hrefs(){
+					document.getElementById("hrefid").innerHTML = window.location.href;
+				}
+			</script>
+			<p>assign()方法加载新的文档</p>
+			<button onclick="assigns()">assign</button>
+			<script>
+				function assigns(){
+					window.location.assign("../54/index.html");
+				}
+			</script>
+		</div>
+	</div>
+</body>
+</html>

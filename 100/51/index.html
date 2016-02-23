@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>js文档对象模型</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>js文档对象模型</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<h3>javascript-dom简介</h3>
+			<p>html dom：当网页被加载时，浏览器会创建页面的文档对象模型(document object Model)，dom操作html四个方向：①javascript能够改变页面中所有html元素②javascript能够改变页面中所有html属性③javascript能够改变页面中所有css样式④javascript能够对页面中所有事件做出反应。</p>
+			<h3>javascript-dom操作html</h3>
+			<p>1、改变html输出流：绝对不要在文档加载完成之后使用document.write()比如p标签的内容会被单击事件覆盖。该文档<br>2、寻找元素：通过id寻找html元素document.getElementById("");通过标签名找到html元素document.getElementsByTagName("p");相同标签的第一个<br>3、改变html内容：使用属性：innerHTML声明变量，用变量点<br>4、改变html属性，使用attribute示例如下，具体查看代码。</p>
+			<a class="aid" href="http://www.baidu.com">百度</a>
+			<input type="button" value="改变" onclick=demo() />
+			<script>
+				function demo(){
+					document.getElementById("aid").href="#";
+				}//如果是图片则更改src即可。
+			</script>
+			<h3>javascript-dom操作css</h3>语法：document.getElementById("").style.property= new style;示例如下通过点击按钮来触发</p>
+			<div id="boxid" class="box" style="background-color:red;width:30px;height:20px;"></div>
+			<input type="button" value="按钮" onclick="demo()" />
+			<script>
+				function demo(){
+					document.getElementById("boxid").style.background="blue";
+				}
+			</script>
+			<h3>javascript-dom EvenListener句柄</h3>
+			<p>分为：addEvenListener和removeEvenListener语法为document.getElementById("div").addEvenListenner(事件，function(){});就是把事件和方法合并了</p>
+		</div>
+	</div>
+</body>
+</html>

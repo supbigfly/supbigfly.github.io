@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>浏览器对象history</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>浏览器对象history</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<h4>window.history对象包含浏览器的历史(url)的集合</h4>
+			<p>方法主要介绍三个history.back()与浏览器点击后退按钮相同history.forward()与浏览器点击前进按钮相同history.go()与浏览器进入历史的某个页面相同，值分正负。</p>
+			<button onclick="backs()">后退</button>
+			<script>
+				function backs(){
+					window.history.back();
+				}
+			</script>
+			<button onclick="forwards()">前进</button>
+			<a>前进按钮是后退按钮使用后才起作用放在这里白扯</a>
+			<script>
+				function forwards(){
+					window.history.forward();
+				}
+			</script>
+		</div>
+	</div>
+</body>
+</html>

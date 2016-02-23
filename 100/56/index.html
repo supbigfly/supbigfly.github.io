@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>js音频</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+	<style>
+		h4{
+			background-color: #9370DB;
+		}
+		.phtml{
+			background-color: black;
+			color:white;
+		}
+		.justdiv{
+			width: 250px;
+			height: 80px;
+			background-color: #FF8C00;
+			border-radius: 35px;
+		}
+		.justdiv p{
+			text-align: center;
+			line-height: 80px;
+			color: white;
+			font-weight: bolder;
+		}
+		button{
+			position: relative;
+			left: 90px;
+			bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>js音频</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<h4>html音频的结构和说明</h4>
+			<p class="phtml">&lt;audio src="" controls="controls"&rt;&lt;audio&rt;<br>audio是音频的标签，src是路径，controls是控件，不写就不显示控制面板，示例如下</p>
+			<audio src="../../music/happy.mp3" controls="controls"></audio>
+			<h4>下面我们通过js来制作一个简单的控制按钮的音频播放面板</h4>
+			<div class="justdiv" id="justdivn">
+				<audio src="../../music/happy.mp3" id="audioid"></audio>
+				<p>just</p>
+				<button onclick="clickA()">播放/暂停</button>
+				<script>
+					var a = document.getElementById("audioid");
+					function clickA(){
+						if(a.paused){
+							a.play();
+							document.getElementById("justdivn").style.background="blue";//为什么用getElementsByName就不行呢？啊！
+						}else{
+							a.pause();
+							document.getElementById("justdivn").style.background="#FF8C00"
+						}
+					}
+				</script>
+			</div>
+			<p class="phtml">如果把单击事件放到div里面不显示按钮再加上cursor:pointer就更好了</p>
+		</div>
+	</div>
+</body>
+</html>

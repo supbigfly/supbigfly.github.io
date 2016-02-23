@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>This is spicegame</title>
-	<link rel="stylesheet" href="../css/public.css">
+	<link rel="stylesheet" href="../36/index.css">
 	<style type="text/css">
 	.max_boxone,
 	.max_boxtwo{
@@ -25,13 +25,16 @@
 		transition:all 8s;
 		background-color: yellow;
 	}
-	body:hover .ballone{
+	.main_inner:hover .ballone{
 		height: 270px;
 		top:30px;
 	}
-	body:hover .balltwo{
+	.main_inner:hover .balltwo{
 		height: 220px;
 		top:80px;
+	}
+	.main{
+		margin-top: 100px;
 	}
 	</style>
 </head>
@@ -41,16 +44,19 @@
         <a href="../index.html">返回</a>
         <h1>a:hover transtion</h1>
     </div>
-    <div class="max_boxone">
-		<div class="boxone">
-			<div class="ballone"></div>
-		</div>
-	</div>
-	<div class="max_boxtwo">
-		<div class="boxtwo">
-			<div class="balltwo"></div>
-		</div>
-	</div>
-	<p>为什么鼠标放下面不动</p>
+    <div class="main">
+    	<div class="main_inner">
+    		<div class="max_boxone">
+				<div class="boxone">
+					<div class="ballone"></div>
+				</div>
+			</div>
+			<div class="max_boxtwo">
+				<div class="boxtwo">
+					<div class="balltwo"></div>
+				</div>
+			</div>
+    	</div>
+    </div>
 </body>
 </html>

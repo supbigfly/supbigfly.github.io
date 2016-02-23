@@ -2,24 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="../css/public.css">
-	<style type="text/css">
-		img{width: 200px;
-			height: 200px;
-			border-radius: 50%;
+	<title>媒介查询</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		.main .box{
+			width: 70%;
+			margin:0 auto;
 		}
-		.index_a{background-color: #F0F8FF;}
-		.box{width: 200px;height: 200px;border:1px red dashed;margin:0 auto;box-shadow: 0px 0px 150px;}
+		.main img{
+			display: block;
+			width: 75%;
+			margin:0 auto;
+		}
+		.main .numbertwo p:nth-of-type(6){
+			color: #FFFFFF;
+			background-color: #FF4081;
+		}
 	</style>
 </head>
 <body>
 	<div class="header clearfix">
         <i class="icon-reorder"></i>
         <a href="../index.html">返回</a>
-        <h1>上传文件夹和图片</h1>
+        <h1>媒介查询</h1>
     </div>
-	<img src="../../images/bgc-yellow.jpg" alt="">
-	<div class="box"></div>
+	<div class="numberthree">
+		<div class="box">
+			<p>媒体查询是可应用于 CSS 样式的简单过滤器。有了这些过滤器，我们可以根据设备呈现内容的特点轻松更改样式，包括显示屏类型、宽度、高度、方向甚至是分辨率。</p><p><img src="../../images/css-media-queries.jpg" alt=""></p><p>在 CSS2.1 中定义了媒体类型，通过给 <link> 元素添加 media 属性，可以为不同的媒体类型加载不同的样式表。link rel=stylesheet media=screen href="";</p><h3>初始化媒体查询</h3><p>媒体查询有两种不同的使用方法，一种是在已有的样式表文件中使用@media规则，另一种是使用 @import 规则导入一张新的样式表，或在HTML文档中链接到一个单独的样式表文件。通常来说，推荐使用的方法是在已有的样式表文件中使用 @media 规则，避免增加额外的 HTTP 请求。</p><p>每一个媒体查询可能会包含一个媒体类型，紧接着是一个或多个表达式。常见的媒体类型包括 all、screen、print、tv 和 braille。HTML5 规范包含了新的媒体类型，甚至包括三维眼镜。若媒体查询中没有指定媒体类型，则默认为 screen。</p>
+		</div>
+	</div>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>js事件</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>js事件</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<p>首先：事件是可以被javascript侦测到的行为<br>其次：事件名称onclick单击onMouseOver鼠标经过onMouseOut鼠标移除onChange文本内容改变onSelect文本框选中，写上内容并选中会改变onfocus光标聚集，单击即可改变onblur移动光标onload网页加载，在body里面写onunload关闭网页<br>再次：命名函数时首字母小写第二单词首字母大写，局部变量可以重复利用</p>
+			<p>onclick()</p>
+			<input type="button" value="onclick" onclick="changeDemo()">
+			<script>
+				function changeDemo(){
+					alert("单击事件");
+				}
+			</script>
+			<p>onmouseout() and onmouseover请参阅第18天</p>
+			<p>onchange()</p>
+			<input type="text" onchange="changeDemo2(this)" /><!-- 这里使用了this是关键字指向当前函数，使用参数传递时用this -->
+			<script>
+				function changeDemo2(obb){
+					alert("内容已改变");
+				}
+			</script>
+			<input type="text" onchange="alert('还可以不写script脚本详情看代码')" />
+			<p>onselect()</p>
+			<input type="text" onselect="changeDemo3(this)" />
+			<script>
+				function changeDemo3(obb){
+					obb.style.background="blue";//写background-color就不行
+				}
+			</script>
+			<p>onfocus()</p>
+			<input type="text" onfocus="changeDemo4(this)" />
+			<script>	
+				function changeDemo4(obb){
+					obb.style.background="green";
+				}
+			</script>
+			<p>placeholder</p>
+			<input type="text" placeholder="请输入用户名" />
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>相对定位和绝对定位</title>
+	<link rel="stylesheet" type="text/css" href="../16/public.css">
+	<style>
+		.relatives{
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			text-align: center;
+			line-height: 100px;
+			color:white;
+			position: relative;
+			left: 50px;
+			bottom:50px;
+		}
+		.absolutes{
+			width: 100px;
+			height: 100px;
+			background-color: white;
+			text-align: center;
+			line-height: 100px;
+			color:black;
+			position: absolute;
+			right:100px;
+			top:50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box_left">
+			<p>我从外往里，以哪里为起点是看谁是我爹爹。</p>
+			<div class="relatives">我是相对定位</div>
+		</div>
+		<div class="box_right">
+			<p>我从里往外，以守卫边疆为己任，倭寇多我就远离，倭寇少我就坚守。</p>
+			<div class="absolutes">我是绝对定位</div>
+		</div>
+	</div>
+	<!-- <div class="number_right">
+		<a href="../28/index.html">NEXT</a>
+	</div> -->
+	<div class="number_left">
+		<a href="../28/index.html">UPDER</a>
+	</div>
+</body>
+</html>

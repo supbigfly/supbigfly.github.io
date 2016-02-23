@@ -1,115 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>title</title>
-    <script src="100/js/jQuery.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
-    <link rel="stylesheet" type="text/css" href="100/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/public.css">
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		li{
+			list-style-type: none;
+		}
+		.clearfix:after,
+		.clearfix:before{
+			content: "";
+			display: table;
+		}
+		.clearfix:after{
+			clear: both;
+		}
+		.header{
+			width: 100%;
+			height: 60px;
+			background-color: #6495ED;
+			position: fixed;
+			top:0px;
+			left: 0px;
+			box-shadow: 0 0 5px #ccc;
+		}
+		.logo{
+			width: 60px;
+			height: 60px;
+			background-color: #4169E1;
+			border-radius: 50%;
+			position: fixed;
+			left: 50%;
+			top:20px;
+			margin-left: -25px;
+			box-shadow: 0 0 5px blue;
+			font-weight: bold;
+			font-size: 2em;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 60px;
+			color: #fff;
+			cursor:pointer;
+			transition:all 1s;
+			z-index: 8;
+		}
+		.banner{
+			background-image: url("images/banner.png");
+			background-size:cover;
+			background-position: 50% 33%;
+			height: 250px;
+			margin-top: 60px;
+			opacity: .8;
+		}
+		.logo:hover{
+			top:25px;
+			box-shadow: 0 0 2px rgba(0,0,0,.5);
+		}
+	</style>
 </head>
 <body>
-    <!-- _________________________TOP_______________________ -->
-    <div class="top">
-        <div class="container">
-            <a class="current" href="FiltLine/home.html">FiltLine</a>
-            <a href="100/index.html">100页面</a>
-        </div>
-    </div>
-    <!-- ________________________HEADER_____________________ -->
-    <div class="header clearfix">
-    </div>
-    <!-- _______________________MAIN____________________________ -->
-    <div class="main clearfix">
-        <h1>参考资料</h1>
-        <ul>    
-            <li><div class="box clearfix"><div class="title">某某某某年某年某月</div><a href="http://dj.haoduoshipin.com/list.html">共享作业</a></div></li>
-            <li><div class="box clearfix"><div class="title">2015年11月21日</div><a href="http://dj.haoduoshipin.com/20151121.html">Github注册网站托管H5标签入门</a></div></li>
-            <li><div class="box clearfix"><div class="title">2015年11月25日</div><a href="http://dj.haoduoshipin.com/20151125.html">百日百页面活动CSS新特性专题</a></div></li>
-            <li><div class="box clearfix"><div class="title">2015年11月27日</div><a href="http://haoduoshipin.com/v/177">CSS3过渡效果</a></div></li>
-            <li><div class="box clearfix"><div class="title">2015年11月28日</div><a href="http://www.imooc.com/learn/390">github客户端使用绝对定位更多过渡效果</a></div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月04日</div><a href="http://dj.haoduoshipin.com/20151204.html">clearfix</a></div></li>
-            <li><div class="box clearfix"><div class="title">2015年12月09日</div>
-                <a href="http://wiki.jikexueyuan.com/project/material-design/animation/meaningful-transitions.html">有意义的转场动画</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月11日</div>
-                <a href="http://happypeter.github.io/kiss/100/16/">min-width实例</a>
-                <a href="http://book.haoduoshipin.com/">好多书</a>
-                <a href="https://dribbble.com/">网站模型</a>
-                <a href="http://www.materialpalette.com/">色盘</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月12日</div>
-                <a href="http://book.haoduoshipin.com/go-responsive/">min-width实例二</a>
-                <a href="http://alistapart.com/article/responsive-web-design">响应式三要素流体布局弹性图片media查询</a>
-                <a href="http://book.haoduoshipin.com/go-responsive/">多屏时代-响应式设计</a>
-                <a href="http://codepen.io/happypeter/pen/adbPoE">黄色小狗</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月14日</div>
-                <a href="http://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts">弹性媒介之iframe和video</a>
-                <a href="http://www.html5rocks.com/en/">HTML5rocks首页</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月18日</div>
-                <a href="http://happypeter.github.io/kiss/100/19/">jsHelloword</a>
-                <a href="http://jquery.cuishifeng.cn/">jQuery帮助文档</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月19日</div>
-                <a href="http://d2forum.alibaba-inc.com/">D2</a>
-                <a href="http://qd.haoduoshipin.com/">摩登前端网站</a>
-                <a href="http://meteor.haoduoshipin.com/">作业标准</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月23日</div>
-                <a href="http://www.bootcss.com/p/font-awesome/">字体图标</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月26日</div>
-                <a href="http://happypeter.github.io/kiss/100/">页面重置列表样式</a>
-                <a href="http://happycasts.github.io/episode-90-demo/">仿宋</a>
-                <a href="http://autoprefixer.github.io/">厂商前缀</a>
-                </div>
-            </li>
-            <li><div class="box clearfix"><div class="title">2015年12月30日</div>
-                <a href="http://www.smartisan.com/jianguo/#/overview">锤子响应式网站</a>
-                <a href="http://jekyll.bootcss.com/">前端jekyll框架</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="doorb">
-        <p>大吉</p>
-        <p>连连</p>
-        <p>常在</p>
-        <p>开心</p>
-        <p>美满</p>
-        <p>大利</p>
-        <p>风顺</p>
-        <p>事成</p>
-    </div>
-    <div class="doora">
-        <p>开门</p>
-        <p>喜事</p>
-        <p>好运</p>
-        <p>天天</p>
-        <p>幸福</p>
-        <p>大吉</p>
-        <p>一帆</p>
-        <p>心想</p>
-    </div>
-    <div class="aaa"></div>
-    <script>
-        $('.aaa').click(function(){
-            $(this).addClass('aaas');
-            $('.doora').addClass('dooras');
-            $('.doorb').addClass('doorbs');
-        });
-    </script>
+	<div class="header">
+		<div class="logo">z</div>
+	</div>
+	<div class="banner"></div>
 </body>
 </html>

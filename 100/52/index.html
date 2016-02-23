@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>js-date日期对象</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body onload="setclock()">
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>js-date日期对象</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<h5>Date()日期对象用来处理日期和时间的</h5>
+			<p>首先我们来定义一个用来存储的对象var date = new Date();然后我们直接打印出来document.write(date);</p>
+			<script>
+				var date = new Date();
+				document.write(date);
+			</script>
+			<p>接下来介绍几个方法<br>getHours()获取小时<br>getMinutes()<br>getSeconds()获取秒<br>getFullYear()获取年份<br>getTime()获取毫秒<br>getDay()获取星期<br>setFullYear()设置具体时间</p>
+			<script type="text/javascript">
+				var date = new Date();
+				document.write("年份"+date.getFullYear());
+				document.write("毫秒"+date.getTime());
+				document.write("星期"+date.getDay());
+				date.setFullYear(5000,02,24);
+				document.write("我要活到"+date);
+			</script>
+			<p>做一个时刻表</p>
+			<div class="clock" id="clock" style="width:200px;height:40px;background-color:green;color:white;"></div>
+			<script>
+				function setclock(){//加入函数后时间消失了，难道是不调用就不起作用了？
+					var date = new Date();//把时间对象的值传递给变量date
+					year = date.getFullYear();//声明全局变量year获取年
+					day = date.getDay();//声明全局变量day获取星期几
+					hours = date.getHours();//声明全局变量hours获取小时
+					minutes = date.getMinutes();//声明全局变量minutes获取分钟
+					seconds = date.getSeconds();//声明全局变量seconds获取秒数
+					minutes = checkTime(minutes);
+					seconds = checkTime(seconds);
+					document.getElementById("clock").innerHTML = year+"年"+"星期"+day+" "+hours+":"+minutes+":"+seconds;//获取层clock的id，在层中显示时间。
+					t = setTimeout(function(){//两个参数：函数和毫秒数
+						setclock();
+					},1000);//每1秒调用一次
+				}
+				function checkTime(i){//设置函数checkTime()并使用参数
+					if(i<10){//判断秒和分是否为一位数
+						i = "0"+i;//是就加字符串0
+					}
+					return i;//不是则返回原值
+				}
+			</script>
+		</div>
+	</div>
+</body>
+</html>

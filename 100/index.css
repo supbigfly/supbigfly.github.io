@@ -10,7 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing:border-box;
-	font-family: "Microsoft Yahei","Hiragino Sans GB",sans-serif;
+	font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 a{
 	text-decoration: none;
@@ -92,7 +92,7 @@ a.hamburger:hover{
 	line-height: 60px;
 	color: #ffffff;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 20px;
 }
 .essay{
 	height: 80px;
@@ -101,9 +101,9 @@ a.hamburger:hover{
 .title{
 	padding:15px 0px 10px 15px;
 	text-align: center;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 	color:#212121;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 }
 .date{
 	text-align: center;

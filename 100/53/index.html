@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>js浏览器对象window</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
+</head>
+<body>
+	<header>
+		<div class="header clearfix">
+	        <i class="icon-reorder"></i>
+	        <a href="../index.html">返回</a>
+	        <h1>浏览器对象window</h1>
+	    </div>
+	</header>
+	<div class="main">
+		<div class="main_inner">
+			<h5>这一节我们来讲解javascript的浏览器对象window注意没有s哦</h5>
+			<p>window对象：是BOM的核心，window对象指当前的浏览器窗口。所有js全局对象，函数以及变量均自动成为window对象的成员。比如说：全局变量是属性，全局函数时方法，就连dom也是属性之一。<br>首先我们来介绍window尺寸window.innerHeight浏览器的内部高度，window.innerWidth浏览器的内部宽度。这里面的宽和高是不包括浏览器的滚动条和菜单栏的而得到的是结果是数值。<br>还有我们平日里面写的document.write("");其实是window.document.write("");<br>下面介绍两个方法window.open();和window.close();我们通过点击按钮来触发事件<br>window.open()是有三个参数的①url②窗口名称③窗口样式</p>
+			<button id="btn" onclick="windemo()">打开窗口</button>
+			<button id="btn2" onclick="windemo2()">关闭窗口</button>
+			<script>
+				function windemo(){
+					window.open("../52/index.html");
+				}
+				function windemo2(){
+					window.close("index.html");
+				}
+			</script>
+		</div>
+	</div>
+</body>
+</html>
