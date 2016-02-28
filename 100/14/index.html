@@ -45,14 +45,14 @@ li{
 }
 	.father{
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-		width: 1000px;
+		width: 100%;
 		transition:all 1s;
 	}
 	.father:hover{
 		box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(0, 0, 0, 0.12);
 	}
 	.son{
-		width:100px;
+		width:10%;
 		height:60px;
 		background-color:#00bcd4;
 		float: left;
@@ -60,7 +60,7 @@ li{
 		text-align: center;
 	}
 	.daughter{
-		width:900px;
+		width:90%;
 		height:60px;
 		background-color:#eee;
 		float: left;
@@ -78,11 +78,11 @@ li{
 		clear: left;
 	}
 	.box3{
-		width: 700px;
+		width: 100%;
 		background-color:gray;
 	}
 	.box4{
-		width: 700px;
+		width: 100%;
 		height: 50px;
 		background-color: blue;
 		margin-top: 10px;
@@ -122,14 +122,14 @@ li{
 		<div class="son">1</div>
 		<div class="daughter"></div>
 	</div>
-	<pre>第二种：还是飘的问题，这次是两个盒子，不套盒子，第一个盒子飘第二个不飘
+	<p>第二种：还是飘的问题，这次是两个盒子，不套盒子，第一个盒子飘第二个不飘
 		共两个解决方案：直接使用clear可以决绝，使用clearfix不能解决
-	</pre>
+	</p>
 	<div class="box1"></div>
 	<div class="box2"></div>
-	<pre>
+	<p>
 		第三种：大盒子里面有个盒子，两个盒子的margin-top重叠了，造成给小盒子margin-top产生大盒子给上面的距离，或者是margin-bottom，此时要搞清楚谁对谁造成了影响，clearfix这个词不要给错了位置
-	</pre>
+	</p>
 	<div class="box3 clearfi">
 		<div class="box4"></div>
 	</div>

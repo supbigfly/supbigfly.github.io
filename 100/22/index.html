@@ -6,9 +6,7 @@
 	<title>@keyframes-animation</title>
 	<link rel="stylesheet" type="text/css" href="../36/index.css">
 	<style type="text/css">
-		.main{
-			width: 800px;
-			margin:0 auto;
+		.main .main_inner{
 			margin-top: 50px;
 		}
 		.hero{
@@ -17,7 +15,19 @@
 			overflow: hidden;/*因层的大小不流动所以隐藏*/
 		}
 		.hero img{
+			-webkit-animation:bbb 14s infinite;
 			animation:bbb 14s infinite;
+		}
+		-webkit-@keyframes bbb{
+			0%{margin-left: 0px;}
+			12.5%{margin-left: -20px;}
+			25%{margin-left: -40px;}
+			37.5%{margin-left: -60px;}
+			50%{margin-left: -80px;}
+			62.5%{margin-left: -60px;}
+			75%{margin-left: -40px;}
+			87.5%{margin-left: -20px;}
+			100%{margin-left: 0px;}
 		}
 		@keyframes bbb{
 			0%{margin-left: 0px;}
@@ -140,9 +150,16 @@
 			left: 93px;
 			top:80px;
 			border-radius: 50% 0 50% 0;
+			-webkit-animation:yao 0.6s infinite;
 			animation:yao 0.6s infinite;
+			-webkit-animation-play-state:paused;
 			animation-play-state:paused;
 			z-index: -100;
+		}
+		-webkit-@keyframes yao{
+			40%{
+				transform:rotate(50deg);
+			}
 		}
 		@keyframes yao{
 			40%{
@@ -150,6 +167,7 @@
 			}
 		}
 		.dog:hover .tail{
+			-webkit-animation-play-state:running;
 			animation-play-state:running;
 		}
 	</style>
