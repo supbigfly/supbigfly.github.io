@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>box-shadow</title>
-	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>边框阴影</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
 	<style type="text/css">
-		.main{
-			margin:50px 200px 0px 120px;
+		.main .main_inner{
+			margin:30px auto;
+		}
+		@media (max-width: 760px){
+			.header h1{
+				font-size: 20px;
+			}
+			.main .main_inner{
+				padding:5px;
+			}
 		}
 		.zfx_one,
 		.zfx_two,
@@ -34,7 +43,7 @@
 		.zfx_four{
 			box-shadow: 0px -15px 4px green,15px 0px 4px yellow,0px 15px 4px red,-15px 0px 4px blue;
 		}
-		pre{
+		p{
 			color: #D2691E;
 			font-size: 20px;
 			clear: both;
@@ -43,34 +52,35 @@
 </head>
 <body>
 	<div class="header clearfix">
-    	<i class="icon-reorder"></i>
 		<a href="../index.html">返回</a>
 		<h1>这是一个正方形的层显示阴影的效果</h1>
 	</div>
 	<div class="main">
-		<div class="zfx_one">
-	  <p>默认效果</p>
-	</div>
-	<div class="zfx_two">
-		<p>水平垂直移动值为0使得四周都有阴影效果为默认</p>
-	</div>
-	<div class="zfx_three">	
-	</div>
-	<div class="zfx_four">
-		<p>上下左右的阴影不一样</p>
-	</div>
-	<pre>
-box-shadow属性有六个值，详细如下：语法box-shadow: h-shadow 
-v-shadow blur spread color inset;h-shadow水平阴影的位置
-（必须填写）v-shadow垂直阴影的位置（必须填写）blur模糊距离
-（可选）spread阴影的尺寸（可选）color阴影的颜色（可选）
-inset（可将默认的外部阴影值outset改成内部阴影值inset）
-用法说明详见链接博客：http://blog.csdn.net/freshlover/
-article/details/7610269如果前面的阴影模糊值小于后面的阴影
-模糊值，那么前面的显示在后面之上，如果前面阴影的模糊值大于
-后面的阴影模糊值，那么前面的阴影将遮住后面的阴影效果这句话
-好绕啊。
-	</pre>
+		<div class="main_inner">
+			<div class="zfx_one">
+	  		<p>默认效果</p>
+		</div>
+		<div class="zfx_two">
+			<p>水平垂直移动值为0使得四周都有阴影效果为默认</p>
+		</div>
+		<div class="zfx_three">	
+		</div>
+		<div class="zfx_four">
+			<p>上下左右的阴影不一样</p>
+		</div>
+		<p>
+			box-shadow属性有六个值，详细如下：语法box-shadow: h-shadow 
+			v-shadow blur spread color inset;h-shadow水平阴影的位置
+			（必须填写）v-shadow垂直阴影的位置（必须填写）blur模糊距离
+			（可选）spread阴影的尺寸（可选）color阴影的颜色（可选）
+			inset（可将默认的外部阴影值outset改成内部阴影值inset）
+			用法说明详见链接博客：http://blog.csdn.net/freshlover/
+			article/details/7610269如果前面的阴影模糊值小于后面的阴影
+			模糊值，那么前面的显示在后面之上，如果前面阴影的模糊值大于
+			后面的阴影模糊值，那么前面的阴影将遮住后面的阴影效果这句话
+			好绕啊。
+		</p>
+		</div>
 	</div>
 </body>
 </html>

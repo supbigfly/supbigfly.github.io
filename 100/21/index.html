@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 	<title>js-open()</title>
 	<script src="../js/jQuery.js"></script>
 	<script>
@@ -18,7 +19,7 @@
 		ul{
 			padding-left: 0;
 		}
-		ul>li{float: left;width: 100px;height: 50px;text-align: center;background-color: blue;line-height: 50px;color:white;cursor:pointer;border:1px solid #F4A460;box-sizing:border-box;}
+		ul>li{width: 100px;height: 50px;text-align: center;background-color: blue;line-height: 50px;color:white;cursor:pointer;border:1px solid #F4A460;box-sizing:border-box;}
 		ul>li:first-child{
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
@@ -52,7 +53,7 @@
 		    color: #eee;
 		    font-size: 48px;
 		    font-weight: bold;
-		    line-height: 68px;
+		    line-height: 78px;
 		    background-color: #800000;
 		    transition:transform 4s;
 		    text-align: right;  
@@ -67,7 +68,7 @@
 		    color: #eee;
 		    font-size: 48px;
 		    font-weight: bold;
-		    line-height: 68px;
+		    line-height: 78px;
 		    background-color: #800000;
 		    transition:transform 4s;
 		    text-align: left;
@@ -84,9 +85,12 @@
 		.doorb.doorbs{
 		    transform:translateX(100%);
 		}
-		@media (min-width: 786px){
+		@media (min-width: 768px){/*当宽度大于768这个临界值时，line-heitht是85*/
 		    .doora,.doorb{
 		        line-height: 85px;
+		    }
+		    ul li{
+		    	float: left;
 		    }
 		}
 		.aaa{

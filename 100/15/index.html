@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 	<title>box-sizing</title>
-	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
 	<style type="text/css">
-		*
-		{
-			box-sizing:border-box;
-		}
 		.box{
-			width: 700px;height: 60px;
+			width: 50%;height: 60px;
 			padding-top:20px;
 			background-color: green;
 		}
@@ -22,7 +19,11 @@
         <a href="../index.html">返回</a>
         <h1>box-sizing:borde-box;</h1>
     </div>
-	<h3>加padding会对盒子的高度或宽度造成增大这里面用*{box-sizing:border-box;}来搞定</h3>
-	<div class="box">text</div>
+	<div class="main">
+		<div class="main_inner">
+			<h3>加padding会对盒子的高度或宽度造成增大这里面用*{box-sizing:border-box;}来搞定</h3>
+			<div class="box">text</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -41,17 +41,10 @@ li{
 	text-align: center;
 	line-height: 200px;
 }
-.main{
-	background-color: #2F4F4F;
-	color:white;
-}
 .main .main_inner{
-	width: 960px;
+	width: 77%;
 	margin:0 auto;
 }
-/*.main_inner p{
-	color:white;
-}*/
 footer{
 	text-align: center;
 	position: absolute;
