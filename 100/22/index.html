@@ -151,14 +151,35 @@
 			top:80px;
 			border-radius: 50% 0 50% 0;
 			-webkit-animation:yao 0.6s infinite;
+			-moz-animation:yao 0.6s infinite;
+			-o-animation:yao 0.6s infinite;
+			-ms-animation:yao 0.6s infinite;
 			animation:yao 0.6s infinite;
 			-webkit-animation-play-state:paused;
+			-moz-animation-play-state:paused;
+			-o-animation-play-state:paused;
+			-ms-animation-play-state:paused;
 			animation-play-state:paused;
 			z-index: -100;
 		}
-		-webkit-@keyframes yao{
+		@-webkit-keyframes yao{
 			40%{
-				transform:rotate(50deg);
+				-webkit-transform:rotate(50deg);
+			}
+		}
+		@-moz-keyframes yao{
+			40%{
+				-moz-transform:rotate(50deg);
+			}
+		}
+		@-o-keyframes yao{
+			40%{
+				-o-transform:rotate(50deg);
+			}
+		}
+		@-ms-keyframes yao{
+			40%{
+				-ms-transform:rotate(50deg);
 			}
 		}
 		@keyframes yao{
@@ -168,6 +189,9 @@
 		}
 		.dog:hover .tail{
 			-webkit-animation-play-state:running;
+			-moz-animation-play-state:running;
+			-o-animation-play-state:running;
+			-ms-animation-play-state:running;
 			animation-play-state:running;
 		}
 	</style>
