@@ -2,32 +2,99 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+			font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+		}
+		h2{
+			text-align: center;
+			background-color: #6B8E23;
+		}
+	</style>
 </head>
 <body>
+	<h2>基础知识</h2>
+	<h3>W3C标准</h3>
+	<p>由万维网联盟制定的一系列标准，包括：结构化标准语言（HTML和XML）、表现标准语言（CSS）、行为标准语言（DOM和ECMAScript）倡导结构、样式、行为分离。</p>
+	<p>java需要虚拟机运行，由sun公司开发后被甲骨文收购属于强语言面向对象。</p>
+	<h3>CSS中的定位机制</h3>
+	<p>标准文档流（Normal flow）特点从上到下，从左到右，输出文档内容，由块级元素和行级元素组成。</p>浮动（Floats）、绝对定位（Absolute positioning）</p>
+	<h3>块级元素和内联元素</h3>
+	<p>常见的块级元素:div form table p pre h dl ol ul常见的内联元素:span a strong em label input select textarea img br</p>
+	<p>通过display:inline和display:block改变元素的布局级别</p>
+	<p>display:inline-block;将对象呈现为inline对象，但对象的内容作为block对象呈现。如：a:inline-block，使其既具有block的宽高度特性又具有inlined的同行特性。</p>
+	<p>SVG是可伸缩的矢量图，设计与代码交互。</p>
+	<p>layout布局文件_layout/default.html写下划线就是隐藏文件</p>
+	<p>markdown标注性语言（标签式语言）。</p>
+	<h3>html5拖放</h3>
+	<p>①drag和drop是html5标准的组成部分②拖放开始：(ondragstart)调用一个函数，drap(event)规定了被拖放的数据③设置拖放数据：(setDate())设置被拖动数据的类型和值④放入位置：ondragover事件规定在何处放置被拖动的数据⑤放置：ondrop当放置被拖数据时，会发生drop事件。</p>
+	<h3>拓展</h3>
+	<a href="http://www.zhihu.com/question/27897263">GUI UI UE PM</a>
+	<!-- ----------------------------------------------------------- -->
+	<h2>html</h2>
+	<p>viewport是取消手机的缩放模式</p>
+	<p>a不可继承icon的颜色</p>
+	<p>在p中显示标签需要使用字符实体，不需要记忆可在网页中搜索字符实体即可。</p>
+	<!-- ----------------------------------------------------------- -->
+	<h2>css</h2>
 	<h3>透明背景色</h3>
 	<p>background-color: rgba(0,0,0,.3);</p>
+	<p>backgoound-color与background-image同时使用时，图片在上面，颜色在下面。</p>
+	<h3>默认字体样式</h3>
+	<p>"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;</p>
+	<p>ul没有背景色时：给ul高度或li使用clear</p>
+	<h3>box-shadow</h3>
+	<p>box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);</p>
+	<h3>overflow</h3>
+	<p>visible默认值。内容不会被修剪，会呈现在元素框之外。hidden内容会被修剪，并且其余内容是不可见的。scroll内容会被修剪，但是浏览器会显示滚动条来查看内容。auto</p>
 	<h3>@media-max</h3>
 	<p>max-width:970px写在上面max-width:960px写在下面（当宽度小于这个数值时里面的属性生效）</p>
 	<h3>@media-min</h3>
 	<p>min-width:400px写在上面min-width:500px写在下面（当宽度大于这个数值时里面的属性生效）</p>
 	<h3>@media-max与@media-min</h3>
 	<p>max写在上面min写在下面</p>
-	<h3>默认字体样式</h3>
-	<p>"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;</p>
-	<h3>box-shadow</h3>
-	<p>box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);</p>
-	<p>更新日期：2016-02-29</p>
-	<h3>W3C标准</h3>
-	<p>由万维网联盟制定的一系列标准，包括：结构化标准语言（HTML和XML）、表现标准语言（CSS）、行为标准语言（DOM和ECMAScript）倡导结构、样式、行为分离。</p>
-	<h3>CSS中的定位机制</h3>
-	<p>标准文档流（Normal flow）特点从上到下，从左到右，输出文档内容，由块级元素和行级元素组成。</p>浮动（Floats）、绝对定位（Absolute positioning）</p>
-	<p>更新日期：2016-03-01</p>
-	<h3>块级元素和内联元素</h3>
-	<p>常见的块级元素:div form table p pre h dl ol ul常见的内联元素:span a strong em label input select textarea img br</p>
-	<p>通过display:inline和display:block改变元素的布局级别</p>
-	<p>display:inline-block;将对象呈现为inline对象，但对象的内容作为block对象呈现。如：a:inline-block，使其既具有block的宽高度特性又具有inlined的同行特性。</p>
-	<h3>overflow</h3>
-	<p>visible默认值。内容不会被修剪，会呈现在元素框之外。hidden内容会被修剪，并且其余内容是不可见的。scroll内容会被修剪，但是浏览器会显示滚动条来查看内容。auto</p>
+	<h3>font-smooting</h3>
+	<p>使页面上的字体抗锯齿,使用后字体看起来会更清晰舒服。设置为none非常模糊。设置为antialiased，变得非常平滑。有六个值auto/inherit/initial/none/subpixel-antialiased/antialiased后三个为常用值。</p>
+	<p>实践后：div有宽高属性，里面的图片不设置宽高显示不全面，设置百分比宽高显示全面。</p>
+	<h3>定位</h3>
+	<p>fixed相对于屏幕。relative不脱离文档结构，相对于原来的位置。</p>
+	<p>给行级元素居中把text-align写在父级元素中。<a href="http://www.w3school.com.cn/cssref/pr_pos_vertical-align.asp">vertical-align</a></p>
+	<p><a href="http://www.w3school.com.cn/cssref/pr_class_visibility.asp">visibility</a>规定元素是否可见</p>
+	<p>a:link,a:visited{text-decoration:none;}点击未点击都去掉下划线</p>
+	<p>display:inline;背景不挨着，须给ul一个背景色。比float:left好用。</p>
+	<!-- ----------------------------------------------------------- -->
+	<h2>jQuery</h2>
+	<p>通过一行简单的标记被添加到网页中，是javascript的一个函数库，对js进行封装解决了兼容问题。功能有：html元素选取html元素、css操作html事件函数、js特效和动画、dom遍历和修改、ajax、utilities。用javascript会麻烦些，统一规范写到&lt;/body&lg;结束标签上面。基础语法：$(selector).action()美元符号定义jQuery选择符查询和查找html元素，jQuery的action()执行对元素的操作。</p>
+	<p>标签是元素节点、id class href等是属性节点、href里面的是文本节点。</p>
+	<p>hide()隐藏元素</p>
+	<p>show()显示元素</p>
+	<p>addClass()添加类名</p>
+	<p>removeClass()移除类名</p>
+	<p>toggleClass()添加移除类名的开关</p>
+	<p>css("属性","文本")如$("img").css("src","路径")更换文本节点来改变图片</p>
+	<p>$(this)选择父级元素选择的元素</p>
+	<p>alert("");console.log("");在不报错时用来自己检查错误</p>
+	<p>parent()找到父级元素</p>
+	<p>siblings()获取当前元素的同级别的其它的元素</p>
+	<p>find()获取当前元素的子级元素</p>
+	<p>index()获取同级元素的索引，不同类型只要是同级就算，返回int数值从0开始</p>
+	<p>slideUp()上卷</p>
+	<p>slideDown()下卷</p>
+	<p>fadeOut()渐出</p>
+	<p>fadeIn()渐入</p>
+	<p>trim()去掉字符串首尾空格</p>
+	<p>$(document).ready(function(){alert("");});文档加载完后运行函数</p>
+	<p>$("p").click(function(){$(this).hide();单击事件p后运行函数，其中ready可以嵌套click</p>
+	<p>$(".btn1",".btn2")和$("div","p")这样写也可以</p>
+	<p>变量是存储数据的容器，jQuery提供方法,js提供语法。</p>
+	<!-- ----------------------------------------------------------- -->
+	<h2>javascript</h2>
+	<p>基于对象，弱语言，编写特效，解析型语言</p>
+	<p>单击事件在p中，点击p调用函数，触发打开窗口事件。&lt;p onclick("click")&gt;&lt;p&gt;&lt;script&gt;function click(){window.open();target="_blank";</p>
+	
+	
 </body>
 </html>

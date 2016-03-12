@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mouse事件</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		.box{
+			width: 960px;
+			height:600px;
+			margin:0 auto;
+			background-color: #DCDCDC;
+		}
+		.box_left,
+		.box_right{
+			width: 300px;
+			height: 300px;
+			background-color: #6495ED;
+			margin:10px;
+			text-align: center;
+			color:white;
+			font-size: 2em;
+		}
+		.box_left{			
+			float: left;
+		}
+		.box_right{
+			float: right;
+		}
+		.small_box{
+			width: 100px;
+			height: 100px;
+			background-color: #8FBC8F;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <a href="../index.html">返回</a>
+        <h1>over out enter leave</h1>
+    </div>
+	<div class="box clearfix">
+		<div class="box_left">over out
+			<div class="small_box"></div>
+		</div>
+		<div class="box_right">enter leave
+			<div class="small_box"></div>
+		</div>
+	</div>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		$(".box_left").mouseover(function(){
+			console.log(1111);
+		});
+		$(".box_left").mouseout(function(){
+			console.log(2222);
+		});
+		$(".box_right").mouseenter(function(){
+			console.log(3333);
+		});
+		$(".box_right").mouseleave(function(){
+			console.log(4444);
+		});
+	</script>
+</body>
+</html>

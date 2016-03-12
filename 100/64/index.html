@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js下拉菜单</title>
+	<link rel="stylesheet" type="text/css" href="../36/index.css">
+	<style>
+		.yuanliao>li{
+			float: left;
+			width: 70px;
+		}
+		.zhushi>li{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <a href="../index.html">返回</a>
+        <h1>js下拉菜单</h1>
+    </div>
+    <div class="nav">
+    	<ul class="yuanliao">
+    		<li>
+    			<a href="#">主食小麦</a>
+    			<ul class="zhushi">
+    				<li><a href="#">馒头</a></li>
+    				<li><a href="#">花卷</a></li>
+    				<li><a href="#">窝窝头</a></li>
+    			</ul>
+    		</li>
+    		<li>
+    			<a href="#">主食高粱</a>
+    			<ul class="zhushi">
+    				<li><a href="#">大米粥</a></li>
+    				<li><a href="#">饭团</a></li>
+    				<li><a href="#">大米饭</a></li>
+    			</ul>
+    		</li>
+    	</ul>
+    </div>
+    <script src="../js/jQuery.js"></script>
+    <script>
+    	$(".yuanliao>li").mouseover(function(){
+    		// $(".zhushi>li").show();
+    		//(".zhushi>li").slideDown();为什么这样写就显示两列
+    		$(this).find("li").slideDown();//为什么这样写就显示一列
+    	});
+    	//$(".yuanliao>li").mouseout(function(){
+    		// $(this).find("ul>li").slideUp();
+    		//$(".zhushi>li").slideUp();
+    	//})
+		$(".yuanliao>li").mouseleave(function(){
+			$(this).find("li").slideUp();
+		})
+    </script>
+</body>
+</html>

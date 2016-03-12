@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>Document</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		html{
+			width: 100%;
+			height:100%;
+			background-color: #2E8B57;
+		}
+		.demo{
+			width: 20em;
+			height: 3em;
+			margin-left: 20px;
+			margin-top:10px;
+			float: left;
+		}
+		.jia_class,
+		.jian_class{
+			width: 40px;
+			height: 40px;
+			float: left;
+			display: inline;
+			font-size: 30px;
+		}
+		.textdemo{
+			width: 30em;
+			height: 8em;
+			color:white;
+			float: left;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>购物加减法</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+			<div class="demo">
+				<input type="text" id="text_id">
+				<div class="btnbox">
+					<input type="button" value="+" id="jia_id" class="jia_class">
+					<input type="button" value="-" id="jian_id" class="jian_class">
+				</div>
+			</div>
+			<div class="textdemo">
+				<p>var num = 0;//初始化变量</p>
+				<p>$("#text_id").val(num);//选中文本框获取值为0</p>
+				<p>$("#jia_id").click(function(){//初始化加法按钮</p>
+				<p>var num1 = $("#text_id").val();//声明变量并获取文本框的值</p>
+			</div>
+    	</div>
+    </div>
+    <script src="../js/jQuery.js"></script>
+    <script>
+    	var num = 0;//初始化变量
+    	$("#text_id").val(num);
+    	// $("#text_id").val()=0;
+    	//这里是加法了
+    	$("#jia_id").click(function(){
+    		var num1 = $("#text_id").val();   		
+    		$("#text_id").val(Number(num1)+1);
+    	});
+    	$("#jian_id").click(function(){
+    		var num2 = $("#text_id").val();
+    		var jian = Number(num2)-1;
+    		if(jian>=0){
+    			$("#text_id").val(jian);
+    		}else{
+    			alert("plase buy a goods");
+    		}
+    	})
+    </script>
+</body>
+</html>
