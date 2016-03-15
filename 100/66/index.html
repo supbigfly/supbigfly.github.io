@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>animate选项卡</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		html{
+			background-color: #2E8B57;
+			color:white;
+		}
+		.bigbtn{
+			width:354px;
+			color:white;
+			border:1px dashed white;
+		}
+		.btn{
+			float: left;
+			padding:5px 20px;
+			cursor: pointer;
+			/*border-right: 1px dashed white;*/
+		}
+		.view{
+			width: 354px;
+			height: 200px;
+			border-left:1px dashed white;
+			border-right:1px dashed white;
+			/*margin-top: 10px;*/
+			border-bottom:1px dashed white;
+			overflow: hidden;
+		}
+		.bigbox{
+			width: 1380px;
+			height: 200px;
+		}
+		.box{
+			width: 354px;
+			height: 200px;
+			/*float: left;*/
+		}
+		.box1{
+			background-color: red;
+		}
+		.box2{
+			background-color: yellow;
+		}
+		.box3{
+			background-color: blue;
+		}
+		.box4{
+			background-color: #BDB76B;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>animate选项卡</h1>
+    </div>
+    <div class="bigbtn clearfix">
+		<div class="btn" id="btnid">
+			页面一
+		</div>
+		<div class="btn" id="btnid">
+			页面二
+		</div>
+		<div class="btn" id="btnid">
+			页面三
+		</div>
+		<div class="btn" id="btnid">
+			页面四
+		</div>
+	</div>
+	<div class="view">
+		<div class="bigbox">
+			<div class="box box1"></div>
+			<div class="box box2"></div>
+			<div class="box box3"></div>
+			<div class="box box4"></div>
+		</div>
+	</div>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		$(".btn").parent().find(".btn").click(function(){
+			// alert("nihao!");
+			var num = $(this).index();
+			var nums = "-"+(num*200)+"px";
+			$(".bigbox").css("margin-top",nums);
+			// content = document.getElementById("btnid").innerHTML;
+			//$(".bigbox").write({text(content)});
+			var text = $(this).parent().find(".btn").eq(num).text();
+			$(".box").text(text);
+		})
+	</script>
+</body>
+</html>

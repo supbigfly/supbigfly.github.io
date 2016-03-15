@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>js计算器</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>js计算器</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+    		<p>实现功能的关键字input form name value onclick() function</p>
+    		<form action="" name="formA">
+				<input type="text" name="view" value=""><br>
+				<input type="button" value="1" onclick="operA('1')">
+				<input type="button" value="2" onclick="operA('2')">
+				<input type="button" value="3" onclick="operA('3')"><br>
+				<input type="button" value="4" onclick="operA('4')">
+				<input type="button" value="5" onclick="operA('5')">
+				<input type="button" value="6" onclick="operA('6')"><br>
+				<input type="button" value="7" onclick="operA('7')">
+				<input type="button" value="8" onclick="operA('8')">
+				<input type="button" value="9" onclick="operA('9')"><br>
+				<input type="button" value="0" onclick="operA('0')">
+				<input type="button" value="+" onclick="operB('+')">
+				<input type="button" value="-" onclick="operB('-')"><br>
+				<input type="button" value="*" onclick="operB('*')">
+				<input type="button" value="/" onclick="operB('/')">
+				<input type="button" value="=" onclick="result()"><br>
+				<input type="button" value="C" onclick="cleard()">
+			</form>
+			<script>
+				function operA(opernumber){
+					document.formA.view.value +=opernumber;
+				}
+				function operB(operF){
+					document.formA.view.value +=operF;
+				}
+				function result(){
+					var str = document.formA.view.value;
+					document.formA.view.value = eval(str);
+				}
+				function cleard(){
+					document.formA.view.value = "";
+				}
+			</script>
+		</div>	
+    </div>
+</body>
+</html>
