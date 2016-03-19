@@ -22,7 +22,7 @@
 		.divname,
 		.divname,
 		.divname{
-			width: 300px;
+			width: 302px;
 			height: 32px;
 			margin: 0 auto;
 		}
@@ -33,6 +33,10 @@
 		}
 		.input_class{
 			float: left;
+		}
+		.box p{
+			display: inline;
+			font-size: 12px;
 		}
 	</style>
 </head>
@@ -48,6 +52,7 @@
 			<div class="divname">
 				<label class="label_class" for="na">用户名</label>
 				<input class="input_class" id="na" type="text" placeholder="请输入用户名" onfocus="changeDemo(this)" />
+				<p class="yanzheng"></p>
 			</div>
 			
 			<div class="divname">
@@ -77,10 +82,26 @@
 			<div class="divname">kkkkk</div>
 		</form>
 	</div>
+	<script src="../js/jQuery.js"></script>
 	<script>
 		function changeDemo(oob){
 			oob.style.background="blue";
 		}
+
+		$("#na").mouseleave(function(){
+		var mail = /^[\w]{1,9}$/;
+		var txt_value = $(this).val();
+		var re = mail.test(txt_value);
+		var number = Number(re);
+		if(number == 1){
+			//alert("输入正确");
+			$(".yanzheng").html("输入正确");
+		}
+		else{
+			$(".yanzheng").html("^[\w]{1,9}@.com$");
+		}
+		//alert(number);
+		});
 	</script>
 </body>
 </html>
