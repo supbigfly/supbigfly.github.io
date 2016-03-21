@@ -1,0 +1,36 @@
+body{
+	background-color: #000;
+}
+.header{
+	width: 100%;
+	border-top: 1px solid #00BFFF;
+	border-bottom: 1px solid #00BFFF;
+}
+.header .logo{
+	width: 5em;
+	height:5em;
+	background-image: url(../../images/logo.gif);
+	-webkit-background-size: cover;
+	background-size: cover;
+	float: left;
+	/*margin-right: 20%;*/
+	border-right: 1px solid #00BFFF;
+}
+.header .nav{
+	color:white;
+	float: left;
+}
+.header .nav li{
+	float: left;
+	font-weight: bold;
+	font-size: 1.1em;
+	letter-spacing: 0.7em;
+	width: 15em;
+	text-align: center;
+	line-height:4.6em;
+	border-right: 1px solid #00BFFF;
+}
+.header .search{
+	padding:1.9em;
+	margin: 0 auto;
+}
