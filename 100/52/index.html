@@ -23,7 +23,7 @@
 				var date = new Date();
 				document.write(date);
 			</script>
-			<p>接下来介绍几个方法<br>getHours()获取小时<br>getMinutes()<br>getSeconds()获取秒<br>getFullYear()获取年份<br>getTime()获取毫秒<br>getDay()获取星期<br>setFullYear()设置具体时间</p>
+			<p>接下来介绍几个方法<br>getHours()获取小时<br>getMinutes()获取分钟<br>getSeconds()获取秒<br>getFullYear()获取年份<br>getTime()获取毫秒<br>getDay()获取星期<br>setFullYear()设置具体时间<br>getDate()获取日期具体参考w3c-js对象-Date</p>
 			<script type="text/javascript">
 				var date = new Date();
 				document.write("年份"+date.getFullYear());
@@ -56,7 +56,34 @@
 					return i;//不是则返回原值
 				}
 			</script>
+			<p>使用setInterval做一个计时器</p>
+			<div class="jishiqi">
+				时<input type="text" id="shis">
+				分<input type="text" id="fens">
+				秒<input type="text" id="miaos">
+			</div>
 		</div>
 	</div>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		var shi = 0;
+		var fen = 0;
+		var miao = 0;
+		function fun(){
+			$("#shis").val(shi);
+			$("#fens").val(fen);
+			$("#miaos").val(miao);
+			miao++;
+			if(miao==59){
+				miao=0;
+				fen++;
+			}
+			if(fen==59){
+				fen=0;
+				shi++;
+			}
+		}
+		setInterval(fun,1000);
+	</script>
 </body>
 </html>

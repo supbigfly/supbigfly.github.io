@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>跟随鼠标放大图片</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		li{
+			float: left;
+			text-align: center;
+			line-height: 30px;
+			border:1px solid green;
+			width: 30px;
+			height: 30px;
+		}
+		.view{
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+		.bigbox{
+			width: 400px;
+			height: 100px;
+		}
+		.imgclass{
+			width: 100px;
+			height: 100px;
+		}
+		.libgc{
+			background-color: green;
+		}
+		.hideclass{
+			position: absolute;
+			display: none;/*为show()服务，添加类后起作用，又因show()而废除*/
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>跟随鼠标放大图片</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+    		<div class="view">
+			<div class="bigbox">
+				<div class="box"><img src="../../images/288816.jpg" alt="" class="imgclass"></div>
+				<div class="box"><img src="../../images/imgone.jpg" alt="" class="imgclass"></div>
+				<div class="box"><img src="../../images/index_main_03.jpg" alt="" class="imgclass"></div>
+				<div class="box"><img src="../../images/banner-city.jpg" alt="" class="imgclass"></div>
+			</div>
+		</div>
+		<ul class="libgc">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<h4 class="pagex"></h4>
+		<h4 class="pagey"></h4>
+    	</div>
+    </div>
+    <script src="../js/jQuery.js"></script>
+	<script>
+		// $(".bigbox").animate({"margin-left":"-100px"})
+		$(".libgc li").click(function(){
+			var index = $(this).index();
+			var indexs = "-"+(index*100);
+			$(".bigbox").animate({"margin-left":indexs});
+			$(this).addClass("libgc");
+			$(this).siblings().removeClass("libgc");
+		})
+		$(".box").mouseenter(function(){
+			// var num = $(this).find("img").index("imgclass");
+			// alert(num);
+			var index = $(this).find(".imgclass").attr("src");//上面这句只比下面多了两个单词我鼓秋了半个钟头。imgclass与hideclass不是一张图片
+			// var index = $(".imgclass").attr("src");
+			var indexs = "<img class='hideclass' src='"+index+"'>";
+			$("body").append(indexs);
+			// 显示隐藏的元素，它有预定速度，有三种：fast normarl slow;
+			$(".hideclass").show("slow");
+		}).mousemove(function(event){
+			$(".hideclass").css({
+				"top":(event.pageY+10)+"px",
+				"left":(event.pageX+20)+"px"
+			})
+			$(".pagex").text(event.pageX+20);
+			$(".pagey").text(event.pageX+10);//当小括号里面加小括号时用大括号嵌套，就像双引号与单引号那样是一个意思。
+		}).mouseleave(function(){
+			$(".hideclass").remove();
+		});
+	</script>
+</body>
+</html>

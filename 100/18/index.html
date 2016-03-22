@@ -3,34 +3,42 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-<title>onmouseover</title>
+<title>javaScript Math</title>
 <link rel="stylesheet" type="text/css" href="../36/index.css">
 <style>
- .xuexi{width:200px;height:120px;background:green;}
- .nnn{width: 200px;height: 200px;border: 1px solid red;}
+  .yufa{
+    width: 16em;
+    height: 3em;
+    background-color: #000;
+    color:#fff;
+    border:1px dashed gray;
+    padding:1px;
+  }
 </style>
-<script>
-   function aixuexi(){
-    var woaixuexi=document.getElementById("woaixuexi");
-    woaixuexi.style.display="none";
-  }
-  function aipixuexi(){
-  	var oaixuexi=document.getElementById("woaixuexi");
-  	oaixuexi.style.display="block";
-  }
-</script>
 </head>
 <body>
   <div class="header clearfix">
       <i class="icon-reorder"></i>
       <a href="../index.html">返回</a>
-      <h1>onmouseover and onmouseout</h1>
+      <h1>Math对象</h1>
   </div>
   <div class="main">
     <div class="main_inner">
-      <div id="woaixuexi" class="xuexi"></div>
-  <div class="nnn" onmouseover="aixuexi()" onmouseout="aipixuexi()">移动过来绿色消失，离开显示。</div>
+        <p>Math对象用于执行数学任务</p>
+        <h4>使用Math的属性和方法的语法：</h4>
+        <p class="yufa">var pi_value = Math.PI;</p>
+        <p class="yufa">var sqrt_value = Math.sqrt(15);</p><p>Math对象并不像Date和String那样是对象的类，因此没有构造函数Math()，像Math.sin()这样的函数只是函数，不是某个对象的方法，无需创建，通过Math作为对象使用就可以调用其所有属性的方法。</p>
+        <img src="../../images/Math-shuxing.jpg" alt="">
+        <img src="../../images/Math-fangfa.jpg" alt="">
+        <p>var number = 3.14;<br>var result = Math.floor(number);//向下取整;Math.ceil(number);//向上取整;Math.random()//随机数;Math.floor(Math.random()*9+8);//乘以就是0-9的随机数，加8是把数值增加了8-16的9位随机数。</p>
+        <input type="text" id="txt"><input type="button" value="Math" id="btn">
     </div>
-  </div>
+    <script src="../js/jQuery.js"></script>
+    <script>
+      $("#btn").click(function(){
+        var random = Math.floor(Math.random()*9+8);
+        $("#txt").val(random);
+      })
+    </script>
 </body>
 </html>

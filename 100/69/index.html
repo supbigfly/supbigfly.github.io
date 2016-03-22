@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>滚动菜单</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		html{
+			background-color: #1d1d1d;
+		}
+		li{
+			color:white;
+			float: left;
+		}
+		ul{
+			overflow: hidden;
+			height:40px;
+		}
+		.box span,
+		.box a{
+			display: block;
+			padding:0 20px;
+			height: 40px;
+			line-height: 40px;
+			color:white;
+			margin-top: 0px;
+		}
+		.box a{
+			background-color: white;
+			color:black;
+		}
+		.box span{
+			transition:margin-top 2s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>滚动菜单</h1>
+    </div>
+    <div class="box">
+		<ul>
+			<li><span>index</span><a href="#">index</a></li>
+			<li><span>content</span><a href="#">content</a></li>
+			<li><span>about</span><a href="#">about</a></li>
+			<li><span>some</span><a href="#">some</a></li>
+			<li><span>thing</span><a href="#">thing</a></li>
+		</ul>
+	</div>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		$(".box").find("li").mouseenter(function(){
+			$(this).stop().animate({"margin-top":"-40px"},2000);
+			// $(this).css("margin-top","-40px");这样写达不到动画的效果
+			// $(this).attr("margin-top","-40px");这个是改变属性，上面是改变样式，要分清。
+		}).mouseleave(function(){
+			// $(this).css("margin-top","0px");这样也没有效果
+			$(this).stop().animate({"margin-top":"0px"},1500);
+		})
+	</script>
+</body>
+</html>

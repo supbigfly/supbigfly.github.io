@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>display选项卡</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		li{
+			float: left;
+			padding:0 20px;
+			text-align: center;
+		}
+		.content{
+			width:250px;
+			height: 200px;
+			background-color: green;
+			display: none;
+		}
+		.first{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>display选项卡</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+    		<div class="box clearfix">
+				<ul>
+					<li>页面一</li>
+					<li>页面二</li>
+					<li>页面三</li>
+				</ul>
+			</div>
+			<div>
+				<div class="content first">1</div>
+				<div class="content" style="color:white">2</div>
+				<div class="content" style="color:white">3</div>
+			</div>
+		</div>
+    </div>
+    <script src="../js/jQuery.js"></script>
+	<script>
+		$(".box").find("ul>li").click(function(){
+			var index = $(this).index();//通过li得到数值
+			//eq通过index的值来转换第一个或者第几个值没有了0，1，2的概念了获得的是对象的概念
+		    $(".content").eq(index).css("display","block").siblings().css("display","none");
+		    //$(".content").eq(index).siblings().css("display","none");
+			//.css("display","block").siblings().css("display","none");
+			
+			//alert($(".content").eq(index));这样可以查看数据类型。
+		})
+	</script>
+</body>
+</html>
