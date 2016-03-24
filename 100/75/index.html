@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>图片自动轮播</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		body{
+			background-color: #000;
+		}
+		.banner{
+			width:70%;
+			margin:0 auto;
+			height:25em;
+			background-color: #000;
+			border:5px solid white;
+			margin-top: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+		.banner .view{
+			width: 236.4em;
+			height: 24.4em;
+		}
+		.banner .pic img{
+			width: 59.1em;
+			height: 24.4em;
+			display: block;
+			float: left;
+		}
+		.banner .btn{
+			position: absolute;
+			bottom:20px;
+			left:50%;
+			margin-left: -60px;
+		}
+		.banner ul li{
+			width: 10px;
+			height: 10px;
+			margin-right: 2em;
+			background-color: #fff;
+			opacity: .4;
+			border-radius: 50%;
+			cursor:pointer;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>图片自动轮播</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+    		<p>右键查看原代码或F12</p>
+    	</div>
+    </div>
+	<script>
+		var arr = [1,2,2,3,4,5,5,6];
+		var obj ={};
+		for(var i=0;i<arr.length;i++){
+			//document.write(arr[i]);
+			if(obj[arr[i]] == undefined){
+				obj[arr[i]]=1;
+			}
+			//console.log(obj);
+		}
+		var arrs = [];
+		for(var a in obj){
+			arrs.push(a);
+		}
+		console.log(arrs);
+	</script>
+</body>
+</html>

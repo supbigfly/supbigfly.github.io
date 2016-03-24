@@ -3,23 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-	<title>Math Date [] {}</title>
+	<title>数组</title>
 	<link type="text/css" rel="stylesheet" href="../36/index.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+    <style>
+        span{
+            border:1px solid red;
+        }
+    </style>
 </head>
 <body>
 	<div class="header clearfix">
         <i class="icon-reorder"></i>
         <a href="../index.html">返回</a>
-        <h1>Math Date [] {}浅谈</h1>
+        <h1>数组</h1>
     </div>
     <div class="main">
     	<div class="main_inner">
-    		<p>这节课让我们来一起浅谈日期对象、数学对象、数组和对象</p>
-    		<p>对象的声明有两种：var obj = {}和var obj = new object();</p>
+    		<h4>数组</h4>
     		<p>数组的声明有两种：var arr = []和var arr = new Array();</p>
-    		<p>日期对象的声明：var date = new Date();</p>
-    		<p>数学对象不用声明直接使用即可如示例所示：var number = "3.14";var result = Math.floor(number);//向下取整Math.ceil(number);//向上取整</p>
+            <p>var arr = Array("pig","cat","monkey");<span>//有关键字时使用小括号</span></p>
+            <p>var arr = ["pig","cat","monkey"];<span>//没有关键字时用中括号</span></p>
+            <p>for(var i=0;i&lt;arr.length;i++&gt;//使用数组关键字length应运而生了</p>
+            <p>if(arr[i]!="pig")console.log(arr[i]);<span>//这里面相当于arr[0]输出的值，你的明白？</span></p>
+            <h4>数组嵌套输出</h4>
+            <p>var arr = [[7,8,9],[4,5,6]];<span>//嵌套数组结构</span></p>
+            <p>for(var i=0;i&lt;arr.length;i++)<span>使用for循环查找第一层数组</span></p>
+            <p>for(var j=0;j&lt;arr[i].length;j++)</p>
+            <p>document.write(arr[i][j]);<span>第一个值是arr[0][0]对应的数值</span></p>
     	</div>
     </div>
 </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>带参数的返回值函数</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>带参数的返回值函数</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+    		<div class="box" id="btn" style="width:100px;height:100px;background-color:red;">单击我吧</div>
+    		<p>右键查看原代码或F12</p>
+    	</div>
+    </div>
+    <script src="../js/jQuery.js"></script>
+	<script>
+		function f(x,y){
+			var result = x*2+y*2;
+			return result;
+		}
+		$("#btn").click(function(){
+			var value = f(2,2);
+			document.write(value);//?方块为什么消失了
+		})
+	</script>
+</body>
+</html>

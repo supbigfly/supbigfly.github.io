@@ -18,7 +18,5 @@ $(".btn li").mouseenter(function(){
 	var result = index*-59.1+"em";
 	num = index;
 	$(".view").animate({"margin-left":result},2000);
-
 	$(".btn li").eq(index).css("opacity","1").siblings().css("opacity",".4");
-	
 })

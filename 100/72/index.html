@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>append,prepend,prompt,confirm</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>append,prepend,prompt,confirm</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+    		<input type="text" id="txt">
+			<input type="button" id="btn_two" value="delete">
+			<ul>
+				<li>香蕉<span class="spans" style="border:1px dashed red;margin-left:10px;">delete</span></li>
+				<li>土豆<span class="spans" style="border:1px dashed red;margin-left:10px;">delete</span></li>
+				<li>橘子<span class="spans" style="border:1px dashed red;margin-left:10px;">delete</span></li>
+			</ul>
+			<input type="button" id="btn_append" value="append">
+			<input type="button" id="btn_prepend" value="prepend">
+    	</div>
+    </div>
+    <script src="../js/jQuery.js"></script>
+	<script>
+	//使用prompt与append添加树状结构
+		$("#btn_append").click(function(){
+			var txt_prompt = window.prompt("plase text value");
+			//var string = "<span class='spans' style='border:1px dashed red;margin-left:10px;'>delete</span></li>"
+			if(txt_prompt!=null){
+				var result ="<li>"+txt_prompt+"</li>";
+
+				//var result = "<li>'"+txt_prompt+string;
+
+				$("ul").append(result);
+			}
+		})
+	//使用prompt对话框与prepend添加树状结构
+		$("#btn_prepend").click(function(){
+			var txt_value = $("#txt").val();
+			var txt_prompt = window.prompt("plase text value");
+			if(txt_value!=null){
+				var result ="<li>"+txt_prompt+"</li>";
+				$("ul").prepend(result);
+			}
+		})
+	//使用each遍历index获取位置，element调取文本值做判断删除li
+		$("#btn_two").click(function(){
+			$("ul li").each(function(index,element){
+				var txt_value = $("#txt").val();
+				if($(element).text()==txt_value){
+					$(element).remove();
+				}
+			})
+		})
+	//使用confirm()对话框提示的是与否点击删除元素
+		$(".spans").click(function(){
+			var result = confirm();
+			if(result){
+			//这里如果用$(".spans")就会把树状结构全部删除
+				$(this).parent().remove();
+			}
+		})
+	</script>
+</body>
+</html>

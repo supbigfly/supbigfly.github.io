@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>图片自动轮播</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		body{
+			background-color: #000;
+		}
+		.banner{
+			width:70%;
+			margin:0 auto;
+			height:25em;
+			background-color: #000;
+			border:5px solid white;
+			margin-top: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+		.banner .view{
+			width: 236.4em;
+			height: 24.4em;
+		}
+		.banner .pic img{
+			width: 59.1em;
+			height: 24.4em;
+			display: block;
+			float: left;
+		}
+		.banner .btn{
+			position: absolute;
+			bottom:20px;
+			left:50%;
+			margin-left: -60px;
+		}
+		.banner ul li{
+			width: 10px;
+			height: 10px;
+			margin-right: 2em;
+			background-color: #fff;
+			opacity: .4;
+			border-radius: 50%;
+			cursor:pointer;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>图片自动轮播</h1>
+    </div>
+    <div class="banner">
+		<div class="view">
+			<div class="pic">
+				<img src="../../images/fengj01.jpg" alt="fengj01">
+				<img src="../../images/fengjing02.jpg" alt="fengjing02">
+				<img src="../../images/banner-city.jpg" alt="banner-city">
+				<img src="../../images/fengjing03.jpg" alt="fengjing03">
+			</div>
+			<div class="btn">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <script src="../js/jQuery.js"></script>
+	<script>
+		var t = setInterval(fun,3000);
+		var num = 0;
+		function fun(){	
+			var nums = num*-59.1+"em";	
+			//$(".btn li").eq(num).css("background-color","red").siblings().css("background-color","white");
+			$(".btn li").eq(num).css("opacity","1").siblings().css("opacity",".4");
+			$(".view").animate({"margin-left":nums},2000);
+			//++在上面时，下面的4改成3，0改成-1
+			num++;
+			num = num == 4 ? 0 : num;
+		}
+		$(".btn li").mouseenter(function(){
+			clearInterval(t);
+		}).mouseleave(function(){
+			t = setInterval(fun,3000);
+		}).click(function(){
+			var index = $(this).index();
+			var result = index*-59.1+"em";
+			num = index;
+			$(".view").animate({"margin-left":result},2000);
+			$(".btn li").eq(index).css("opacity","1").siblings().css("opacity",".4");
+		})
+	</script>
+</body>
+</html>
