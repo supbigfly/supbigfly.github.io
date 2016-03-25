@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>抢拍倒计时</title>
+	<link type="text/css" rel="stylesheet" href="../36/index.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
+	<style>
+		.view{
+			width: 200px;
+			height: 200px;
+		}
+		.bigimg{
+			width: 200px;
+			height: 200px;
+			display: none;
+		}
+		.first{
+			display: block;
+		}
+		.smaimg{
+			width: 50px;
+			height: 50px;
+		}
+		.box{width: 230px;height: 50px;position: relative;}
+		.hide_class{position: absolute;display: none;}
+		.inner_left,
+		.inner_right{float: left;}
+        .active{background-color: red;cursor: pointer;}
+	</style>
+</head>
+<body>
+	<div class="header clearfix">
+        <i class="icon-reorder"></i>
+        <a href="../index.html">返回</a>
+        <h1>抢拍倒计时</h1>
+    </div>
+    <div class="main">
+    	<div class="main_inner">
+    		<div class="inner_left">
+    			<div class="view">
+			    	<img src="../../images/x1-01.jpg" class="bigimg first">
+			    	<img src="../../images/x1-02.jpg" class="bigimg">
+			    	<img src="../../images/x1-03.jpg" class="bigimg">
+			    	<img src="../../images/x1-04.jpg" class="bigimg">
+			    </div>
+			    <div class="box">
+			    	<img src="../../images/x1-01.jpg" class="smaimg">
+			    	<img src="../../images/x1-02.jpg" class="smaimg">
+			    	<img src="../../images/x1-03.jpg" class="smaimg">
+			    	<img src="../../images/x1-04.jpg" class="smaimg">
+			    </div>
+    		</div>
+    		<div class="inner_right">
+    			<div>距开抢时间还有：
+    				<span id="hours"></span>:
+    				<span id="minutes"></span>:
+    				<span id="seconds"></span>
+    			</div>
+    			<input class="txt" type="text" value="0">
+    			<input type="button" class="jia" value="+">
+    			<input type="button" class="jian" value="-">
+    			<input type="button" class="btns" value="抢拍开始">
+    			<p></p>
+    		</div>
+    	</div>
+    </div>
+    <script src="../js/jQuery.js"></script>
+    <script>
+    	$(".smaimg").mouseenter(function(){
+    		var index = $(this).index();
+    		$(this).css("border","1px solid red").siblings().css("border","none");
+    		//alert(index);
+    		$(".bigimg").eq(index).css("display","block").siblings().css("display","none");
+    	})
+    	//上面是鼠标滑动小图片显示大图片
+    	$(".bigimg").mouseenter(function(){
+    		var src = $(this).attr("src");
+    		var apd_src = "<img class='hide_class' src='"+src+"'>";
+    		$("body").append(apd_src);
+    		$(".hide_class").show("slow");
+    	}).mousemove(function(event){
+    		$(".hide_class").css({
+    			"top":(event.pageY+10)+"px",
+    			"left":(event.pageX+10)+"px"
+    		});
+    	}).mouseleave(function(){
+    		$(".hide_class").remove();
+    	});
+    	//上面是鼠标跟随
+    	$(".jia").click(function(){
+    		var txt_value = $(".txt").val();
+    		if(txt_value<10){
+    		txt_value++;
+    		}
+    		if(txt_value==10){
+    			$("p").text("库存不足");
+    		}
+    		$(".txt").val(txt_value);
+    	});
+    	$(".jian").click(function(){
+    		var txt_value = $(".txt").val();
+    		if(txt_value>0){
+    			txt_value--;
+    			$("p").text("");
+    		}
+    		$(".txt").val(txt_value);
+    	})
+    	//上面是购物车加减
+    	var targetTime = [08,03,00];
+    	var targetHours;
+    	var targetMinutes;
+    	var targetseconds;
+    	var t = setInterval(fun,1000);
+    	function fun(){
+    		var date = new Date();
+    		var hour = date.getHours();
+    		var minute = date.getMinutes();
+    		var second = date.getSeconds();
+    		targetHours = targetTime[0]-hour;
+    		if(targetTime[1]>=minute){
+    			targetMinutes = targetTime[1]-minute; 
+    		}else{
+    			targetMinutes = 60+targetTime[1]-minute;
+    			targetHours-=1;
+    		}
+            if(targetTime[2]>=second){
+                targetseconds = targetTime[2]-second;
+            }else{
+                targetseconds = 60+targetTime[2]-second;
+                targetMinutes-=1;
+            }
+            $("#hours").text(targetHours);
+            $("#minutes").text(targetMinutes);
+            $("#seconds").text(targetseconds);
+            if(targetHours==0&&targetMinutes==0&&targetseconds==0){
+                clearInterval(t);
+                $(".btns").addClass("active");
+            }
+    	}
+    </script>
+</body>
+</html>

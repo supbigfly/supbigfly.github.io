@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-	<title>js语法</title>
+	<title>js循环语句</title>
 	<link rel="stylesheet" type="text/css" href="../36/index.css">
 	<link rel="shortcut icon" type="image/x-icon" href="../../images/logo.gif">
 </head>
@@ -12,27 +12,29 @@
 		<div class="header clearfix">
 	        <i class="icon-reorder"></i>
 	        <a href="../index.html">返回</a>
-	        <h1>js语法</h1>
+	        <h1>js循环语句</h1>
 	    </div>
 	</header>
 	<div class="main">
 		<div class="main_inner">
-			<p>运算符</p>
-		<p>算术运算符+ - * / % ++ --赋值运算符= += -= *= /= %=比较运算符== === != !== > &lt; >= &rt;=逻辑运算符&& || !条件预算符 字符串操作</p>
-		<p>爷爷：1+1等于几啊？</p>
-		<p>孙子：我有计算器</p>
-		<p id="jieguo"></p>
-		<!-- <button onclick="yunsuan()">计算器</button> -->
-		<input type="button" onclick="yunsuan()" value="计算器" />
+			<h3>for循环</h3>
+			<p>for循环，当不满足条件时跳出。示例一：数字1加到100得出的书</p>
+			<input type="text" id="txt">
+			<p id="txtp"></p>
+			<input type="text" id="txt2">
+			<p id="txtp2"></p>
 		</div>
 	</div>
+	<script src="../js/jQuery.js"></script>
 	<script>
-		function yunsuan(){
-			var a = 1;
-			var b = 1;
-			var c = a+b;
-			//document.write("c");
-			document.getElementById("jieguo").innerHTML=(parseInt(c));
+		var sum = 0;//放在这里只用一次，放在里面每次再执行的时候都初始化一次
+		for(var i=0;i<=100;i++){
+			sum +=i; $("#txt").val(sum);$("#txtp").text(sum);console.log(sum);
+		}
+		for(var j=0;j<=100;j++){
+			$("#txt2").val(j);
+			$("#txtp2").text(j);
+			console.log(j);
 		}
 	</script>
 </body>
