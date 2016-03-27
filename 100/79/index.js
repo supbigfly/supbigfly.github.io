@@ -1,0 +1,1 @@
+document.getElementsByTagName("html").backgroundColor("#363636");

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="top">
+		<ul>
+			<li><a href="#">获取节点</a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+		<div class="btn"></div>
+	</div>
+	<header>
+		<h3>原生js第一章</h3>
+	</header>
+	<div class="main">
+		<div class="mian_inner">
+			<div class="box_first">
+				<p>获取节点分以下几种：</p>
+				<ul>
+					<li>document.getElementById获取id<p>返回值是对象</p></li>
+					<li>document.getElementsByClassName获取class<p>返回值是数组</p></li>
+					<li>document.getElementsByTagName获取标签</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer>
+		
+	</footer>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		$(".top").find(".btn").mouseenter(function(){
+			//alert("kkk");
+			$(".top").css({"margin-left":"0px"},2000);
+		});
+		$(".top").mouseleave(function(){
+			$(this).css({"margin-left":"-200px"},5000);
+		})
+	</script>
+</body>
+</html>
