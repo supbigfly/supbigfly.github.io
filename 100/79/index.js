@@ -1,1 +1,4 @@
-document.getElementsByTagName("html").backgroundColor("#363636");
+window.onload = function(){
+	var bgc = document.getElementsByTagName("html");
+	bgc.backgroundColor("#363636");
+}
