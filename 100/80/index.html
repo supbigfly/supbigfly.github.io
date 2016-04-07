@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollTop</title>
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{text-decoration:none;}
+		a.hamburger{
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: #7FFFD4;
+		text-align: center;
+		position: fixed;
+		right: 15px;
+		bottom:42px;
+		z-index: 1;
+		line-height: 50px;
+		border-radius: 10%;
+		-webkit-transtion:background-color 3s;
+		transition:background-color 1s;
+		display: none;
+		}
+		a.hamburger:hover{
+			background-color: #00FFFF;
+		}
+		a i{
+			font-size: 32px;
+			color:#FFFFFF;
+		}
+		#nav{
+			position: absolute;
+			top:20px;
+			left:50%;
+			margin-left: -12.5em;
+		}
+		#nav li{
+			float: left;
+			width: 5em;
+			height: 2em;
+			list-style-type: none;
+			text-align: center;
+			line-height: 2em;
+			border:1px solid #9E9E9E;
+		}
+		#nav li:hover{
+			background-color: green;
+			background-color: #3CB371;
+		}
+		.top,
+		.header,
+		.banner,
+		.container,
+		#footer{
+			height: 35em;
+			text-align: center;
+			line-height: 35em;
+			color:#ffffff;
+			font-size: 2em;
+			text-transform: uppercase;
+		}
+		.top{
+			background-color: #388E3C;
+		}
+		.header{
+			background-color: #727272;
+		}
+		.banner{
+			background-color: #388E3C;
+		}
+		.container{
+			background-color: #727272;
+		}
+		#footer{
+			background-color: #388E3C;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">我是top</div>
+	<div class="header">我是header
+		<ul id="nav">
+			<li><a href="#top">top</a></li>
+			<li><a href="#header">header</a></li>
+			<li><a href="#banner">banner</a></li>
+			<li><a href="#container">container</a></li>
+			<li><a href="#footer">footer</a></li>
+		</ul>
+	</div>
+	<div class="banner">我是banner</div>
+	<div class="container">我是container</div>
+	<div id="footer">我是footer</div>
+	<a class="hamburger" href="#">
+		<i class="icon-double-angle-up"></i>
+	</a>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		$(window).scroll(function(){
+			var scroTop = $(this).scrollTop();
+			if(scroTop>50){
+				$(".hamburger").css("display","block");
+			}else{
+				$(".hamburger").css("display","none");
+			}
+		})
+		$(".hamburger").click(function(){
+			$("body,html").animate({"scrollTop":0},3000);
+		})
+		$("#nav li a").click(function(){
+			var href = $(this).attr("href");
+			//alert(href);
+			var tops = $(href).offset().top;
+			$("body,html").animate({"scrollTop":tops},3000);
+		})
+	</script>
+</body>
+</html>

@@ -20,3 +20,14 @@ $(".btn li").mouseenter(function(){
 	$(".view").animate({"margin-left":result},2000);
 	$(".btn li").eq(index).css("opacity","1").siblings().css("opacity",".4");
 })
+$(window).scroll(function(){
+	var mar = $(this).scrollTop();
+	if(mar>50){
+		$(".hamburger").css("display","block");
+	}else{
+		$(".hamburger").css("display","none");
+	}
+})
+$(".hamburger").click(function(){
+	$("body,html").animate({"scrollTop":0},3000);
+})
