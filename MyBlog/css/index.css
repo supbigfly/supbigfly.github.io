@@ -1,11 +1,6 @@
 body{
 	background-color: #000;
 }
-.header{
-	width: 100%;
-	border-top: 1px solid #00BFFF;
-	border-bottom: 1px solid #00BFFF;
-}
 .header .logo{
 	width: 5em;
 	height:5em;
@@ -13,29 +8,39 @@ body{
 	-webkit-background-size: cover;
 	background-size: cover;
 	float: left;
-	/*margin-right: 20%;*/
-	border-right: 1px solid #00BFFF;
+	/*display: none;*/
 }
 .header .nav{
 	color:white;
-	float: left;
+	position: absolute;
+	left: 50%;
+	-webkit-transform:translate(-50%);
 }
 .header .nav li{
 	float: left;
 	font-weight: bold;
 	font-size: 1.1em;
 	letter-spacing: 0.7em;
-	width: 15em;
+	width: 10vw;
 	text-align: center;
 	line-height:4.6em;
-	border-right: 1px solid #00BFFF;
 }
 .header .nav li a{
 	color:white;
 }
 .header .search{
-	padding:1.9em;
+	padding:1.9vw;
 	margin: 0 auto;
+	float: right;
+}
+@media (min-width: 768px) and (max-width: 991px){
+
+}
+@media (max-width: 768px){
+	.header .logo{display: none;}
+	.header .nav li{letter-spacing: 0.4em;width:10vw;}
+	.header .search{display: none;}
+
 }
 .banner{
 	width:70%;

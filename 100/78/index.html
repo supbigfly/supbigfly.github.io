@@ -7,7 +7,7 @@
 	<link type="text/css" rel="stylesheet" href="../36/index.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/logo.gif">
 	<style>
-		body{background-color: gray;}
+		body{background-color: #FFCCBC;}
         .leftbox{width: 100%;height: 100px;border:3px solid #A0522D;margin-bottom: 1em;}
         .left{float:left}
         .lefts{float:right;width:35%;}
@@ -67,13 +67,15 @@
         $("#list").delegate(".del","click",function(){//选择器，事件类型，
             $(this).parent().remove();
         });
+//绑定事件，给元素绑定事件，一个或者多个
         $("#btns").bind("click mouseenter",function(){
             alert("绑定事件");
         });
+//该事件只触发一次
         $("#one").one("click",function(){
             alert("只触发一次");
         });
-
+//hover事件，两个参数，第一个进入，第二个出来，相当于把enter与leave整合了。
         $(".box").hover(function(){
             $(this).toggleClass("active");
         });
