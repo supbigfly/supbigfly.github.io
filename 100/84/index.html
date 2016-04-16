@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问题汇总</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<style>
+		.clearfix:after,
+		.clearfix:before{content: "";display: table;}
+		.clearfix:after{clear:both;}
+		.main_inner{width: 1000px;margin:10% auto;border:1px solid gray;}
+		.div-one,
+		.div-two,
+		.div-three{border:1px solid #DAA520;margin:2px;}
+		.div-three p{width: 800px;float: left;}
+		.div-three .anliyi,
+		.div-three .anlier{float: left;}
+		.div-three .anliyi i{font-size: 32px;background-color: #63B8FF;}
+		.glyphicon.glyphicon-search{width: 36px;height: 36px;background-color: #63B8FF;color:black;text-align: center;line-height: 36px;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="main_inner">
+			<div class="div-one">
+				<p><span>问题1：</span>添加Bootstrap后发生不兼容</p>
+				<p><span>方案1：</span>在放生地点右键审查元素，找到该元素的的css比如ul元素的bottom:10px;在其他的页面使用优先级覆盖</p>
+			</div>
+			<div class="div-two">
+				<p><span>问题2：</span>点击a标签不触发事件，点击p标签触发。</p>
+				<p><span>方案1：</span>a的href是空字符串时，点击a的功能是刷新页面换成#就好了</p>
+			</div>
+			<div class="div-three clearfix">
+				<p><span>问题3：</span>使用font-size控制的字体</p>
+				<div class="anliyi">
+					<i class="icon-reorder"></i>
+				</div>
+				<p><span>方案1：使用bootstrap的width,height控制字体</span></p>
+				<div class="anlier">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

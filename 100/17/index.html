@@ -88,28 +88,28 @@
 			oob.style.background="blue";
 		}
 
-		// $("#na").mouseleave(function(){
-		// var mail = /^[\w]{1,9}$/;
-		// var txt_value = $(this).val();
-		// var re = mail.test(txt_value);
-		// var number = Number(re);
-		// if(number == 1){
-		// 	$(".yanzheng").html("√");
-		// }
-		// else{
-		// 	$(".yanzheng").html("X");
-		// }
-		// });
-		$("#na").blur(function(){
-			var mail = /^[\w]{1,9}@.com/;
-			var txt_value = $(this).val();
-			var re = mail.exec(txt_value);
-			if(re != txt_value||re == null){
-				$(".yanzheng").html("X").removeClass().addClass("false");
-			}else{
-				$(".yanzheng").text("√").removeClass().addClass("true");
-			}
-		})
+		$("#na").mouseleave(function(){
+		var mail = /^[\w]{1,9}$/;
+		var txt_value = $(this).val();
+		var re = mail.test(txt_value);
+		var number = Number(re);
+		if(number == 1){
+			$(".yanzheng").html("√");
+		}
+		else{
+			$(".yanzheng").html("X");
+		}
+		});
+		// $("#na").blur(function(){
+		// 	var mail = /^a$/;
+		// 	var txt_value = $(this).val();
+		// 	var re = mail.exec(txt_value);
+		// 	if(re != txt_value||re == null){
+		// 		$(".yanzheng").html("X").removeClass().addClass("false");
+		// 	}else{
+		// 		$(".yanzheng").text("√").removeClass().addClass("true");
+		// 	}
+		// })
 	</script>
 </body>
 </html>

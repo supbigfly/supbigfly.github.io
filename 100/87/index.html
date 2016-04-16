@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>next().text()</title>
+</head>
+<body>
+	<span class="zan"><img src="../../images/zan.gif" alt=""></span>
+	<span>0</span>
+	<script src="../js/jQuery.js"></script>
+	<script>
+		$(".zan").click(function(){
+			var val = $(this).next().text();
+			var num = Number(val)+1;
+			$(this).next().text(num);
+		})
+	</script>
+</body>
+</html>

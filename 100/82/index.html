@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式语法</title>
+	<style>
+		.main_inner{
+			width: 1000px;
+			margin: 0 auto;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="main_inner">
+			<h3>入门难，精通简单</h3>
+			<p>两个特殊符号^和$。他们的作用是分别指出一个字符串的开始和结束</p>
+			<p><span>"ab*"</span>表示一个字符串有一个a后面跟着零个或若干个b("a","ab","abb")</p>
+			<p><span>"ab+"</span>表示字符串有一个a后面跟着至少一个b或者更多</p>
+			<p><span>"ab?"</span>表示一个字符串有一个a后面跟着零个或者一个b</p>
+			<p><span>"a?+$"</span>表示在字符串的末尾有零个或者一个a跟着一个或者多个b</p>
+			<p>正则表达式两种声明方法:var re = new RegExp();和var re = //;</p>
+			<p><span>[0-9]</span>z中括号表示范围在数字0-9这10个数字中取值</p>
+			<p><span>{4,5}</span>大括号规定位数是多少，逗号表示4位或者5位</p>
+			<p><span>()</span>小括号分组，相当于数组中的第几个元素</p>
+			<p>
+				<span>\d</span>匹配数字
+				<span>\D</span>匹配非数字
+				<span>\w</span>匹配数字字母下划线
+				<span>\W</span>匹配非...
+				<span>\s</span>匹配空格
+				<span>\S</span>匹配非空格或者tab
+			</p>
+			<p>
+				<span>test()</span>检测一个字符串是否匹配某个模式，当字符串是RegExp时，符合返回true,不符合返回false.<br>
+				<span>exec()</span>检测字符串，返回数组，存放匹配结果，未匹配返回null。此数组的第0个元素是与正则表达式相匹配的文本，以此类推。http://www.w3school.com.cn/jsref/jsref_exec_regexp.asp<br>
+				<span>blur()</span>当文本框失去焦点时触发事件
+			</p>
+		</div>
+	</div>
+	<script>
+		// var pStyle = document.getElementsByTagName("p");
+		// pStyle.style.color="red";
+		// document.getElementById("pp").style.color="red";
+		var pStyle = document.getElementsByTagName("span");
+		for(var i=0;i<pStyle.length;i++){
+			pStyle[i].style.color="red";
+		}
+	</script>
+</body>
+</html>
