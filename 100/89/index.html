@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>node登录验证</title>
+	<link rel="stylesheet" type="text/css" href="../84/public.css">
+</head>
+<body>
+	<div class="main">
+		<div class="main_inner">
+			<div class="div-one">
+				<p><span>原生</span>return</p>
+				<p>app.get("/login",function(req,res){//浏览器中访问login<br>fs.readFile("data/userlist.json","utf8",function(err,data){//在json中读取文件为字符串格式<br>var userlist = JSON.parse(data);//json字符串转换成json对象数组<br>for(var i in userlist){//使用for循环遍历数组<br>if(req.query.username==userlist[i].username&&req.query.password==userlist[i].password){//文本框的内容与json里面的值<br>res.render("userlist");<br>return;<br>}<br>}res.render("index-err")}<br>)})</p>
+			</div>
+			<div class="div-two">
+				<p><span>break</span>send</p>
+				<p>app.get("/login",function(req,res){<br>var result="";<br>fs.readFile("data/userlist.json","utf8",function(err,data){<br>var userlist = JSON.parse(data);<br>for(var i in userlist){<br>if(req.query.username==userlist[i].username&&req.query.password==userlist[i].password){<br>res.render("userlist");<br>break;<br>}else{<br>result="登录失败";<br>}<br>}res.send(result);<br>})<br>})//登录正确这里执行一遍，所以页面的bootstrap效果消失了，登录失败又执行了一遍，所以报错。</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

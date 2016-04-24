@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>node.js</title>
+	<style>	
+		.main{
+			background-image: url(../../images/88-bg.gif);
+			
+		}
+		.main_inner{
+			width: 1000px;
+			height:auto;
+			border:1px solid black;
+			margin:5% auto;
+		}
+		.one,.two,.three,.four,.five{
+			border:1px dashed blue;
+			margin:5px;
+			padding:0 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="main_inner">
+			<div class="one">
+				<p>first.js<br>var num1 = 20;<br>var num2 = 30;<br>var result = num1+num2;<br>console.log(result);</p>
+			</div>
+			<div class="two">
+				<p>server.js----node核心文件http<br>var http = require("http");<br>http.createServer(function(req,res){<br>res.end("Hello");<br>}).listen(3000);<br>console.log("服务器已启动");</p>
+			</div>
+			<div class="three">
+				<p>readfile.js<br>var fs = require("fs");<br>fs.readFile("data/tempText.txt","banner",function(err){<br>if(err){<br>console.log(err);<br>}else{<br>console.log("添加成功");<br>}</p>
+			</div>
+			<div class="four">
+				<p>readfile.js变异版<br>var http = require("http");<br>var fs = require("fs");<br>var server = http.createServer(function(req,res){<br>fs.readFile("data/tempText.txt","apple",function(err,data){<br>res.end(data);<br>})<br>})<br>server.listen(3000);<br>console.log("添加成功");//可在浏览器中访问</p>
+			</div>
+			<div class="five">
+				<p>appendfile.js<br>var fs = require("fs");<br>fs.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
