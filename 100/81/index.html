@@ -11,6 +11,10 @@
 		.footer_inner{
 			width: 1000px;
 			border:1px solid black;
+			margin: 0 auto;
+			/*text-align: center;*/
+			padding-left: 100px;
+			box-sizing:border-box;
 		}
 	</style>
 </head>
@@ -32,22 +36,24 @@
 			<p>cd ..(上一步）</p>
 			<p>cd projectName/（进入这个文件夹，事先在本地创建好的文件夹）</p>
 			<p>git init（版本库）</p>
-			<p>git status（查询状态）</p>
+			<p>git status（查询状态）红色</p>
 			<p>git add .（添加到缓存）</p>
 			<p>git status/git commit -m 'init'（-m后面的是说明）</p>
-			<p>git status</p>
+			<p>git status（查询状态）</p>
+			<p>git commit -m 'init'第一次提交到分支上</p>
+			<p>git status（查询状态）</p>
 			<p>git remote add origin https://github.com/username/projectName.git</p>
-			<p>git push -u origin master（提交到远程主机）</p>
+			<p>git push -u origin(远程) master(主机)（提交到）</p>
 			<p>username:;userpassword:;</p>
 			<p>②链接：分配权限：settings-->collborators-->右侧：账号名称填写</p>
 			<p>分支操作</p>
-			<p>git clone address(ctrl+v)</p>
-			<p>有改动执行下面语句</p>
-			<p>git-add .-->git commit -m ""-->git push -u origin master</p>
-			<p>----git pull ----</p>
+			<p>git clone 地址(粘贴)</p>
+			<p>有改动进入项目目录查询状态后执行下面语句</p>
+			<p>git add .-->git commit -m ""-->git push -u origin master</p>
+			<p>----git pull从网上弄下来</p>
 			<p>(master|merging)有冲突</p>
 			<p>工作时全放在master会有问题，需建立分支</p>
-			<p>git branch lee---git branch---git checkout lee---git merge lee---git branch----d lee</p>
+			<p>git branch lee李分支<br>git branch查询分支<br>git checkout lee切换分支<br>git merge lee合并<br>git branch -d lee删除分支</p>
 		</div>
 	</div>
 	<div class="footer">
