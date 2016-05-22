@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,html{
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix:after,
+		.clearfix:before{
+			content: "";
+			display: table;
+		}
+		.clearfix:after{
+			clear: both;
+		}
+		header{
+			background-color: #00CED1;
+		}
+		p{
+			padding-top: 0.1rem;
+			padding-bottom: 0.1rem;
+			color:#ffffff;
+		}
+	</style>
+</head>
+<body>
+	<header class="clearfix">
+		<p>这是个练习，结果在控制台输出，点击li输出对应的索引</p>
+	</header>
+	<ul>
+		<li class="list">我是1</li>
+		<li class="list">我是2</li>
+		<li class="list">我是3</li>
+	</ul>
+	<script>
+		var oLi = document.getElementsByClassName("list");
+		for(var i=0;i<oLi.length;i++){
+			oLi[i].onclick=(function(x){
+				return function(){
+					console.log(x);
+				}
+			})(i)
+		}
+	</script>
+</body>
+</html>
