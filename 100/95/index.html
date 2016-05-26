@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular</title>
+	<style>
+		body,html,p,h1{
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix:after,
+		.clearfix:before{
+			content: "";
+			display: table;
+		}
+		.clearfix:after{
+			clear: both;
+		}
+		header{
+			background-color: #00CED1;
+		}
+		p{
+			padding-top: 0.1rem;
+			padding-bottom: 0.1rem;
+			color:#ffffff;
+			border-top:1px dashed yellow;
+		}
+		.main{
+			border:1px solid black;
+			width: 960px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Angular</h1>
+		<p>angular是MVC框架，优点是利于模块化，可以复用。</p>
+		<p>使用npm下载Angular，命令：npm install angular</p>
+		<p>将angular粘贴到script文件夹中</p>
+		<h2>第一节：绑定数据</h2>
+		<p>引入&lt;script src="script/angular.js"&gt;&lt;script&gt;</p>
+		<p>&lt;body ng-app=""&gt;在这里规定范围是入口</p>
+		<p>&lt;input type="text" ng-model="txt"&gt;</p>
+		<p>&lt;h1 {{txt}}&gt;&lt;/h1&gt;绑定了input与h1，在文本框中输入的内容同时在h1中显示</p>
+		<p>此时的引入放到下面会先加载页面，同时标记会闪烁一下，但若放到上面若页面又会影响速度。解决方案是使用标签内部绑定ng-bind="txt"如：h2标签里面写字套用span标签，在span标签内加入绑定。</p>
+		<p>实例如下：</p>
+	</header>
+	<section class="main" ng-app="">
+		<input type="text" ng-model="txt">
+		<h5 ng-bind="txt"></h5>
+	</section>
+	<script src="../js/angular.js"></script>
+</body>
+</html>

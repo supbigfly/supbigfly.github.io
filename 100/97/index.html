@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angular事件</title>
+	<link rel="stylesheet" href="../96/index.css">
+	<style>
+		.box{
+			background-color: red;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body ng-app="app">
+	<section id="menu">
+		<div class="content">
+			<nav>
+				<a href="../index.html">首页</a>
+				<a href="">语言特性</a>
+				<a href="">函数手册</a>
+			</nav>
+		</div>
+	</section>
+	<section class="main">
+		<div class="content">
+			<section class="page">
+				<div class="logo">Angular事件</div>
+			</section>
+		</div>
+	</section>
+	<div class="content_bottom">
+		<div class="content">
+			<h2>单击事件：ng-click="cl()"</h2>
+			<h2>移入事件：ng-mouseenter="mo()"</h2>
+			<p>使用时通常为：ng-controller="ctrl"</p>
+			<p>代码及效果如下：</p>
+			<pre>&lt;body ng-app="app"&gt;<br>&lt;ng-controller="ctrl"&gt;<br>&lt;div class="box" ng-click="cl()" ng-mouseenter="mo()"&gt;&lt;/div&gt;<br></pre>
+			<pre>&lt;script src="script/angular.js"&gt;&lt;/script&gt;</pre>
+			<pre>&lt;script&gt;
+var myApp = angular.module("app",[]);
+myApp.controller("ctrl",function($scope){
+	$scope.cl=function(){
+		console.log("click");
+	}
+	$scope.mo=function(){
+		alert("mouseenter");
+	}
+})
+&lt;/script&gt;</pre>
+		</div>
+	</div>
+	<div ng-controller="ctrl">
+		<div class="box" ng-click="cl()" ng-mouseenter="mo()"></div>
+	</div>
+	<script src="../js/angular.js"></script>
+	<script>
+		var myApp = angular.module("app",[]);
+		myApp.controller("ctrl",function($scope){
+			$scope.cl=function(){
+				console.log("click");
+			}
+			$scope.mo=function(){
+				alert("mouseenter");
+			}
+		})
+	</script>
+</body>
+</html>
