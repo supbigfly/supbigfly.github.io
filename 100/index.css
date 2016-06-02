@@ -12,6 +12,9 @@
 	box-sizing:border-box;
 	font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
+body{
+	background-image: url(../images/beige_paper.png);
+}
 a{
 	text-decoration: none;
 }
@@ -96,10 +99,42 @@ a.hamburger:hover{
 	font-weight: bold;
 	font-size: 20px;
 }
+.essay,.title,.date,.fonticon{
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
 .essay{
 	height: 100px;
 	background-color: #fff;
-	-webkit-transition:all 300ms ease-in-out;
+}
+.essay .pic{
+	width: 100px;
+	height: 100px;
+	float: left;
+	line-height: 100px;
+	text-align: center;
+}
+.essay .pic .fonticon{
+	color: #000;
+	font-size: 20px;
+}
+.box:hover .essay{
+	background-color: #000;
+}
+.box:hover .essay .pic .fonticon{
+	color: #fff004;
+	font-size: 50px;
+}
+.box:hover .essay .title{
+	font-size: 14px;
+	color:#fff004;
+}
+.box:hover .essay .date{
+	font-size: 28px;
+	color:#fff;
 }
 .title{
 	padding:15px 0px 10px 15px;
@@ -149,19 +184,25 @@ a.hamburger:hover{
 }
 @media (min-width:764px){
 	.doc{
-		width: 10%;
-		height: 95px;
-		line-height: 95px;
+		width: 5%;
+		height: 100px;
+		line-height: 100px;
 		float: left;
 	}
 	.essay{
-		width: 90%;
+		width: 95%;
 		float: right;
-		height: 95px;
+		height: 100px;
 	}
 	.title,
 	.date{
 		text-align: left;
+	}
+	.title{
+		font-size: 28px;
+	}
+	.date{
+		font-size: 14px;
 	}
 	.icon-reorder{
 		display: none;
