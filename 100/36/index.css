@@ -53,3 +53,9 @@ footer{
 	width: 100%;
 	color:#FFA500;
 }
+.footer{
+	position: fixed;
+	bottom:0;
+	left:0;
+	width: 100%;
+}

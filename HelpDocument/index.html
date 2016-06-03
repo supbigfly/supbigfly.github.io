@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="jquery.treeview.css">
 	<style>
 		*{margin: 0;padding: 0;box-sizing:border-box;}
 		li{list-style-type: none;}
@@ -10,8 +11,9 @@
 		body{background-color: #ddc;}
 		.top{width: 100%;height: 10%;background-color: #998;border-bottom: 4px solid #443;}
 		.left{width: 20%;position: absolute;left:10px;margin-top: 10px;border:1px solid #443;}
-		.right{width: 75%;position: absolute;right:10px;margin-top: 10px;border:1px solid #443;}
+		.right{width: 75%;height:100%;position: absolute;right:30px;margin-top: 10px;border:1px solid #443;}
 		.list{cursor: pointer;}
+		.aa{width: 100%;height: 100%;}
 	</style>
 </head>
 <body>
@@ -22,36 +24,67 @@
 		</h1>
 	</div>
 	<div class="left">
-		<h3>导航</h3>
-		<ul>
-			<li class="list">抢拍倒计时</li>
-			<li class="list">图片自动轮播</li>
-			<li class="list">图片跟随</li>
-		</ul>
+		<ul id="tree" class="filetree">
+	        <li><span class="folder">web前端开发</span>
+	        	<ul>
+	        		<li><span class="folder">HTML</span></li>
+	        		<li>
+	        			<span class="folder">CSS</span>
+	        			<ul>
+	        				<li>
+	        					<span class="folder">css3</span>
+	        					<ul>
+	        						<li class="css3_href">
+	        							box-shadow
+	        						</li>
+	        						<li class="css3_href">
+	        							border-radius
+	        						</li>
+	        					</ul>
+	        				</li>
+	        			</ul>
+	        		</li>
+	        		<li>
+	        			<span class="folder">JAVASCRIPT</span>
+	        			<ul>
+	        				<li><span class="folder">ECMA</span></li>
+	        				<li><span class="folder">DOM</span></li>
+	        				<li><span class="folder">BOM</span></li>
+	        			</ul>
+	        		</li>
+	        	</ul>
+	        </li>
+	    </ul>
 	</div>
-	<div class="right"><embed id="embeds" src="../100/77/index.html" width="100%" height="500px"></div>
-	<script>
-		var arrUrl = ["../100/77/index.html","../100/74/index.html","../100/71/index.html"];
-		var oEmbeds = document.getElementById("embeds");
-		// var oEmbeds = document.getElementsByTagName("embed");
-		var oLi = document.getElementsByClassName("list");
-		for(var i=0;i<oLi.length;i++){
-			oLi[i].onclick = function(){
-				//alert(arrUrl[index(this)]);
-				var ind = index(this);
-				oEmbeds.src = arrUrl[ind];
-				//alert(oEmbeds.src);
-			}
+	<div class="right">
+		<iframe name="aa" class="aa"></iframe>
+	</div>
+	<script src="../script/jQuery.js"></script>
+    <script src="../script/jquery.cookie.js"></script>
+    <script src="../script/jquery.treeview.js"></script>
+    <script>
+    	var css3Arrurl = ["http://supbigfly.github.io/100/1/index.html","http://supbigfly.github.io/100/2/index.html"];
+    	var url = document.getElementsByClassName("css3_href");
+    	var ress;
+    	for(var i=0;i<url.length;i++){
+    		url[i].onclick=function(){
+				var ind = index(this);				
+				ress=css3Arrurl[ind];
+				renwu();
+    		}
+    	}
+    	function index(obj){
+    		var inds = obj.parentNode.children;
+    		for(var i=0;i<inds.length;i++){
+    			if(inds[i]==obj){
+    				return i;
+    			}
+    		}
+    	}
+    	$("#tree").treeview();
+		function renwu(){
+			window.open(ress,"aa");
 		}
-		function index(node){
-			var nodes = node.parentNode.children;
-			for(var i=0;i<nodes.length;i++){
-				if(nodes[i]==node){
-					// alert(i);
-					return i;
-				}
-			}
-		}
-	</script>
+    </script>
 </body>
 </html>
