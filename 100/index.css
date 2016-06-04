@@ -25,12 +25,21 @@ a i{
 li{
 	list-style-type: none;
 }
-.header{
+.top{
+	height: 30px;
+	background-color: #616161;
 	position: fixed;
+	width: 100%;
 	top:0;
 	left: 0;
-	background-color:#795548;
+}
+.header{
+	position: fixed;
+	top:30px;
+	left: 0;
+	background-color:#9E9E9E;
 	width: 100%;
+	box-shadow:1px 1px 1px #F5F5F5;
 }
 .header a{
 	color: #eee;
@@ -45,7 +54,7 @@ li{
 .header h1{
 	color:#ffffff;
 	text-align: center;
-	line-height: 200px;
+	line-height: 150px;
 }
 .icon-reorder{
 	color:#eee;
@@ -91,7 +100,7 @@ a.hamburger:hover{
 	box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.16), 0px 2px 20px 0 rgba(0, 0, 0, 0.12);
 }
 .doc{
-	background-color: #9E9E9E;
+	background-color: #795548;
 	height: 80px;
 	text-align: center;
 	line-height: 80px;
@@ -127,6 +136,7 @@ a.hamburger:hover{
 .box:hover .essay .pic .fonticon{
 	color: #fff004;
 	font-size: 50px;
+	line-height: 100px;
 }
 .box:hover .essay .title{
 	font-size: 14px;

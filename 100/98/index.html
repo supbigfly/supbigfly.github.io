@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../96/index.css">
+</head>
+<body>
+	<section id="menu">
+		<div class="content">
+			<nav>
+				<a href="../index.html">首页</a>
+				<a href="">语言特性</a>
+				<a href="">函数手册</a>
+			</nav>
+		</div>
+	</section>
+	<section class="main">
+		<div class="content">
+			<section class="page">
+				<div class="logo">arguments使用</div>
+			</section>
+		</div>
+	</section>
+	<div class="content_bottom">
+		<div class="content">
+			<h2>初始化arguments</h2>
+			<pre>function fun(){<br>console.log(arguments[0]);<br>console.log(arguments[1]);<br>console.log(arguments[2]);<br>}<br>fun("第一个","第二个","第三个");</pre>
+			<h2>平方与乘积</h2>
+			<pre>function fun(){<br>if(arguments.length==1){<br>console.log(arguments[0]*arguments[0]);<br>}else if(arguments.length==2){<br>console.log(arguments[0]*arguments[1]);<br>}else{<br>console.log("超过位数");<br>}<br>}<br>fun(2,3);</pre>
+		</div>
+	</div>
+</body>
+</html>
