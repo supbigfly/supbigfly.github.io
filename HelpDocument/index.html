@@ -32,6 +32,11 @@
 	        			<span class="folder">CSS</span>
 	        			<ul>
 	        				<li>
+	        					<span class="css_href">white-space</span>
+	        				</li>
+	        			</ul>
+	        			<ul>
+	        				<li>
 	        					<span class="folder">css3</span>
 	        					<ul>
 	        						<li class="css3_href">
@@ -63,13 +68,34 @@
     <script src="../script/jquery.cookie.js"></script>
     <script src="../script/jquery.treeview.js"></script>
     <script>
+    	var cssArrurl = ["../100/99/index.html"];
+
     	var css3Arrurl = ["http://supbigfly.github.io/100/1/index.html","http://supbigfly.github.io/100/2/index.html"];
-    	var url = document.getElementsByClassName("css3_href");
+
+    	var css3Url = document.getElementsByClassName("css3_href");
+
+    	var cssUrl = document.getElementsByClassName("css_href");
     	var ress;
-    	for(var i=0;i<url.length;i++){
-    		url[i].onclick=function(){
+    	for(var i=0;i<css3Url.length;i++){
+    		css3Url[i].onclick=function(){
 				var ind = index(this);				
 				ress=css3Arrurl[ind];
+				renwu();
+    		}
+    	}
+    	function index(obj){
+    		var inds = obj.parentNode.children;
+    		for(var i=0;i<inds.length;i++){
+    			if(inds[i]==obj){
+    				return i;
+    			}
+    		}
+    	}
+    	//css href
+    	for(var i=0;i<cssUrl.length;i++){
+    		cssUrl[i].onclick=function(){
+				var ind = index(this);				
+				ress=cssArrurl[ind];
 				renwu();
     		}
     	}
