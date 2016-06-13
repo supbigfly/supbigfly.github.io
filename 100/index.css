@@ -166,8 +166,12 @@ a.hamburger:hover{
 	z-index: 4;
 	background-color: blue;
 	opacity:.4;
-	transition:transform 3s;
-	transform:translateX(-150px);
+	-webkit-transition: -webkit-transform 3s;
+	transition: -webkit-transform 3s;
+	transition: transform 3s;
+	transition:transform 3s, -webkit-transform 3s;
+	-webkit-transform:translateX(-150px);
+	        transform:translateX(-150px);
 }
 .nav.navs{
 	transform:translateX(0px);
