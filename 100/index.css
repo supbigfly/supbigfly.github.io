@@ -169,11 +169,12 @@ a.hamburger:hover{
 	-webkit-transition: -webkit-transform 3s;
 	transition: -webkit-transform 3s;
 	transition: transform 3s;
-	transition:transform 3s, -webkit-transform 3s;
+	transition: transform 3s, -webkit-transform 3s;
 	-webkit-transform:translateX(-150px);
 	        transform:translateX(-150px);
 }
 .nav.navs{
+	-webkit-transform:translateX(0px);
 	transform:translateX(0px);
 }
 .nav a{
