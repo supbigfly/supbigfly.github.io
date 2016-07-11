@@ -28,30 +28,18 @@
 	<div class="content_bottom">
 		<div class="content">
 			<h2>git最大的功能是管理代码</h2>
-			<p>①创建仓库名，在网页上创建。（clear）命令是清除当前命令行的显示。</p>
-			<p>cd ..(上一步）</p>
-			<p>cd projectName/（进入这个文件夹，事先在本地创建好的文件夹）</p>
-			<p>git init（版本库）</p>
-			<p>git status（查询状态）红色</p>
-			<p>git add .（添加到缓存）</p>
-			<p>git status/git commit -m 'init'（-m后面的是说明）</p>
-			<p>git status（查询状态）</p>
-			<p>git commit -m 'init'第一次提交到分支上</p>
-			<p>git status（查询状态）</p>
-			<p>git remote add origin https://github.com/username/projectName.git</p>
-			<p>git push -u origin(远程) master(主机)（提交到）</p>
-			<p>username:;userpassword:;</p>
-			<p>②链接：分配权限：settings-->collborators-->右侧：账号名称填写</p>
-			<p>分支操作</p>
-			<p>git clone 地址(粘贴)</p>
-			<p>有改动进入项目目录查询状态后执行下面语句</p>
-			<p>git add .-->git commit -m ""-->git push -u origin master</p>
-			<p>----git pull从网上弄下来</p>
-			<p>(master|merging)有冲突</p>
+			<p>命令含义</p>
+			<pre>git clear清除当前命令行的显示<br>cd ..上一步<br>git clone 地址(粘贴) 克隆<br>git pull网上的更新到本地<br>subl .启动sublime快捷键win下不可以！<br>ls -a隐藏文件你给我出来！<br>Already up-to-date已更新的意思，不是命令。</pre>
+			<p>首次在github.com上创建项目</p>
+			<pre>①在网上创建仓库名<br>②本地创建文件夹与网上的仓库名一致<br>③cd projeceName<br>④git init版本库<br>⑤git add .添加到缓存<br>⑥git statu查询状态红色<br>⑦git status/git commit -m 'init' -m后面的是说明<br>⑧git status查询状态绿色<br>⑨git commit -m 'init'第一次提交到分支上<br>⑩git remote add origin https://github.com/username/projectName.git首次提交<br>git push -u origin(远程) master(主机)（提交到）<br>username:;userpassword:;</pre>
+			<p>分配权限</p>
+			<pre>settings-->collborators-->右侧：账号名称填写</pre>
 			<p>工作时全放在master会有问题，需建立分支</p>
-			<p>git branch lee李分支<br>git branch查询分支<br>git checkout lee切换分支<br>git merge lee合并<br>git branch -d lee删除分支</p>
-			<p>如果用master分支，仓库必须起名叫`sensui7.github.io`，访问页面为http://sensui7.github.io </p>
-			<p>如果你想随便起名字，也可以，不过只能用`gh-pages`分支，比如你的blog仓库的`gh-pages`分支是博客内容，则访问页面为http://sensui7.github.io/blog/</p>
+			<pre>git branch查看分支<br>git branch gh-pages新建分支<br>git checkout gh-pages切换分支<br>git merge gh-pages分支内容合并<br>git branch -d lee删除分支<br>git checkout还有一个撤销的功能 index.html<br>git commit -am "gh-pages"省去add命令<br>git pull master同步到本地<br>将gh-pages上面的内容同步到master上面----git checkout master----git merge gh-pages<br>将主分支的弄到分支上---git checkout gh-pages---git pull origin master</pre>
+			<p>注意事项</p>
+			<pre>1.如果用master分支，仓库必须起名叫sensui7.github.io 访问页面为http://sensui7.github.io<br>2.如果你想随便起名字，也可以，不过只能用`gh-pages`分支，比如你的blog仓库的`gh-pages`分支是博客内容，则访问页面为http://sensui7.github.io/blog/<br>3.md文件不见时需输入命令将网上的同步下来git pull --rebase origin master</pre>
+			<p>第二次创建仓库</p>
+			<pre>①网上创建仓库名<br>②本地执行git clone 网址----到达本地后是个空文件夹相当于在本地新建文件夹<br>③本地创建READMD.md<br>④git add -A<br>⑤git commit -a -m 'readom'<br>⑥git config --global user.email ""<br>git config -- global user.name ""<br>git checkout -b gh-pages<br>git push -u origin gh-pages<br>这时去官网的settings找到Branches将gh-pages设置为默认分支update<br>将访问地址更改Edit----website:http://supbigfly.github.io/demo</pre>
 		</div>
 	</div>
 </body>

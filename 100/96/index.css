@@ -62,7 +62,8 @@ nav a{
 	color:#eaf2d9;
 }
 .content_bottom .content{
-	
+	word-wrap:break-word;
+	border: 1px solid red;
 	width: 870px;
 	margin: 0 auto;
 	padding:45px;
