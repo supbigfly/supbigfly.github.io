@@ -51,7 +51,6 @@
 	top:25px;
 }
 .banner{
-	background-image: url(../../images/banner.jpg);
 	height:500px;
 	-webkit-background-size: cover;
 	background-size: cover;
